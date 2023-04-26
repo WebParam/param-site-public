@@ -31,7 +31,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.globe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
     <!-- <div id="element" style="position: relative;"><span style="position: relative; z-index: 1;"> </span>
         <canvas class="vanta-canvas" width="750" height="450" style="display: block; position: absolute; z-index: 0; top: 0px; left: 0px; width: 600px; height: 360px;"></canvas></div>
     <div id="element2"> </div>
@@ -212,7 +212,7 @@
    
     <nav class="navbar navbar-default navbar-fixed-top" style="padding:0.5%; background-color: white;">
         <a style="height:100%" class="navbar-brand"  href="#">
-            <img src="./images/paramlogo.svg" height="100%" class="d-inline-block align-top" alt="">
+            <img src="./images/paramlogo.svg" height="10%" class="d-inline-block align-top" alt="">
             
         </a>
           <div class="container">
@@ -238,7 +238,7 @@
           </div>
         </nav>
     
-        <main role="main" style="margin-top:5%">
+        <main role="main" style="margin-top:10%">
         <div id="element">
           <!-- Main jumbotron for a primary marketing message or call to action -->
           <div class="jumbotron" style="background-color: transparent;"  style="padding:15%"
@@ -253,12 +253,12 @@
             </div>
           </div>
 
-          <div class="jumbotron" style="padding:10%; background-color: rgba(255,255,255,0.6);">
+          <div class="jumbotron" style="padding:10%; background-color: rgba(255,255,255,0.9);">
             <!-- Example row of columns -->
             <div class="row">
               
                 <div class="col-md-5"  style=" background-size: contain; background-image: url(./images/param-arrow-right.png);background-repeat: no-repeat;">
-                    <!-- <img style="width:80%; " src="./images/people-1.svg" alt="Image" /> -->
+                    <img style="width:80%; " src="./images/people-1.svg" alt="Image" />
                 </div>
                 <div class="col-md-7" style="margin-top:5%">
                     <h3>AGILE TEAM</h3>
@@ -272,7 +272,7 @@
                     Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
                 </div>
                 <div class="col-md-5" style=" background-position: right; background-size: contain; background-image: url(./images/param-arrow-left.png);background-repeat: no-repeat;" >
-                    <!-- <img style="width:80%; float:right" src="./images/people-1.svg" alt="Image" /> -->
+                    <img style="width:80%; float:right" src="./images/people-1.svg" alt="Image" />
                 </div>
               </div>
             </div>
@@ -912,20 +912,31 @@
         <script type="text/javascript">//<![CDATA[
             
             
-   
-            VANTA.GLOBE({
-            el: "#element",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x87c05,
-            color2: 0xa9119e,
-            backgroundColor: 0xffffff
+      VANTA.NET({
+              el: "#element",
+              mouseControls: true,
+              touchControls: true,
+              gyroControls: false,
+              minHeight: 200.00,
+              minWidth: 200.00,
+              scale: 1.00,
+              scaleMobile: 1.00,
+              color: 0x87c05,
+                backgroundColor: 0xffffff
             })
+            // VANTA.GLOBE({
+            // el: "#element",
+            // mouseControls: true,
+            // touchControls: true,
+            // gyroControls: false,
+            // minHeight: 200.00,
+            // minWidth: 200.00,
+            // scale: 1.00,
+            // scaleMobile: 1.00,
+            // color: 0x87c05,
+            // color2: 0xa9119e,
+            // backgroundColor: 0xffffff
+            // })
         </script>
             
             
