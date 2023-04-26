@@ -1,0 +1,591 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/navbar-fixed-top/">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- <title>Fixed Top Navbar Example for Bootstrap</title> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="navbar-fixed-top.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+    .card{
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    background-color: rgb(247, 247, 247);
+    }
+
+
+    /*
+        code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+        code customized by Azmind.com
+    */
+    @media (min-width: 768px) and (max-width: 991px) {
+        /* Show 4th slide on md if col-md-4*/
+        .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -33.3333%;  /*change this with javascript in the future*/
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 768px) {
+        /* Show 3rd slide on sm if col-sm-6*/
+        .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -50%;  /*change this with javascript in the future*/
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+    }
+    @media (min-width: 576px) {
+        .carousel-item {
+            margin-right: 0;
+        }
+        /* show 2 items */
+        .carousel-inner .active + .carousel-item {
+            display: block;
+        }
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+            transition: none;
+        }
+        .carousel-inner .carousel-item-next {
+            position: relative;
+            transform: translate3d(0, 0, 0);
+        }
+        /* left or forward direction */
+        .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        .carousel-item-next.carousel-item-left + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+        /* farthest right hidden item must be also positioned for animations */
+        .carousel-inner .carousel-item-prev.carousel-item-right {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+        /* right or prev direction */
+        .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        .carousel-item-prev.carousel-item-right + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
+    }
+    /* MD */
+    @media (min-width: 768px) {
+        /* show 3rd of 3 item slide */
+        .carousel-inner .active + .carousel-item + .carousel-item {
+            display: block;
+        }
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+            transition: none;
+        }
+        .carousel-inner .carousel-item-next {
+            position: relative;
+            transform: translate3d(0, 0, 0);
+        }
+        /* left or forward direction */
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+        /* right or prev direction */
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
+    }
+    /* LG */
+    @media (min-width: 991px) {
+        /* show 4th item */
+        .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+            display: block;
+        }
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+            transition: none;
+        }
+        /* Show 5th slide on lg if col-lg-3 */
+        .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -25%;  /*change this with javascript in the future*/
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+        /* left or forward direction */
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+        /* right or prev direction //t - previous slide direction last item animation fix */
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
+    }
+    
+  </style>
+  <script>
+
+        /*
+            Carousel
+        */
+        $('#carousel-example').on('slide.bs.carousel', function (e) {
+            /*
+                CC 2.0 License Iatek LLC 2018 - Attribution required
+            */
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 5;
+            var totalItems = $('.carousel-item').length;
+        
+            if (idx >= totalItems-(itemsPerSlide-1)) {
+                var it = itemsPerSlide - (totalItems - idx);
+                for (var i=0; i<it; i++) {
+                    // append slides to end
+                    if (e.direction=="left") {
+                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                    }
+                    else {
+                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                    }
+                }
+            }
+        });
+    </script>
+    <body>
+   
+    <nav class="navbar navbar-default navbar-fixed-top" style="padding:0.5%; border:none; background-color: #263F22;">
+        <a style="height:100%" class="navbar-brand"  href="#">
+            <img src="./images/paramlogo_white.svg" height="100%" class="d-inline-block align-top" alt="">
+            
+        </a>
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav" style="padding:1%">
+                <li style="padding-left:10px"class="active"><a href="#">About</a></li>
+                <li style="padding-left:10px"><a href="#about">Services</a></li>
+                <li style="padding-left:10px"><a href="#contact">Teams</a></li>
+                <li style="padding-left:10px"><a href="#contact">Devs</a></li>
+                <li style="padding-left:10px"><a href="#contact">Blog</a></li>
+                <li style="padding-left:10px"><a href="#contact">Augmentation</a></li>
+                <li style="padding-left:10px"><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+    
+        <main role="main" style="margin-top:5%">
+    
+
+
+
+
+
+            <style>
+                
+            
+              </style>
+             
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+            <!-- <div id="element" style="position: relative;"><span style="position: relative; z-index: 1;"> </span>
+                <canvas class="vanta-canvas" width="750" height="450" style="display: block; position: absolute; z-index: 0; top: 0px; left: 0px; width: 600px; height: 360px;"></canvas></div>
+            <div id="element2"> </div>
+             -->
+             
+
+
+
+
+
+
+          <!-- Main jumbotron for a primary marketing message or call to action -->
+          <div class="jumbotron"
+            style="background-color: #263F22;
+            color: white;
+            margin-bottom: 0px;">
+            <div class="container">
+                <div class="row" style="background-image: url(./images/param-banner.svg);background-repeat: no-repeat;">
+              
+                    <div class="col-md-6" style="padding-top:10%">
+                        <h3 style="font-size: 4em; text-align: right;
+                        font-weight: bold;">Dev-as-service</h3>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 10%;
+                    padding-bottom: 15%;
+                    font-size: 1em;">
+                      At Param, we understand the importance of hiring the right talent for your business's success. That's why we offer a unique talent network that guarantees you access to the best candidates for your team.
+
+                      Our commitment is straightforward -
+                      if you're not satisfied with the candidate, we will replace them at no additional cost.
+                      
+                    
+                      <button type="button" style="    background-color: transparent;
+                      border: 1px solid rgb(196, 199, 201);
+                      padding-left: 5%;
+                      padding-right: 5%;
+                      padding-top: 4%;
+                      padding-bottom: 4%;
+                      color: white;
+                      margin-top: 15px;
+                    " 
+                class="btn btn-outline-light">Schedule a session</button>
+                    </div>
+                  
+                  </div>
+              
+            </div>
+          </div>
+     
+      
+  
+
+          <div class="jumbotron" style="background-color: rgb(216, 216, 216); margin-bottom: 0px;">
+            <!-- Example row of columns -->
+            <div class="row" >
+                <h3 style="
+             
+                font-size: 3em;
+                text-align: center;"
+                >Staff Augmentation</h3>
+
+                <div class="col-md-6" style="">
+                   
+                  <img style="width:80%; float:right" src="./images/colab.svg" alt="Image" />
+                </div>
+                <div class="col-md-5"style="padding-top:10%" >
+                   
+                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
+                        <h4 style="text-align: center;font-size: 1em;">Speed and effeciency</h4>
+                    </div>
+                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
+                        <h4 style="text-align: center;font-size: 1em;">Cost Reduction</h4>
+                    </div>
+                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
+                        <h4 style="text-align: center;font-size: 1em;">Fresh talent</h4>
+                    </div>
+                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
+                        <h4 style="text-align: center;font-size: 1em;">Quick placement</h4>
+                    </div>
+                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
+                        <h4 style="text-align: center;font-size: 1em;">Competitive advantage</h4>
+                    </div>
+                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
+                        <h4 style="text-align: center;font-size: 1em;">Scalable team</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="jumbotron"  style="color:white; padding-bottom: 0px;    margin-bottom: 0px;" id="element">
+            <!-- Example row of columns -->
+            <div class="row">
+            
+            
+            <div class="col-md-5" >
+                <h2 style="
+                    padding-top: 25%;
+                font-size: 3em;
+                text-align: left; 
+                    padding-left: 30%;
+                ">Our Results Speak <br/>For Us</h2>
+               
+     
+            </div>
+            <div class="col-md-7" style="
+            ">
+               <p style="
+                padding-left: 15%;
+                padding-right: 15%;
+                padding-bottom: 5%;
+                padding-top: 15%;
+                font-size: 12pt;
+                ">At Param, we understand the importance of hiring the right talent for your business's success. That's why we offer a unique talent network that guarantees you access to the best candidates for your team.
+                    Our commitment is straightforward -
+                    if you're not satisfied with the candidate, we will replace them at no additional cost.
+                </p>
+                <p style="
+                padding-left: 15%;
+                padding-right: 15%;
+                
+                font-size: 12pt;
+                padding-bottom: 15%;">We ensure the best fit -
+                You can rest assured that you won't be stuck with an unsuitable hire.
+    
+                Our Staff Augmentation service grants you access to the top talent in your industry, saves you time and money, and guarantees your satisfaction with our candidate replacement policy.
+     
+                 </p>
+    
+            </div>
+            </div>
+    
+        </div>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+            
+            
+            <div class="col-md-5" >
+                <h2 style="
+                padding-top: 15%;
+                font-size: 4em;
+                padding-right: 15%;
+                text-align: left; 
+                ">Skills We
+                    Have Available</h2>
+                <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
+                <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
+                 <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
+                
+
+               <img  style=" width:80%; "src="./images/transparent-back-2.svg">
+            </div>
+            <div class="col-md-7">
+                <img style=" width:80%; float:right; padding-top: 15%;" src="./images/people-3.svg" alt="Image" />
+            </div>
+            </div>
+   
+        </div>
+
+
+        <!-- Top content -->
+        <div class="jumbotron owl-2-style" style=" background-color: white;">
+            <h2 style="
+            padding-top: 1%;
+            padding-bottom: 2%;
+            font-size: 4em;
+            text-align: center; 
+           
+            
+            ">Companies we worked with</h2>
+            <div class="owl-carousel owl-2">
+                <div class="media-29101">
+                    <a href="#"><img  height="10%" src="./images/stb.svg" alt="Image" class="img-fluid"></a>
+                   
+                </div>
+                <div class="media-29101">
+                    <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="media-29101">
+                    <a href="#"><img  height="10%"  src="./images/discovery.svg" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="media-29101">
+                    <a href="#"><img  height="10%"   src="./images/mtn.svg" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="media-29101">
+                    <a href="#"><img  height="10%"   src="./images/stb.svg" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="media-29101">
+                    <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+
+     
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row" style="
+            padding-top: 8%; padding-bottom: 8%; ">
+            
+            
+            <div class="col-md-12 container" >
+               
+                <div class="" style="
+                    /* padding-bottom: 2%; */
+                    font-size: 15pt;
+                    text-align: center;
+                    width: 100%;
+                    /* padding-top: 2%;  */
+                    background-color: rgb(38, 63, 34);
+                    color: white;
+                    border-radius: 20px;
+                    padding: 6%;
+                    "
+                    >
+                <h2 style="
+                 padding-top: 2%; 
+                font-size: 2em;
+                ">Work with The World’s Top Talent</h2>
+                    <p style="padding-left: 5%;
+                    padding-right: 5%; font-size: 12px;">ork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talen</p>
+                    <button style="background-color: transparent;
+                    border: 1px solid rgb(196, 199, 201);
+                   margin-top: 1%;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    "  type="button" class="btn btn-outline">Get in touch</button>
+                </div>
+            </div>
+          
+   
+            </div>
+        </div>
+
+        
+
+
+    </main>
+    
+        <footer  class="jumbotron" style="background-color: rgb(38, 63, 34); ">
+           
+   
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-3 " style="background-image: url(./images/transparent-back-2.svg);
+                    background-repeat: repeat-x;
+                    min-height: 35%;
+                    background-position: left;">
+                        <div class="">
+                            <img src="./images/paramlogo_white.svg" alt="Image" />
+                        </div>
+                        
+                    </div>
+                  <div class="col-md-3 ">
+                    <div class="" style="
+                        color:white;    padding-top: 10%;
+                        ">
+                        <ul>
+                            <li>Business Analysts</li>
+                            <li>Software Developers</li>
+                            <li>Project Managers</li>
+                            <li>DevOps Engineers</li>
+                            <li>QA Engineers</li>
+                            </ul>
+                    </div>
+                </div>
+                  <div class="col-md-3">
+                    <div class="" style="
+                    color:white;    padding-top: 10%;
+                    ">
+                        <ul>
+                            <li>Business Analysts</li>
+                            <li>Software Developers</li>
+                            <li>Project Managers</li>
+                            <li>DevOps Engineers</li>
+                            <li>QA Engineers</li>
+                            </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="" style="
+                        color:white;    padding-top: 10%;
+                        ">
+                        <ul>
+                            <li>Business Analysts</li>
+                            <li>Software Developers</li>
+                            <li>Project Managers</li>
+                            <li>DevOps Engineers</li>
+                            <li>QA Engineers</li>
+                            </ul>
+                    </div>
+                  </div>
+                </div>
+        
+        
+    
+        </footer>
+    
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript">//<![CDATA[
+            
+            
+            // example 1
+            VANTA.NET({
+              el: "#element",
+              mouseControls: true,
+              touchControls: true,
+              gyroControls: false,
+              minHeight: 200.00,
+              minWidth: 200.00,
+              scale: 1.00,
+              scaleMobile: 1.00,
+              color: 0x7652d,
+                backgroundColor: 0x2e292e
+            })
+            
+            </script>
+            
+    
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
