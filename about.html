@@ -14,7 +14,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+    
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
@@ -172,6 +174,33 @@
         }
     }
     
+    /* Tabs*/
+section {
+    padding: 60px 0;
+}
+
+/* section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+} */
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f3f3f3;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 4px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    /* color: #eee;
+    font-size: 20px; */
+}
   </style>
   <script>
 
@@ -203,7 +232,7 @@
     </script>
     <body>
    
-    <nav class="navbar navbar-default navbar-fixed-top" style="padding:0.5%; border:none; background-color: #263F22;">
+    <nav class="navbar navbar-default navbar-fixed-top" style="padding:0.5%; border:none;  background-color: rgba(238,238,238, 0.95);">
         <a style="height:100%" class="navbar-brand"  href="#">
             <img src="./images/paramlogo_white.svg" height="100%" class="d-inline-block align-top" alt="">
             
@@ -233,61 +262,37 @@
     
         <main role="main" style="margin-top:5%">
     
-
-
-
-
-
-            <style>
-                
-            
-              </style>
-             
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
-            <!-- <div id="element" style="position: relative;"><span style="position: relative; z-index: 1;"> </span>
-                <canvas class="vanta-canvas" width="750" height="450" style="display: block; position: absolute; z-index: 0; top: 0px; left: 0px; width: 600px; height: 360px;"></canvas></div>
-            <div id="element2"> </div>
-             -->
-             
-
-
-
-
-
-
           <!-- Main jumbotron for a primary marketing message or call to action -->
-          <div class="jumbotron"
-            style="background-color: #263F22;
-            color: white;
-            margin-bottom: 0px;">
-            <div class="container">
-                <div class="row" style="background-image: url(./images/param-banner.svg);background-repeat: no-repeat;">
-              
-                    <div class="col-md-6" style="padding-top:10%">
-                        <h3 style="font-size: 4em; text-align: right;
-                        font-weight: bold;">Dev-as-service</h3>
+          <div class="jumbotron" style="margin-bottom: 0px; "
+          >
+            <div class="">
+                <div class="row" >
+                    <div class="col-md-7" style="padding-top: 5%;
+                        padding-bottom: 15%;
+                        padding-left: 15%;
+                        font-size: 1em;">
+                        <h3 style="font-size: 3em; text-align: left;
+                            font-weight: bold;">Connecting Great Organizations With Great Solutions Through Collaboration</h3>
+                       <p
+                       style="font-size: 11pt;"> Param Technologies is an integrated development studio that works together with organizations and their teams to help them build and grow solutions that solve the problems they face.
+                        </p>
+                        <button type="button" style="    background-color: transparent;
+                        border: 1px solid rgb(196, 199, 201);
+                        padding-left: 5%;
+                        padding-right: 5%;
+                        padding-top: 4%;
+                        padding-bottom: 4%;
+                        color: white;
+                        margin-top: 15px;
+                        
+                        " 
+                        class="btn btn-outline-light">Schedule a session</button>
                     </div>
-                    <div class="col-md-6" style="padding-top: 10%;
-                    padding-bottom: 15%;
-                    font-size: 1em;">
-                      At Param, we understand the importance of hiring the right talent for your business's success. That's why we offer a unique talent network that guarantees you access to the best candidates for your team.
-
-                      Our commitment is straightforward -
-                      if you're not satisfied with the candidate, we will replace them at no additional cost.
-                      
-                    
-                      <button type="button" style="    background-color: transparent;
-                      border: 1px solid rgb(196, 199, 201);
-                      padding-left: 5%;
-                      padding-right: 5%;
-                      padding-top: 4%;
-                      padding-bottom: 4%;
-                      color: white;
-                      margin-top: 15px;
-                    " 
-                class="btn btn-outline-light">Schedule a session</button>
+                    <div class="col-md-5" style="overflow: hidden;">
+                       <img style="width:100%; padding-top: 20%;     width: 150%;
+                       " src="./images/param-banner.svg"/>
                     </div>
+               
                   
                   </div>
               
@@ -295,193 +300,507 @@
           </div>
      
       
-  
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row" style="    padding-left: 0%;
+        padding-right: 6%;
+        padding-top: 20%;
+        padding-bottom: 20%;">
+     
+        
+        <div class="col-md-5" >
+            
+            <img style="width:100%; padding-top: 12%;     width: 100%;
+            " src="./images/param-banner.svg"/>
+ 
+        </div>
+        <div class="col-md-7" style=" padding-left: 10%; ">
+            <h2 style="
+                padding-top: 5%;
+            font-size: 3em;
+            text-align: left;
+            padding-bottom: 5%; 
+            ">About Param</h2>
+           <p style="
+   
+            font-size: 12pt;
+            ">At Param, we understand the importance of hiring the right talent for your business's success. That's why we offer a unique talent network that guarantees you access to the best candidates for your team.
+                Our commitment is straightforward -
+                if you're not satisfied with the candidate, we will replace them at no additional cost.
+            </p>
+           
 
-          <div class="jumbotron" style="background-color: rgb(216, 216, 216); margin-bottom: 0px;">
+        </div>
+        </div>
+
+    </div>
+
+    <div class="jumbotron" style="background-color: rgb(216, 216, 216); padding-bottom: 2%;
+    margin-bottom: 0;">
+      <!-- Example row of columns -->
+      <div class="row" >
+       
+          <div class="col-md-6" style="
+          padding-left: 10%;
+      ">
+              <h3 style="
+              padding-top: 10%;
+              padding-right: 15%;
+              font-size: 3em;
+              text-align: left;"
+              >Partner Ecosystem</h3>
+              <div style="border-left: 1px solid black;
+              padding-left: 5%;">
+                <p  style="padding-right: 15%;
+      
+                font-size: 1em;
+                margin-top: 15%;
+                padding-bottom: 10%;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+            
+              </div>
+           </div>
+           <div class="col-md-6" >
+            <img style="width:80%; float: left;" src="./images/partners.svg" alt="Image" />
+        </div>
+
+      </div>
+    </div>
+
+    <div style="background-color: white" class ="jumbotron owl-2-style">
+        <h2 style="
+        padding-top: 5%;
+        padding-bottom: 10%;
+        font-size: 3em;
+        text-align: center; 
+        ">Companies we worked with</h2>
+        <div class="owl-carousel owl-2">
+            <div class="media-29101">
+                <a href="#"><img  height="10%" src="./images/stb.svg" alt="Image" class="img-fluid"></a>
+               
+            </div>
+            <div class="media-29101">
+                <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="media-29101">
+                <a href="#"><img  height="10%"  src="./images/discovery.svg" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="media-29101">
+                <a href="#"><img  height="10%"   src="./images/mtn.svg" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="media-29101">
+                <a href="#"><img  height="10%"   src="./images/stb.svg" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="media-29101">
+                <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+
+          <div class="jumbotron" id="element">
             <!-- Example row of columns -->
             <div class="row" >
                 <h3 style="
+                padding:5%;
+                font-size: 9em;
+                text-align: left;"
+                >Our </br>
+                Core </br>
+                Competencies</h3>
+
              
-                font-size: 3em;
-                text-align: center;"
-                >Staff Augmentation</h3>
-
-                <div class="col-md-6" style="">
-                   
-                  <img style="width:80%; float:right" src="./images/colab.svg" alt="Image" />
-                </div>
-                <div class="col-md-5"style="padding-top:10%" >
-                   
-                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
-                        <h4 style="text-align: center;font-size: 1em;">Speed and effeciency</h4>
-                    </div>
-                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
-                        <h4 style="text-align: center;font-size: 1em;">Cost Reduction</h4>
-                    </div>
-                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
-                        <h4 style="text-align: center;font-size: 1em;">Fresh talent</h4>
-                    </div>
-                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
-                        <h4 style="text-align: center;font-size: 1em;">Quick placement</h4>
-                    </div>
-                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
-                        <h4 style="text-align: center;font-size: 1em;">Competitive advantage</h4>
-                    </div>
-                    <div style="padding:2%; margin: 2%;" class="col-md-5 card" >
-                        <h4 style="text-align: center;font-size: 1em;">Scalable team</h4>
-                    </div>
-                </div>
 
             </div>
         </div>
 
-        <div class="jumbotron"  style="color:white; padding-bottom: 0px;    margin-bottom: 0px;" id="element">
-            <!-- Example row of columns -->
-            <div class="row">
-            
-            
-            <div class="col-md-5" >
-                <h2 style="
-                    padding-top: 25%;
-                font-size: 3em;
-                text-align: left; 
-                    padding-left: 30%;
-                ">Our Results Speak <br/>For Us</h2>
-               
-     
-            </div>
-            <div class="col-md-7" style="
-            ">
-               <p style="
-                padding-left: 15%;
-                padding-right: 15%;
-                padding-bottom: 5%;
-                padding-top: 15%;
-                font-size: 12pt;
-                ">At Param, we understand the importance of hiring the right talent for your business's success. That's why we offer a unique talent network that guarantees you access to the best candidates for your team.
-                    Our commitment is straightforward -
-                    if you're not satisfied with the candidate, we will replace them at no additional cost.
-                </p>
-                <p style="
-                padding-left: 15%;
-                padding-right: 15%;
-                
-                font-size: 12pt;
-                padding-bottom: 15%;">We ensure the best fit -
-                You can rest assured that you won't be stuck with an unsuitable hire.
-    
-                Our Staff Augmentation service grants you access to the top talent in your industry, saves you time and money, and guarantees your satisfaction with our candidate replacement policy.
-     
-                 </p>
-    
-            </div>
-            </div>
-    
-        </div>
         <div class="container">
-            <!-- Example row of columns -->
-            <div class="row">
-            
-            
-            <div class="col-md-5" >
-                <h2 style="
-                padding-top: 15%;
-                font-size: 4em;
-                padding-right: 15%;
-                text-align: left; 
-                ">Skills We
-                    Have Available</h2>
-                <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
-                <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
-                 <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
-                
-
-               <img  style=" width:80%; "src="./images/transparent-back-2.svg">
-            </div>
-            <div class="col-md-7">
-                <img style=" width:80%; float:right; padding-top: 15%;" src="./images/people-3.svg" alt="Image" />
-            </div>
-            </div>
-   
-        </div>
-
-
-        <!-- Top content -->
-        <div class="jumbotron owl-2-style" style=" background-color: white;">
             <h2 style="
+            margin-top: 2%;
             padding-top: 1%;
+            /* font-weight: bold; */
             padding-bottom: 2%;
-            font-size: 4em;
-            text-align: center; 
-           
-            
-            ">Companies we worked with</h2>
-            <div class="owl-carousel owl-2">
-                <div class="media-29101">
-                    <a href="#"><img  height="10%" src="./images/stb.svg" alt="Image" class="img-fluid"></a>
-                   
+            text-align: left; 
+            ">What we do</h2>
+          
+            <!-- Example row of columns -->
+            <div class="row">
+                
+              <div class="col-md-4" style="border-right: 1px solid lightgray;
+              padding: 2%;">
+                <div class="card" style="    
+                padding-top: 5%;
+                box-shadow: none;
+                border-radius: 20px;
+                background-color: #EBEBEB;
+                padding-bottom: 5%;">
+                   <div style="padding-left: 25%;">
+                    <img style="padding: 5%;" src="./images/software-icon.svg" alt="Image" />
                 </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"  src="./images/discovery.svg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"   src="./images/mtn.svg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"   src="./images/stb.svg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+                         <h4 style="
+                        padding: 5%;
+                        text-align: center;
+                        font-size: 1.5em;
+                         "> Software Development</h4>
+                    <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                    </p>
                 </div>
             </div>
+              <div class="col-md-4" style="border-right: 1px solid lightgray;
+              padding: 2%;">
+                <div class="card" style="    
+                padding-top: 5%;
+                box-shadow: none;
+                border-radius: 20px;
+                background-color: #EBEBEB;
+                padding-bottom: 5%;">
+                    <div style="padding-left: 25%;">
+                         <img style="padding: 5%;" src="./images/devops-icon.svg" alt="Image" />
+                    </div>
+                    <h4 style="
+                          padding: 5%;
+                        text-align: center;
+                        font-size: 1.5em;
+                         ">Why Education in the Blockchain Space is Essential</h4>
+                     <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                    </p>
+                </div>
+              </div>
+              <div class="col-md-4" style="
+              padding: 2%;">
+                <div class="card" style="    
+                padding-top: 5%;
+                box-shadow: none;
+                background-color: #EBEBEB;
+                border-radius: 20px;
+                padding-bottom: 5%;">
+                    <div style="padding-left: 25%;">
+                         <img style="padding: 5%;" src="./images/ai.svg" alt="Image" />
+                    </div>
+                        <h4 style="
+                       padding: 5%;
+                        text-align: center;
+                        font-size: 1.5em;
+                         "> Why Education in the Blockchain Space is Essential</h4>
+                     <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                    </p>
+                </div>
+              </div>
+            </div>
+    
+            <hr>
+    
+        </div> <!-- /container -->
+    
+        
+        <div class="container" style="    padding-top: 5%;
+        padding-bottom: 10%;" >
+            <!-- Example row of columns -->
+          
+            <section id="tabs">
+                <div class="container">
+                    <h6 class="section-title h1">AM/ML Tech stack</h6>
+                    <div class="row" style="padding: 5%;" >
+                        <div class="col-xs-12 ">
+                            <nav style="padding: 5%;">
+                                <div style="padding-left: 10%;" class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                    <a style="padding-left: 10%;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">LANGUAGE</a>                                                                                                                                          
+                                    <a  style="padding-left: 10%;"class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">ML TOOLS </a>
+                                    <a  style="padding-left: 10%;"class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">STORAGE</a>
+                                    <a  style="padding-left: 10%;"class="nav-item nav-link " id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">ETL</a>
+                                    
+                                    <a  style="padding-left: 10%;"class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">VISUALIZATION</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                <div class="tab-pane fade " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <img src="./images/python.svg"/>
+                                    <img src="./images/sql.svg"/>	
+                                    <img src="./images/java.svg"/>
+                                </div>
+                                <div class="tab-pane fade " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    <img src="./images/sql.svg"/>	
+                                </div>
+                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                    <img src="./images/java.svg"/>	
+                                </div>
+                                <div class="tab-pane fade show in active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                    <img src="./images/python.svg"/>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!-- ./Tabs -->
         </div>
 
-     
         <div class="container">
             <!-- Example row of columns -->
-            <div class="row" style="
-            padding-top: 8%; padding-bottom: 8%; ">
-            
-            
-            <div class="col-md-12 container" >
-               
-                <div class="" style="
-                    /* padding-bottom: 2%; */
-                    font-size: 12pt;
-                    text-align: center;
-                    width: 100%;
-                    /* padding-top: 2%;  */
-                    background-color: rgb(38, 63, 34);
-                    color: white;
-                    border-radius: 20px;
-                    padding: 6%;
-                    "
-                    >
-                <h2 style="
-                 padding-top: 2%; 
-                font-size: 2em;
-                ">Work with The World’s Top Talent</h2>
-                    <p style="padding-left: 5%;
-                    padding-right: 5%; font-size: 12px;">ork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talen</p>
-                    <button style="background-color: transparent;
-                    border: 1px solid rgb(196, 199, 201);
-                   margin-top: 1%;
-                    padding-top: 2%;
-                    padding-bottom: 2%;
-                    padding-left: 10%;
-                    padding-right: 10%;
-                    "  type="button" class="btn btn-outline">Get in touch</button>
+            <div class="row">
+              <div class="col-md-3">
+                <h2 style="margin-top:20%">What have we done</h2>
+                
+              </div>
+              <div class="col-md-3 ">
+                <div class="card">
+                    <h4 style="
+                        padding-top: 15%;
+                        padding-left: 15%;
+                        padding-right: 15%;
+                        text-align: center; 
+                        font-weight: bold;
+                        "> YOUR GROUP, YOUR LAWS</h4>
+                    <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
+                    </p>
                 </div>
             </div>
-          
-   
+              <div class="col-md-3">
+                <div class="card">
+                    <h4 style="
+                        padding-top: 15%;
+                        padding-left: 15%;
+                        padding-right: 15%;
+                        text-align: center;
+                        font-weight: bold; 
+                        "> YOUR GROUP, YOUR LAWS</h4>
+                    <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
+                    </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                    <h4 style="
+                        padding-top: 15%;
+                        padding-left: 15%;
+                        padding-right: 15%;
+                        text-align: center; 
+                        font-weight: bold;
+                        ">EXPAND YOUR TALENT POOL</h4>
+                    <p style="padding: 10%" >Struggling to find developers locally? We remove distance as an obstacle. We connect you with the best talent from around the world, so you can collaborate with brilliant individuals no matter where you are.</p>
+                </div>
+              </div>
             </div>
-        </div>
+    
+            <hr>
+    
+          </div> <!-- /container -->
+                
+            <div style="    background-image: url(./images/plogo_pattern.svg);
+            background-repeat: no-repeat;
+            background-size: 44%;
+            background-position-x: 10%;
+            background-position-y: 20%;">
 
+                       <!-- Top content -->
+                <div class="jumbotron" style="background-color: rgba(96,96,96,0.3);">
+                    <div class="row" >
+                        <h3 style="
+                        padding:5%;
+                        padding-top:10%;
+                        font-size: 3em;
+                        text-align: center;"
+                        >“We are better working together on delivering one big solution, then working as individuals on smaller outcomes”</h3>
+
+                        <h4 style="
+                        padding:5%;
+                        font-size: 3em;
+                        text-align: center;"
+                        >Someone famous</h4>
+
+                    
+
+                    </div>
+                </div>
+                <div class="jumbotron" style="background-color: transparent;">
+                    <!-- Example row of columns -->
+                    <div class="row">
+                    <div class="col-md-6">
+                        <h2 style="font-size: 3em; padding-left: 10%;padding-top: 30%;">4 Reasons Why<br/>
+                            You Should Choose Us</h2>
+                        
+                    </div>
+                
+                    <div class="col-md-3">
+                        <div class="card">
+                            <h4 style="
+                                padding-top: 15%;
+                                padding-left: 15%;
+                                padding-right: 15%;
+                                text-align: center;
+                                font-weight: bold; 
+                                "> YOUR GROUP, YOUR LAWS</h4>
+                            <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <h4 style="
+                                padding-top: 15%;
+                                padding-left: 15%;
+                                padding-right: 15%;
+                                text-align: center; 
+                                font-weight: bold;
+                                ">EXPAND YOUR TALENT POOL</h4>
+                            <p style="padding: 10%" >Struggling to find developers locally? We remove distance as an obstacle. We connect you with the best talent from around the world, so you can collaborate with brilliant individuals no matter where you are.</p>
+                        </div>
+                    </div>
+                    </div>
+            
+                    <hr>
+            
+                </div> <!-- /container -->
+                        
+
+     
+      
+            </div>
+ 
+            <div class="container">
+                <h2 style="
+                margin-top: 2%;
+                padding-top: 1%;
+                /* font-weight: bold; */
+                padding-bottom: 2%;
+                text-align: left; 
+                ">What we do</h2>
+              
+                <!-- Example row of columns -->
+                <div class="row">
+            
+                    <div class="col-md-3" style="border-right: 1px solid lightgray;
+                    padding: 2%;">
+                      <div  style="    
+                      padding-top: 5%;
+                      box-shadow: none;
+                      border-radius: 20px;
+                      background-color: #EBEBEB;
+                      padding-bottom: 5%;">
+                         <div style="padding-left: 25%;">
+                          <img style="padding: 5%;" src="./images/software-icon.svg" alt="Image" />
+                      </div>
+                               <h4 style="
+                              padding: 5%;
+                              text-align: center;
+                              font-size: 1.5em;
+                               "> Software Development</h4>
+                          <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-3" style="border-right: 1px solid lightgray;
+                  padding: 2%;">
+                    <div style="    
+                    padding-top: 5%;
+                    box-shadow: none;
+                    border-radius: 20px;
+                    background-color: #EBEBEB;
+                    padding-bottom: 5%;">
+                       <div style="padding-left: 25%;">
+                        <img style="padding: 5%;" src="./images/software-icon.svg" alt="Image" />
+                    </div>
+                             <h4 style="
+                            padding: 5%;
+                            text-align: center;
+                            font-size: 1.5em;
+                             "> Software Development</h4>
+                        <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                        </p>
+                    </div>
+                </div>
+                  <div class="col-md-3" style="border-right: 1px solid lightgray;
+                  padding: 2%;">
+                    <div style="    
+                    padding-top: 5%;
+                    box-shadow: none;
+                    border-radius: 20px;
+                    background-color: #EBEBEB;
+                    padding-bottom: 5%;">
+                        <div style="padding-left: 25%;">
+                             <img style="padding: 5%;" src="./images/devops-icon.svg" alt="Image" />
+                        </div>
+                        <h4 style="
+                              padding: 5%;
+                            text-align: center;
+                            font-size: 1.5em;
+                             ">Why Education in the Blockchain Space is Essential</h4>
+                         <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                        </p>
+                    </div>
+                  </div>
+                  <div class="col-md-3" style="
+                  padding: 2%;">
+                    <div style="    
+                    padding-top: 5%;
+                   
+                    border-radius: 20px;
+                    padding-bottom: 5%;">
+                        <div style="padding-left: 25%;">
+                             <img style="padding: 5%;" src="./images/ai.svg" alt="Image" />
+                        </div>
+                            <h4 style="
+                           padding: 5%;
+                            text-align: center;
+                            font-size: 1.5em;
+                             "> AUTOMATED TRACKING
+
+
+
+                            </h4>
+                         <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Be part of the process and track development progress
+                        </p>
+                    </div>
+                  </div>
+                </div>
         
+                <hr>
+        
+            </div> <!-- /container -->
+        
+            
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row" style="
+                padding-top: 8%; padding-bottom: 8%; ">
+                
+                
+                <div class="col-md-12 container" >
+                   
+                    <div class="" style="
+                        /* padding-bottom: 2%; */
+                        font-size: 15pt;
+                        text-align: center;
+                        width: 100%;
+                        /* padding-top: 2%;  */
+                        background-color: rgb(38, 63, 34);
+                        color: white;
+                        border-radius: 20px;
+                        padding: 6%;
+                        "
+                        >
+                    <h2 style="
+                     padding-top: 2%; 
+                    font-size: 2em;
+                    ">Work with The World’s Top Talent</h2>
+                        <p style="padding-left: 5%;
+                        padding-right: 5%; font-size: 12px;">ork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talen</p>
+                        <button style="background-color: transparent;
+                        border: 1px solid rgb(196, 199, 201);
+                       margin-top: 1%;
+                        padding-top: 2%;
+                        padding-bottom: 2%;
+                        padding-left: 10%;
+                        padding-right: 10%;
+                        "  type="button" class="btn btn-outline">Get in touch</button>
+                    </div>
+                </div>
+              
+       
+                </div>
+            </div>
 
 
     </main>
@@ -552,26 +871,38 @@
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
         <script src="../../assets/js/vendor/popper.min.js"></script>
         <script src="../../dist/js/bootstrap.min.js"></script>
+      
         <script type="text/javascript">//<![CDATA[
             
             
-            // example 1
             VANTA.NET({
-              el: "#element",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 1.00,
-              scaleMobile: 1.00,
-              color: 0x7652d,
-                backgroundColor: 0x2e292e
-            })
-            
-            </script>
-            
-    
+                    el: "#element",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    color: 0x545454,
+                      backgroundColor: 0xdbdbdb,
+                      showDots: true
+                  })
+                  // VANTA.GLOBE({
+                  // el: "#element",
+                  // mouseControls: true,
+                  // touchControls: true,
+                  // gyroControls: false,
+                  // minHeight: 200.00,
+                  // minWidth: 200.00,
+                  // scale: 1.00,
+                  // scaleMobile: 1.00,
+                  // color: 0x87c05,
+                  // color2: 0xa9119e,
+                  // backgroundColor: 0xffffff
+                  // })
+              </script>
+                  
     
     <!-- Bootstrap core JavaScript
     ================================================== -->
