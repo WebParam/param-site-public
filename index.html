@@ -179,6 +179,24 @@
         }
     }
     
+    .owl-prev{
+        background-color: green;
+    margin: 2%;
+    border-radius: 35px;
+    padding: 3%;
+    border: none;
+    font-size: 30px;
+    width: 20%;
+    }
+    .owl-next{
+        background-color: green;
+    margin: 2%;
+    border-radius: 35px;
+    padding: 3%;
+    border: none;
+    font-size: 30px;
+    width: 20%;
+    }
   </style>
   <script>
 
@@ -244,7 +262,8 @@ padding:0.5%; border:none; ;
           </div>
         </nav>
     
-        <main role="main" style="">
+        <main role="main" style="background-color: #F7F7F7;
+        ;">
         <!-- <div id="element"> -->
           <!-- Main jumbotron for a primary marketing message or call to action -->
           <div class="jumbotron" style="margin-bottom: 0px; background-image:url('./images/transparent-back-1.png'); background-position: left; background-size: contain;background-repeat: no-repeat;"
@@ -287,12 +306,14 @@ padding:0.5%; border:none; ;
             </div>
           </div>
 
-          <div class="jumbotron" style="padding-right: 15%; padding-left: 15%; background-color: rgba(238,238,238, 0.95);">
+        <div class="jumbotron" style="padding-right: 15%; padding-left: 15%; margin-bottom: 0px;    background-color: #F7F7F7;;">
             <!-- Example row of columns -->
             <div class="row">
                 <h1 class="display-3" style="text-align:center;    font-size: 45px;
                 font-weight: bold;">Our Business</h1>
-                   <div class="col-md-5" style=" background-position: right; background-size: contain; background-image: url(./images/param-arrow-left.png);background-repeat: no-repeat;" >
+                   <div class="col-md-5" style="
+                    /* background-position: right; background-size: contain; background-image: url(./images/param-arrow-left.png);background-repeat: no-repeat;"  */
+                    >
                     <img style="width: 100%;
                     float: right;
                     padding: 5%;" src="./images/people-1.svg" alt="Image" />
@@ -312,19 +333,26 @@ padding:0.5%; border:none; ;
               </div>
             <div class="row">
               
-                <div class="col-md-5" style="margin-top:5%; text-align: right;">
-                    <h3 style="font-size: 32px; padding: 5%;">AGILE TEAM</h3>
+                <div class="col-md-5" style="margin-top:5%; text-align: left;">
+                    <h3 style="font-size: 32px; padding: 5%;">STAFF AUGMENTATION</h3>
                     <ul style="list-style-type: none;     font-size: 21px;
                     padding-left: 10%;  ">
-                        <li style="margin: 10px 0;">Business Analysts</li>
-                        <li style="margin: 10px 0;">Software Developers</li>
-                        <li style="margin: 10px 0;">Project Managers</li>
+
+
+
+
+                        <li style="margin: 10px 0;">Temporary staffing gives that flexibility to  deal
+                            with projects of any size.</li>
+                        <li style="margin: 10px 0;">No long-term commitments.</li>
+                        <li style="margin: 10px 0;">Shorter hiring process.</li>
                         <!-- <li style="margin: 10px 0;">DevOps Engineers</li>
                         <li style="margin: 10px 0;">QA Engineers</li> -->
                         </ul>
                 </div>
-                <div class="col-md-7"  style=" background-size: contain; background-image: url(./images/param-arrow-right.png);background-repeat: no-repeat;">
-                    <img style="width:100%; " src="./images/people-2.svg" alt="Image" />
+                <div class="col-md-7"  style=" 
+                /* background-size: contain; background-image: url(./images/param-arrow-right.png);background-repeat: no-repeat;" */
+                >
+                    <img style="width:80%; " src="./images/people-2.svg" alt="Image" />
                 </div>
                
 
@@ -334,83 +362,143 @@ padding:0.5%; border:none; ;
           
         <!-- </div> -->
     
-          <div class="container">
+          <div style="padding-left: 5%; padding-top: 5%;
+          padding-bottom: 5%;background-color: #E9EBE9; ">
             <!-- Example row of columns -->
             <div class="row">
               <div class="col-md-3">
-                <h2 style="margin-top:20%">How Our Services will Benefit You</h2>
-                
+                <h2 style="margin-top:50%;font-size: 2.5em;">How Our Services Will Benefit You</h2>
+                <div id="owl-nav"></div>
               </div>
-              <div class="col-md-3 ">
-                <div class="card">
-                    <h4 style="
-                        padding-top: 15%;
-                        padding-left: 15%;
-                        padding-right: 15%;
-                        text-align: center; 
-                        font-weight: bold;
-                        "> YOUR GROUP, YOUR LAWS</h4>
-                    <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
-                    </p>
+            
+              <div class="col-md-9" >
+                <div class="owl-carousel owl-1">
+                    <div class="media-29101">
+                        <div class="col-md-12 ">
+                            <div class="card" style="padding-top: 25%;
+                            padding-bottom: 25%;
+                            padding-left: 10%;
+                            padding-right: 10%;">
+                                <h4 style="
+                                    padding-top: 15%;
+                                    padding-left: 20%;
+                                    padding-right: 20%;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    font-size: 13px;
+                                    "> YOUR GROUP, YOUR LAWS</h4>
+                                <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
+                                </p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="media-29101">
+                        <div class="col-md-12">
+                            <div class="card" style="padding-top: 25%;
+                            padding-bottom: 25%;
+                            padding-left: 10%;
+                            padding-right: 10%;">
+                                <h4 style="
+                                     padding-top: 15%;
+                                    padding-left: 20%;
+                                    padding-right: 20%;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    font-size: 13px;
+                                    "> YOUR GROUP, YOUR LAWS</h4>
+                                <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-29101">
+                        <div class="col-md-12 ">
+                            <div class="card" style="padding-top: 25%;
+                            padding-bottom: 25%;
+                            padding-left: 10%;
+                            padding-right: 10%;">
+                                <h4 style="
+                                     padding-top: 15%;
+                                    padding-left: 20%;
+                                    padding-right: 20%;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    font-size: 13px;
+                                    "> YOUR GROUP, YOUR LAWS</h4>
+                                <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-29101">
+                        <div class="col-md-12 ">
+                            <div class="card" style="padding-top: 25%;
+                            padding-bottom: 25%;
+                            padding-left: 10%;
+                            padding-right: 10%;">
+                                <h4 style="
+                                     padding-top: 15%;
+                                    padding-left: 20%;
+                                    padding-right: 20%;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    font-size: 13px;
+                                    "> YOUR GROUP, YOUR LAWS</h4>
+                                <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+               
                 </div>
             </div>
-              <div class="col-md-3">
-                <div class="card">
-                    <h4 style="
-                        padding-top: 15%;
-                        padding-left: 15%;
-                        padding-right: 15%;
-                        text-align: center;
-                        font-weight: bold; 
-                        "> YOUR GROUP, YOUR LAWS</h4>
-                    <p style="padding: 10%" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
-                    </p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card">
-                    <h4 style="
-                        padding-top: 15%;
-                        padding-left: 15%;
-                        padding-right: 15%;
-                        text-align: center; 
-                        font-weight: bold;
-                        ">EXPAND YOUR TALENT POOL</h4>
-                    <p style="padding: 10%" >Struggling to find developers locally? We remove distance as an obstacle. We connect you with the best talent from around the world, so you can collaborate with brilliant individuals no matter where you are.</p>
-                </div>
-              </div>
             </div>
     
-            <hr>
+         
     
           </div> <!-- /container -->
     
 
-          <div class="jumbotron" style="background-color: rgb(216, 216, 216); padding-bottom: 2%;
+          <div class="jumbotron" style="background-color:background: #F0F0F0; ; padding-bottom: 5%; padding-top: 5%;
           margin-bottom: 0;">
             <!-- Example row of columns -->
             <div class="row" >
               
-                <div class="col-md-6" style="float:right">
-                    <h3 style="
+                <div class="col-md-6" style="">
+                    <div style="
                     padding-top: 10%;
-                    padding-right: 15%;
+                     padding-left: 15%;
+           
+                     text-align: left;">
+
+                  
+                    <h3 style="
+                   
                     font-size: 3em;
-                    text-align: center;"
-                    >Partner Ecosystem</h3>
-                   <p  style="padding-right: 15%; padding-left: 15%;
-                   padding-top: 10%;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    text-align: left;">
+                    Partner Ecosystem</h3>
+                   <p  style="        padding-right: 15%;
+                   padding-left: 7%;
+                   padding-top: 10%;
+                   font-size: 1em;
+                   font-weight: unset;
+                   border-left: 2px solid white;
+                   padding-bottom: 25%;
+               " >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-                </div>
+                </div>  
+            </div>
                 <div class="col-md-6" >
-                    <img style="width:80%; float: right;" src="./images/partners.svg" alt="Image" />
+                    <img style="width:80%;" src="./images/partners.svg" alt="Image" />
                 </div>
 
             </div>
           </div>
 
 
-          <div class="container">
+          <div class="container" style="background-color: #F7F7F7;
+          ;">
             <!-- Example row of columns -->
             <div class="row">
             
@@ -423,23 +511,21 @@ padding:0.5%; border:none; ;
                 text-align: left; 
                 ">Skills We <br/>
                     Have Available</h2>
-               
+               <div style="  margin-top: 8%;
+               border-left: 3px solid black;
+               padding-bottom: 60%;
+               background-position-y: -60%;
+               font-size: 12pt;
+               padding-left: -2px;
+               text-align: left;
+               width: 100%;
+               background-image: url(./images/transparent-back-2.svg);
+               background-size: 100%;
+               background-repeat: no-repeat;
+               background-position-x: 50px;">
                 <div class="container"  style="
-                margin-top: 8%;
-                
-                
-                padding-bottom: 60%;
-                background-position: bottom;
-                font-size: 12pt;
-                
-                text-align: left;
-                width: 80%;
-                padding-top: 5%;
-                background-image: url('./images/transparent-back-2.svg'); 
-                background-size: 50%;
-                background-repeat:repeat-x;
+            
                 list-style-type: none;"
-                
                 >
                 <div class="col-md-12" >
                     <ul style="list-style-type: none; font-size: 24px;;">
@@ -459,8 +545,9 @@ padding:0.5%; border:none; ;
                    
                 </div>
             </div>
+            </div>
             <div class="col-md-7">
-                <img style="width:80%;padding-top: 15%; padding-bottom: 5%;" src="./images/people-3.svg" alt="Image" />
+                <img style="width:90%;padding-top: 15%; padding-left: 15%; padding-bottom: 5%;" src="./images/people-3.svg" alt="Image" />
             </div>
             </div>
    
@@ -470,7 +557,8 @@ padding:0.5%; border:none; ;
 
     
         <!-- Top content -->
-        <div style="background-color: white" class ="jumbotron owl-2-style">
+        <div style="background-color: #F7F7F7;
+        " class ="jumbotron owl-2-style">
             <h2 style="
             padding-top: 1%;
             padding-bottom: 2%;
@@ -502,19 +590,20 @@ padding:0.5%; border:none; ;
 
         <div class="jumbotron" style="
         background-color: rgb(38, 63, 34);
+        padding: 5%;
         ">     <h2 style="
             padding-top: 1%;
             padding-bottom: 2%;
-            font-size: 3em;
+            font-size: 2.5em;
             text-align: center; 
             color:white;
             ">Related services</h2>
             <!-- Example row of columns -->
-            <div class="row">
+            <div class="row" style="padding-top: 5%; pad">
               <div class="col-md-4 ">
                 <div class="card" style="
-                    margin-left: 5%;
-                    border-radius: 10%;
+                  margin-left: 5%;
+                    border-radius: 50px;
                     margin-right: 5%;
                     ">
                     <h4 style="
@@ -523,17 +612,23 @@ padding:0.5%; border:none; ;
                         padding-right: 15%;
                         text-align: center; 
                         font-weight: bold;
-                        "> REDUCE THE COST OF HIRING</h4>
-                    <p style="padding: 10%; font-size: 1em;" >
-                        Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free!
+                        "> SERVICE PROVIDERS FOR IT</h4>
+                    <p style="    padding-top: 10%;
+                    font-size: 1em;
+                    text-align: center;
+                    padding-bottom: 10%;
+                    padding-left: 5%;
+                    padding-right: 5%;" >
+                        According to your software development demands, our comprehensive outsourcing services offer a variety of options, including staff augmentation, self-managed teams, and everything in between.
+
                     </p>
                 </div>
             </div>
               <div class="col-md-4">
                 <div class="card"style="
                     margin-left: 5%;
+                    border-radius: 50px;
                     margin-right: 5%;
-                    border-radius: 10%;
                     ">
                     <h4 style="
                         padding-top: 15%;
@@ -542,15 +637,22 @@ padding:0.5%; border:none; ;
                         text-align: center;
                         font-weight: bold; 
                         "> YOUR GROUP, YOUR LAWS</h4>
-                    <p style="padding: 10% ; font-size: 1em;" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free!
-                    </p>
+                     <p style="    padding-top: 10%;
+                     font-size: 1em;
+                     text-align: center;
+                     padding-bottom: 10%;
+                     padding-left: 5%;
+                     padding-right: 5%;" >
+                         According to your software development demands, our comprehensive outsourcing services offer a variety of options, including staff augmentation, self-managed teams, and everything in between.
+ 
+                     </p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card"style="
-                    margin-left: 5%;
+                   margin-left: 5%;
+                    border-radius: 50px;
                     margin-right: 5%;
-                    border-radius: 10%;
                     ">
                     <h4 style="
                         padding-top: 15%;
@@ -559,8 +661,15 @@ padding:0.5%; border:none; ;
                         text-align: center; 
                         font-weight: bold;
                         ">EXPAND YOUR TALENT POOL</h4>
-                    <p style="padding: 10% ; font-size: 1em;" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free!</p>
-                </div>
+                     <p style="    padding-top: 10%;
+                     font-size: 1em;
+                     text-align: center;
+                     padding-bottom: 10%;
+                     padding-left: 5%;
+                     padding-right: 5%;" >
+                         According to your software development demands, our comprehensive outsourcing services offer a variety of options, including staff augmentation, self-managed teams, and everything in between.
+ 
+                     </p></div>
               </div>
             </div>
     
@@ -743,11 +852,14 @@ padding:0.5%; border:none; ;
             <!-- Example row of columns -->
             <div class="row">
               <h2 style="
-          font-weight: bold;
-                text-align: center; 
+            font-weight: bold;
+            text-align: center;
+            font-size: 4em;
               ">Our Results Speak For Us</h2>
               <h4 style="
-          
+          text-align: center;
+    font-size: 3em;
+    padding-top: 3%;
               text-align: center; 
             ">Summary of the Findings of Gig Economy IT Projects on a Platform vs. Traditional IT Projects</h4>
               <div class="col-md-4">
@@ -760,7 +872,7 @@ padding:0.5%; border:none; ;
                         text-align: center; 
                         font-weight: bold;
                         "> 30%</h4>
-                    <p style="padding: 10%" >Our applicants will fit in with.
+                    <p style="padding: 10%" >More Effecient Staffing
                     </p>
                 </div>
             </div>
@@ -773,8 +885,8 @@ padding:0.5%; border:none; ;
                         padding-right: 15%;
                         text-align: center;
                         font-weight: bold; 
-                        "> 30%</h4>
-                    <p style="padding: 10%" >Hiring employees can come with a lot of expenses. ! 
+                        "> 0%</h4>
+                    <p style="padding: 10%" >Lower Risk 
                     </p>
                 </div>
               </div>
@@ -788,7 +900,7 @@ padding:0.5%; border:none; ;
                         text-align: center; 
                         font-weight: bold;
                         ">30%</h4>
-                    <p style="padding: 10%" >Struggling to find developers locally? </p>
+                    <p style="padding: 10%" >Higher Project Satisfaction</p>
                 </div>
               </div>
             </div>
@@ -879,7 +991,7 @@ padding:0.5%; border:none; ;
               </div>
             </div>
     
-            <hr>
+            <!-- <hr> -->
     
         </div> <!-- /container -->
     
@@ -909,8 +1021,8 @@ padding:0.5%; border:none; ;
                 ">Work with The World’s Top Talent</h2>
                     <p style="padding-left: 5%;
                     padding-right: 5%; font-size: 12px;">ork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talen</p>
-                    <button style="background-color: transparent;
-                    border: 1px solid rgb(196, 199, 201);
+                    <button style="background-color: #1B3517;
+                    /* border: 1px solid rgb(196, 199, 201); */
                    margin-top: 1%;
                     padding-top: 2%;
                     padding-bottom: 2%;
