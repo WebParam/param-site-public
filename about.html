@@ -221,6 +221,13 @@ section {
     width: 20%;
     color:white;
     }
+    .contact-box a:hover{
+        color: gray;
+    }
+    .contact-box a{
+        color: white;
+    }
+
   </style>
   <script>
 
@@ -250,7 +257,7 @@ section {
             }
         });
     </script>
-     <body style="width:100%; overflow-x: hidden;  background-color: rgba(240, 236, 236, 1);">
+     <body style="width:100%; overflow-x: hidden;  background-color: white;">
    
         <nav class="navbar navbar-default navbar-fixed-top" style="width:100%; 
     
@@ -258,7 +265,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
 
     background-color: rgba(238,238,238, 0.95);">
         <a style="height:100%; max-width: 10%;     padding-right: 20%;
-    " class="navbar-brand"  href="#">
+    " class="navbar-brand"  href="/">
             <img src="./images/paramlogo.svg" height="5%" class="d-inline-block align-top" alt="">
             
         </a>
@@ -275,12 +282,12 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
               <ul class="nav navbar-nav" style="  width: 70%;
               padding: 1%;
               padding-left: 5%;">
-                <li style="padding-left:5%; " class="active"><a href="#">Home</a></li>
-                <li style="padding-left:5%" ><a href="about.html">About</a></li>
+                <li style="padding-left:5%; " ><a href="/">Home</a></li>
+                <li style="padding-left:5%" class="active"   ><a href="about">About</a></li>
                 <li style="padding-left:5%"><a href="#contact">Teams</a></li>
                 <li style="padding-left:5%"><a href="#contact">Devs</a></li>
                 <li style="padding-left:5%"><a href="#contact">Blog</a></li>
-                <li style="padding-left:5%"><a href="staff-augmentation.html">Augmentation</a></li>
+                <li style="padding-left:5%"><a href="staff-augmentation">Augmentation</a></li>
                 <li style="padding-left:5%"><a href="#contact">Contact</a></li>
               </ul>
             </div><!--/.nav-collapse -->
@@ -305,17 +312,20 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                        <p
                        style="font-size: 11pt;"> Param Technologies is an integrated development studio that works together with organizations and their teams to help them build and grow solutions that solve the problems they face.
                         </p>
-                        <button type="button" style="    background-color: transparent;
-                        border: 1px solid rgb(196, 199, 201);
-                        padding-left: 5%;
-                        padding-right: 5%;
-                        padding-top: 4%;
-                        padding-bottom: 4%;
-                        color: white;
-                        margin-top: 15px;
-                        
-                        " 
-                        class="btn btn-outline-light">Schedule a session</button>
+                        <div class="row ghost-dark">
+                            <a type="button" data-toggle="modal" data-target="#exampleModal" style="
+                            padding-left: 5%;
+                            padding-right: 5%;
+                            padding-top: 3%;
+                            padding-bottom: 3%;
+                            color: white;
+                            margin-top: 15px;
+                            border-radius: 0px;
+                            color: black;
+                            border: 1px solid black;
+                            " 
+                            class="btn btn-outline-light">Schedule a session</a>
+                        </div>
                     </div>
                     <div class="col-md-5" style="overflow: hidden;">
                        <img style="width:100%; padding-top: 20%;     width: 150%;
@@ -469,11 +479,13 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     <img style="padding: 5%;    width: 52%;" src="./images/software-icon.svg" alt="Image" />
                 </div>
                          <h4 style="
-                        padding: 5%;
-                        text-align: center;
+                       text-align: center;
                         font-size: 1.5em;
+                        padding-bottom: 3%;
                          "> Software Development</h4>
-                    <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                    <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. 
+                        <br/><br/>With our state-of-the-art technology and expertise in the latest software development methodologies.
+                        <br/><br/>We can bring your ideas to life and create applications that are both functional and visually stunning.
                     </p>
                 </div>
             </div>
@@ -492,8 +504,10 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                           padding: 5%;
                         text-align: center;
                         font-size: 1.5em;
-                         ">Why Education in the Blockchain Space is Essential</h4>
-                     <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                         ">DevOps</h4>
+                     <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >At Param, our DevOps and cloud services help you optimize operations and minimize costs.
+                        <br/><br/> Our experts use the latest cloud technologies and best practices to provide efficient, secure solutions such as cloud migration, infrastructure management, security, and automation. 
+                        <br/><br/>Trust us to keep your business ahead of the curve.
                     </p>
                 </div>
               </div>
@@ -512,8 +526,10 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                        padding: 5%;
                         text-align: center;
                         font-size: 1.5em;
-                         "> Why Education in the Blockchain Space is Essential</h4>
-                     <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Our talented team of software developers is dedicated to delivering cutting-edge applications that will transform the way you do business. With our state-of-the-art technology and expertise in the latest software development methodologies, we can bring your ideas to life and create applications that are both functional and visually stunning.
+                         "> ML & AI</h4>
+                     <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >We specialize in utilizing machine learning to develop intelligent systems that learn and improve from data. 
+                        <br/><br/>Our expertise in machine learning enables us to create tailored solutions for clients across a range of industries, including finance, healthcare, and retail. 
+                        We leverage various ML techniques, including supervised, unsupervised, and reinforcement learning, to build robust and scalable ML models.
                     </p>
                 </div>
               </div>
@@ -595,6 +611,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                           border-radius: 2;
                           padding-left: 5%;
                           border-radius: 25px;
+                          margin-bottom: 2%;
                           padding-right: 5%;">
                           <img src="./images/call-center.svg" style="    width: 50%;
                           margin-left: 25%;"/>
@@ -622,6 +639,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                         box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
                         padding-bottom: 5%;
                         border-radius: 2;
+                        margin-bottom: 2%;
                         padding-left: 5%;
                         border-radius: 25px;
                         padding-right: 5%;">
@@ -651,6 +669,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                         padding-bottom: 5%;
                         border-radius: 2;
                         padding-left: 5%;
+                        margin-bottom: 2%;
                         border-radius: 25px;
                         padding-right: 5%;">
                         <img src="./images/call-center.svg" style="    width: 50%;
@@ -671,30 +690,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                         </div>
                       </div>
                   </div>
-                  <div class="media-29101">
-                      <div class="col-md-12 ">
-                          <div class="card" style="padding-top: 25%;
-                          padding-bottom: 25%;
-                          padding-left: 5%;
-                          border-radius: 4;
-                          border-radius: 45px;
-                          padding-right: 5%;">
-                              <h4 style="
-                                   padding-top: 15%;
-                                  padding-left: 20%;
-                                  padding-right: 20%;
-                                  text-align: center;
-                                  font-weight: bold;
-                                  font-size: 13px;
-                                  "> YOUR GROUP, YOUR LAWS</h4>
-                              <p style="
-                              padding: 5%;
-                              text-align: center;
-                          " >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
-                              </p>
-                          </div>
-                      </div>
-                  </div>
+        
              
               </div>
           </div>
@@ -735,29 +731,30 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 padding-bottom: 5%;background-color: transparent;">
                   <!-- Example row of columns -->
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <h2 style="font-size: 3em; padding-left: 10%;padding-top: 30%;">4 Reasons Why<br/>
                             You Should Choose Us</h2>
                       <div id="owl-nav3" style="padding-left: 10%;" class="col-md-6"></div>
                     </div>
                   
-                    <div class="col-md-6" style="padding-top: 5%;" >
+                    <div class="col-md-7" style="padding-top: 5%;" >
                       <div class="owl-carousel owl-3">
                           <div class="media-29101">
                               <div class="col-md-12 " style="margin-bottom: 2%;
-                            ">
-                                  <div class="card" style=" padding-top: 5%;
-                                  background-color: transparent;
-                                  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
-                                  padding-bottom: 5%;
+                            "> <img src="./images/logo_people.svg" style="    width: 50%;
+                                  margin-left: 25%;"/>
+                                  <div class="card" style=" padding-top: 15%;padding-bottom: 15%;
+                                  background-color: rgba(238,238,238, 0.95);
+                                    margin-top: -20%;
+                                  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                                  padding-bottom: 15%;
                                   border-radius: 2;
                                   padding-left: 5%;
                                   border-radius: 25px;
                                   padding-right: 5%;">
-                                  <img src="./images/call-center.svg" style="    width: 50%;
-                                  margin-left: 25%;"/>
+                                 
                                       <h4 style="
-                                          padding-top: 5%;
+                                          padding-top: 20%;
                                           padding-left: 20%;
                                           padding-right: 20%;
                                           text-align: center;
@@ -774,20 +771,21 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                           
                           </div>
                           <div class="media-29101">
-                              <div class="col-md-12"  style="margin-bottom: 2%;
-                              ">
-                                <div class="card" style=" padding-top: 5%;
-                                background-color: transparent;
-                                box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
-                                padding-bottom: 5%;
+                            <div class="col-md-12 " style="margin-bottom: 2%;
+                          "> <img src="./images/logo_gear.svg" style="    width: 50%;
+                                margin-left: 25%;"/>
+                                <div class="card" style="padding-top: 15%;padding-bottom: 15%;
+                                background-color: rgba(238,238,238, 0.95);
+                                  margin-top: -20%;
+                                box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                                padding-bottom: 15%;
                                 border-radius: 2;
                                 padding-left: 5%;
                                 border-radius: 25px;
                                 padding-right: 5%;">
-                                <img src="./images/call-center.svg" style="    width: 50%;
-                                margin-left: 25%;"/>
+                               
                                     <h4 style="
-                                        padding-top: 5%;
+                                        padding-top: 20%;
                                         padding-left: 20%;
                                         padding-right: 20%;
                                         text-align: center;
@@ -800,51 +798,25 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                                 " >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
                                     </p>
                                 </div>
-                              </div>
-                          </div>
-                          <div class="media-29101">
-                            <div class="col-md-12"  style="margin-bottom: 2%;
-                            ">
-                              <div class="card" style=" padding-top: 5%;
-                              background-color: transparent;
-                              box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
-                              padding-bottom: 5%;
-                              border-radius: 2;
-                              padding-left: 5%;
-                              border-radius: 25px;
-                              padding-right: 5%;">
-                              <img src="./images/call-center.svg" style="    width: 50%;
-                              margin-left: 25%;"/>
-                                  <h4 style="
-                                      padding-top: 5%;
-                                      padding-left: 20%;
-                                      padding-right: 20%;
-                                      text-align: center;
-                                      font-weight: bold;
-                                      font-size: 13px;
-                                      "> YOUR GROUP, YOUR LAWS</h4>
-                                  <p style="
-                                  padding: 5%;
-                                  text-align: center;
-                              " >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
-                                  </p>
-                              </div>
                             </div>
+                        
                         </div>
-                          <div class="media-29101">
-                              <div class="col-md-12 ">
-                                <div class="card" style=" padding-top: 5%;
-                                background-color: transparent;
-                                box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
-                                padding-bottom: 5%;
+                        <div class="media-29101">
+                            <div class="col-md-12 " style="margin-bottom: 2%;
+                          "> <img src="./images/logo_gear.svg" style="    width: 50%;
+                                margin-left: 25%;"/>
+                                <div class="card" style="padding-top: 15%;padding-bottom: 15%;
+                                background-color: rgba(238,238,238, 0.95);
+                                  margin-top: -20%;
+                                box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                                padding-bottom: 15%;
                                 border-radius: 2;
                                 padding-left: 5%;
                                 border-radius: 25px;
                                 padding-right: 5%;">
-                                <img src="./images/call-center.svg" style="    width: 50%;
-                                margin-left: 25%;"/>
+                               
                                     <h4 style="
-                                        padding-top: 5%;
+                                        padding-top: 20%;
                                         padding-left: 20%;
                                         padding-right: 20%;
                                         text-align: center;
@@ -857,8 +829,40 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                                 " >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
                                     </p>
                                 </div>
-                              </div>
-                          </div>
+                            </div>
+                        
+                        </div>
+                        <div class="media-29101">
+                            <div class="col-md-12 " style="margin-bottom: 2%;
+                          "> <img src="./images/logo_gear.svg" style="    width: 50%;
+                                margin-left: 25%;"/>
+                                <div class="card" style="padding-top: 15%;padding-bottom: 15%;
+                                background-color: rgba(238,238,238, 0.95);
+                                  margin-top: -20%;
+                                box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                                padding-bottom: 15%;
+                                border-radius: 2;
+                                padding-left: 5%;
+                                border-radius: 25px;
+                                padding-right: 5%;">
+                               
+                                    <h4 style="
+                                        padding-top: 20%;
+                                        padding-left: 20%;
+                                        padding-right: 20%;
+                                        text-align: center;
+                                        font-weight: bold;
+                                        font-size: 13px;
+                                        "> YOUR GROUP, YOUR LAWS</h4>
+                                    <p style="
+                                    padding: 5%;
+                                    text-align: center;
+                                " >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more. We take care of payroll and HR tasks, so you don't have to. It's hassle-free! 
+                                    </p>
+                                </div>
+                            </div>
+                        
+                        </div>
                           
                      
                      
@@ -880,8 +884,8 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 padding-top: 1%;
                 /* font-weight: bold; */
                 padding-bottom: 2%;
-                text-align: left; 
-                ">What we do</h2>
+                text-align: center; 
+                ">Benefits</h2>
               
                 <!-- Example row of columns -->
                 <div class="row">
@@ -894,19 +898,20 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                       border-radius: 20px;
                       padding-bottom: 5%;">
                           <div style="padding-left: 25%;">
-                               <img style="padding: 5%;" src="./images/ai.svg" alt="Image" />
+                               <img style="padding: 5%;" src="./images/dev-roadmap.svg" alt="Image" />
                           </div>
                               <h4 style="
-                             padding: 5%;
-                              text-align: center;
-                              font-size: 1.5em;
-                               "> AUTOMATED TRACKING
-  
-  
+                            padding: 5%;
+                            text-align: center;
+                            font-size: 14px;
+                            font-weight: bold;
+                               ">DEVELOPMENT ROADMAP
+
+
+
   
                               </h4>
-                           <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Be part of the process and track development progress
-                          </p>
+                           <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Upfront development roadmap and iterative designs before project gets built. </p>
                       </div>
                     </div>
                 <div class="col-md-3" style="border-right: 1px solid lightgray;
@@ -917,18 +922,17 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                   border-radius: 20px;
                   padding-bottom: 5%;">
                       <div style="padding-left: 25%;">
-                           <img style="padding: 5%;" src="./images/ai.svg" alt="Image" />
+                           <img style="padding: 5%;" src="./images/dedicated-team.svg" alt="Image" />
                       </div>
                           <h4 style="
                          padding: 5%;
-                          text-align: center;
-                          font-size: 1.5em;
-                           "> AUTOMATED TRACKING
-
-
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: bold;
+                           ">DEDICATED TEAM
 
                           </h4>
-                       <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Be part of the process and track development progress
+                       <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Handcrafted team that provide agility.
                       </p>
                   </div>
                 </div>
@@ -940,18 +944,18 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     border-radius: 20px;
                     padding-bottom: 5%;">
                         <div style="padding-left: 25%;">
-                             <img style="padding: 5%;" src="./images/ai.svg" alt="Image" />
+                             <img style="padding: 5%;" src="./images/time-money.svg" alt="Image" />
                         </div>
                             <h4 style="
-                           padding: 5%;
-                            text-align: center;
-                            font-size: 1.5em;
-                             "> AUTOMATED TRACKING
-
-
+                         padding: 5%;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: bold;
+                             "> SAVE TIME & MONEY
 
                             </h4>
-                         <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >Be part of the process and track development progress
+                         <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >
+                            Zero recruitment costs. No overhead costs for offices.
                         </p>
                     </div>
                   </div>
@@ -963,14 +967,14 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     border-radius: 20px;
                     padding-bottom: 5%;">
                         <div style="padding-left: 25%;">
-                             <img style="padding: 5%;" src="./images/ai.svg" alt="Image" />
+                             <img style="padding: 5%;" src="./images/tracking.svg" alt="Image" />
                         </div>
                             <h4 style="
                            padding: 5%;
                             text-align: center;
-                            font-size: 1.5em;
+                            font-size: 14px;
+                            font-weight: bold;
                              "> AUTOMATED TRACKING
-
 
 
                             </h4>
@@ -980,53 +984,206 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                   </div>
                 </div>
         
-                <hr>
+               
         
             </div> <!-- /container -->
         
             
 
-            <div class="container" style="background-color:rgba(240, 236, 236, 1);">
-                <!-- Example row of columns -->
-                <div class="row" style="
-                padding-top: 8%; padding-bottom: 8%; ">
-                 <div class="col-md-2" ></div>
-                
-                <div class="col-md-8" >
-                   
-                    <div class="" style="
-                        /* padding-bottom: 2%; */
-                        font-size: 12pt;
-                        text-align: center;
-                        width: 100%;
-                        /* padding-top: 2%;  */
-                        background-color: rgb(38, 63, 34);
-                        color: white;
-                        border-radius: 50px;
-                        padding: 6%;
-                        "
-                        >
-                    <h2 style="
-                     padding-top: 2%; 
-                    font-size: 2em;
-                    ">Work with The World’s Top Talent</h2>
-                        <p style="padding-left: 5%;
-                        padding-right: 5%; font-size: 12px;">ork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talenork with The World’s Top Talen</p>
-                        <button style="background-color: transparent;
-                        border: 1px solid rgb(196, 199, 201);
-                       margin-top: 1%;
-                        padding-top: 2%;
-                        padding-bottom: 2%;
-                        padding-left: 10%;
-                        padding-right: 10%;
-                        "  type="button" class="btn btn-outline">Get in touch</button>
-                    </div>
-                </div>
-              
-                <div class="col-md-8" ></div>
-       
+          
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row" style="
+            padding-top: 8%; padding-bottom: 8%; ">
+             <div class="col-md-2" ></div>
+            
+            <div class="col-md-8 contact-box" >
+               
+                <div class="" style="
+                    /* padding-bottom: 2%; */
+                    font-size: 12pt;
+                    text-align: center;
+                    width: 100%;
+                    /* padding-top: 2%;  */
+                    background-color: rgb(38, 63, 34);
+                    color: white;
+                    border-radius: 50px;
+                    padding: 6%;
+                    "
+                    >
+                <h2 style="
+                 padding-top: 2%; 
+                font-size: 2em;
+                ">Work with The World’s Top Talent</h2>
+                    <p style="padding-left: 5%;
+                    padding-right: 5%; font-size: 12px;">
+                    Connect with our global team of experts and growing partner network who will provide the knowledge, tools, and processes for a fully-managed software product build.
+
+                </p>
+                    <a style="background-color: #1B3517;
+                    /* border: 1px solid rgb(196, 199, 201); */
+                   margin-top: 1%;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    "  type="button"  data-toggle="modal" data-target="#exampleModal" class="btn btn-outline">Get in touch</a>
                 </div>
             </div>
+          
+            <div class="col-md-8" ></div>
+   
+            </div>
+        </div>
+
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="margin-top: 5%;    width: 75%;" role="document">
+            <div class="modal-content" style=" 
+            padding: 6%;
+            box-shadow: none;
+            background-color: transparent;
+            border: none;">
+                <!-- <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div> -->
+                <div class="modal-body" style="">
+                    <div class="container-fluid" style=" 
+                    color:grey;
+                    border-radius: 50px;">
+                        <div class="row">
+                          <div class="col-md-4" style="padding: 20px;
+                          border-radius: 25px 0 0px 25px;
+                            background-color: rgb(38, 63, 34);
+                          height: 70%;">
+                          <div style="text-align: center; padding-top: 45%; padding-bottom: 5%;">
+                            <img src="./images/param-banner-2.svg" height="80px"/>
+                            
+                          </div>
+                          <div>
+                            <h4 style="    color:white; font-size: 1.5em;
+                            text-align: center;">Lets get you all set up</h4>
+                            <h4 style="font-size: 12px;
+                            padding-top: 10%;color:white;
+                            text-align: center">We cant wait to hear from you, please complete the form to set up a session.</h4>
+                         </div>
+                          </div>
+                          <div class="col-md-8 ml-auto" style=    "padding: 10%;
+                          background-color: #eee;
+
+
+                          height: 70%;
+                          border-radius: 0px 25px 25px 0px;">
+                            <form style="padding-top: 5%;">
+                                <div class="form-group row" >
+                                
+                                  <div class="col-sm-12">
+                                    <label for="staticEmail" style="    font-weight: 100;width: 100%;
+                                    font-size: 12px;" class="col-sm-2 col-form-label">Full Name</label>
+                                    <input type="text" style="  width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    border-bottom: 1px solid gray;
+                                    "  class="form-control-plaintext" id="staticEmail" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                   
+                                    <div class="col-sm-6">
+                                        <label for="staticEmail" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                        font-size: 12px;">Email</label>
+                                        <input type="text" style="    width: 100%;
+                                        background: transparent;
+                                        border: none;
+                                        border-bottom: 1px solid gray;
+                                        "  class="form-control-plaintext" id="staticEmail" value="">
+                                      </div>
+                                      <div class="col-sm-6  ">
+                                        <label for="staticEmail" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                        font-size: 12px;">Mobile</label>
+                                        <input type="text" style="    width: 100%;
+                                        background: transparent;
+                                        border: none;
+                                        border-bottom: 1px solid gray;
+                                        "  class="form-control-plaintext" id="staticEmail" value="">
+                                      </div>
+                                      
+                                  </div> 
+                                  <div class="form-group row">
+                                  <div class='col-sm-6'>
+                                    <label for="staticEmail" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                    font-size: 12px;">Date</label>
+                                       <div class='input-group date' id='datetimepicker3' style="width:100%">
+                                      
+                                          <input type='date' style="background-color: transparent;
+                                          width: 100%;
+                                          border: 0px;
+                                          font-size: 12px;
+                                          box-shadow: none;
+                                          border-bottom: 1px solid gray;
+                                         " class="form-control" />
+                                        
+                                          </span>
+                                       </div>
+                                   
+                                  </div>
+                                  <div class='col-sm-6'>
+                                    <label for="staticEmail" class="col-sm-2 col-form-label" style="  width:100%;  font-weight: 100;
+                                    font-size: 12px;">Time</label>
+                                    <div class='input-group date' id='datetimepicker3'>
+                                      
+                                       <input type='time' style="background-color: transparent; width: 100%;
+                                       border: 0px;
+                                       width: 100%;
+                                       font-size: 12px;
+                                       box-shadow: none;border-bottom: 1px solid gray;" class="form-control" />
+                                     
+                                       </span>
+                                    </div>
+                                
+                               </div>
+                                  </div>
+                               <div class="form-group row" style="padding-top: 5%;">
+                                  <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Email</label> -->
+                                  <div class="col-sm-12">
+                                    <!-- <div class="col-sm-6  " > -->
+                                        <button type="button" style="background-color: transparent;
+                                        border: 1px solid black;
+                                        padding-left: 10%;
+                                        color:black;
+                                        padding-right: 10%;
+                                        border-radius: 0;
+                                        font-size: 12px;
+                                        margin-top: 5%;" class="btn " data-dismiss="modal">Cancel</button>
+                                        <button type="button" style="background-color: transparent;
+                                        border: 1px solid black;
+                                        color:black;
+                                        padding-left: 10%;
+                                        padding-right: 10%;
+                                        font-size: 12px;
+                                        border-radius: 0;
+                                        margin-top: 5%;" class="btn">Submit</button>
+                                      <!-- </div> -->
+                                  </div>
+                                </div>
+                              </form>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+                <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+            </div>
+        </div>
+        
 
     </main>
     
