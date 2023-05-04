@@ -221,6 +221,24 @@
     .contact-box a{
         color: white;
     }
+    .colorswitch1:hover{
+       background-color:#263F22 ;
+    }
+    .colorswitch1 {
+       background-color: #1B3517;
+       transition: 1s;
+       cursor: pointer;
+       color:white;
+    }
+    .colorswitch2:hover{
+       background-color:#eee ;
+    }
+    .colorswitch2 {
+       background-color:white;
+       transition: 1s;
+       cursor: pointer;
+       color: #1B3517;
+    }
   </style>
   <script>
 
@@ -283,6 +301,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 <li style="padding-left:5%"><a href="contact">Careers</a></li>
                 <li style="padding-left:5%"><a href="blog-1.html">Blog</a></li>
                 <li style="padding-left:5%"><a href="contact">Contact</a></li>
+                
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -298,16 +317,18 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
           margin-bottom: 0px;">
           <div class="" style="  padding-top: 5%;">
               <div class="row" style="">
-            
-                  <div class="col-md-6" style="padding-top:15%;    padding-bottom: 15%; background-color: #263F22;">
-                      <h3 style="font-size: 3em; text-align: center;
-                      ">Teams-as-a-service</h3>
-                  </div>
-                  <div class="col-md-6" style="padding-top:15% ; padding-bottom:  15%; color:#263F22;background-color: white;">
+            <a href="./teams">
+                <div class="col-md-6 colorswitch1" style="padding-top:15%;    padding-bottom: 15%;">
+                    <h3 style="font-size: 3em; text-align: center;
+                    ">Teams-as-a-service</h3>
+                </div>
+            </a>
+            <a href="./staff-augmentation">
+                  <div class="col-md-6 colorswitch2"  style="padding-top:15% ; padding-bottom:  15%; color:#263F22;">
                     <h3 style="font-size: 3em; text-align: center;
                     ">Dev-as-a-service</h3>
                 </div>
-                
+                </a>
                 </div>
             
           </div>
@@ -368,27 +389,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
  
       </div>
          
-       <div class="jumbotron" style=" color:white; padding-right: 5%; padding-left: 5%; margin-bottom: 0px; background-color: #263F22;">
-        <div class="row">
-             <div class="col-md-3">
-                <h2 style="font-size: 4em;">Call To Action</h2>
-             </div> 
-             <div class="col-md-8">
-                <p style="    font-size: 1em;
-                padding-top: 5%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nispraesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-             </div>
-             <div class="col-md-1" style="padding-top: 4%;">
-                <button type="button" role="presentation" style="    background-color: transparent;
-                margin: 2%;
-                border-radius: 35px;
-                padding: 3%;
-                font-size: 30px;
-                width: 66%;
-                color: white;
-                border: 2px solid white;" class="owl-next"><span aria-label="Next">›</span></button>
-             </div> 
-        </div>
-    </div>
+      
         <div class="container">
             <h2 style="
             margin-top: 2%;
