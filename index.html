@@ -40,10 +40,10 @@
   </head>
   <style>
     .card{
-        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: 1s;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
-    background-color: rgb(247, 247, 247);
+    /* background-color: rgb(247, 247, 247); */
     }
 
 
@@ -221,6 +221,34 @@
     .contact-box a{
         color: white;
     }
+
+
+    .hoverdarkcontainer:hover{
+        background-color: #F8F8F8 ;
+    }
+    .hoverdarkcontainer{
+        
+        background-color: #E0E0E0;
+        transition: 2s;
+        
+    }
+    .hoverdarkcontainer:hover .card{
+        background-color: #F8F8F8 ;
+    }
+
+    .hoverlightcontainer:hover{
+        
+        background-color: #E0E0E0;
+    }
+    .hoverlightcontainer{
+        background-color: #F8F8F8 ;
+        transition: 2s;
+        
+    }
+
+    .hoverdarkcontainer:hover .card{
+        background-color: #E0E0E0 ;
+    }
   </style>
   <script>
 
@@ -321,16 +349,16 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
             </div>
             </div>
           </div>
- <div class="jumbotron" style="padding-right: 5%; padding-left: 5%; margin-bottom: 0px;">
-    <div class="row">
-         <div class="col-md-3">
-            <h2 style="font-size: 4em;">Partners</h2>
-         </div> 
-         <div class="col-md-9">
-            <img src="./images/partnersbar.svg" alt="">
-         </div>
-    </div>
-</div>
+            <div class="jumbotron" style="padding-right: 5%; padding-left: 5%; margin-bottom: 0px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2 style="font-size: 4em;">Partners</h2>
+                    </div> 
+                    <div class="col-md-9">
+                        <img src="./images/partnersbar.svg" alt="">
+                    </div>
+                </div>
+            </div>
         <div class="jumbotron" style="padding-right: 15%; padding-left: 15%; margin-bottom: 0px;    background-color: #F7F7F7;;">
             <!-- Example row of columns -->
             <div class="row">
@@ -388,7 +416,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
           
         <!-- </div> -->
     
-          <div style="padding-left: 10%; padding-top: 10%;
+          <div class="hoverdarkcontainer" style="padding-left: 10%; padding-top: 10%;
           padding-bottom: 10%; ">
             <!-- Example row of columns -->
             <div class="row">
@@ -401,17 +429,16 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 <div class="owl-carousel owl-1" style="color: rgba(38, 63, 34, 1);
                 ">
                     <div class="media-29101">
-                        <div class="col-md-12 ">
-                            <div class="card" style="     padding-top: 15%;
+                        <div class="col-md-12 hoverdark">
+                            <div class="card " style="     padding-top: 15%;
                           
                             padding-bottom: 35%;
                             margin-bottom: 2%;
                             padding-left: 5%;
                             border-radius: 56px;
                             padding-right: 5%;
-                            background-color: rgba(255, 255, 255, 0.2);
-                            color: black;
-                            border: 2px solid black;">
+                            
+                            color: black;">
                                 <h4 style="
                                     padding-top: 15%;
                                     padding-left: 20%;
@@ -429,16 +456,15 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     
                     </div>
                     <div class="media-29101">
-                        <div class="col-md-12">
+                        <div class="col-md-12 hoverdark">
                             <div class="card" style="     padding-top: 15%;
-                            background-color: rgba(255, 255, 255, 0.2);
+                          
                             padding-bottom: 35%;
                             margin-bottom: 2%;
                             padding-left: 5%;
                             border-radius: 56px;
                             padding-right: 5%;
-                            color: black;
-                            border: 2px solid black;">
+                            color: black;">
                                 <h4 style="
                                      padding-top: 15%;
                                     padding-left: 20%;
@@ -457,16 +483,15 @@ Hiring employees can come with a lot of expenses. With our resource augmentation
                         </div>
                     </div>
                     <div class="media-29101">
-                        <div class="col-md-12 ">
+                        <div class="col-md-12 hoverdark">
                             <div class="card" style="     padding-top: 15%;
-                            background-color: rgba(255, 255, 255, 0.2);
+                           
                             padding-bottom: 35%;
                             margin-bottom: 2%;
                             padding-left: 5%;
                             border-radius: 56px;
                             padding-right: 5%;
-                            color: black;
-                            border: 2px solid black;">
+                            color: black;">
                                 <h4 style="
                                      padding-top: 15%;
                                     padding-left: 20%;
@@ -494,8 +519,7 @@ Struggling to find developers locally? We remove distance as an obstacle and con
                             padding-left: 5%;
                             border-radius: 56px;
                             padding-right: 5%;
-                            color: black;
-                            border: 2px solid black;">
+                            color: black;">
                                 <h4 style="
                                     padding-top: 15%;
                                     padding-left: 20%;
@@ -521,8 +545,7 @@ Struggling to find developers locally? We remove distance as an obstacle and con
                             padding-left: 5%;
                             border-radius: 56px;
                             padding-right: 5%;
-                            color: black;
-                            border: 2px solid black;">
+                            color: black;">
                                 <h4 style="
                                      padding-top: 15%;
                                     padding-left: 20%;
@@ -540,34 +563,7 @@ Hiring employees can come with a lot of expenses. With our resource augmentation
                             </div>
                         </div>
                     </div>
-                    <div class="media-29101">
-                        <div class="col-md-12 ">
-                            <div class="card" style=" padding-top: 15%;
-                            background-color: rgba(255, 255, 255, 0.2);
-                          
-                            padding-bottom: 35%;
-                            margin-bottom: 2%;
-                            padding-left: 5%;
-                            border-radius: 56px;
-                            padding-right: 5%;">
-                                <h4 style="
-                                     padding-top: 15%;
-                                    padding-left: 20%;
-                                    padding-right: 20%;
-                                    text-align: center;
-                                    font-weight: bold;
-                                    font-size: 13px;
-                                    ">EXPAND YOUR TALENT POOL</h4>
-                                <p style="
-                                padding: 5%;
-                                text-align: center;
-                            " >
-
-Struggling to find developers locally? We remove distance as an obstacle and connect you with the best talent from around the world. Collaborate with brilliant individuals wherever you are.
-<br/><br/></p>
-                            </div>
-                        </div>
-                    </div>
+                
                     <!-- <div class="media-29101">
                         <div class="col-md-12 ">
                             <div class="card" style="padding-top: 5%;
@@ -661,7 +657,6 @@ Struggling to find developers locally? We remove distance as an obstacle and con
 
           <div class="" style="    background-color: #F7F7F7;   padding-left: 5%;
           padding-top: 5%;
-          padding-bottom: 5%;
           ;">
             <!-- Example row of columns -->
             <div class="row">
@@ -669,7 +664,7 @@ Struggling to find developers locally? We remove distance as an obstacle and con
             
             <div class="col-md-4" >
                 <h2 style="
-                padding-top: 50%;
+                padding-top: 20%;
                 padding-right: 15%;
                 text-align: left; 
                 font-size: 4em;
@@ -696,8 +691,9 @@ Struggling to find developers locally? We remove distance as an obstacle and con
                 </div>
             </div>
             </div>
-            <div class="col-md-6">
-                <img style="" src="./images/people-3.svg" alt="Image" />
+            <div class="col-md-6" style="margin-bottom: -11%;">
+                <img style="width: 120%;
+                margin-top: -25%;" src="./images/people-3.svg" alt="Image" />
             </div>
             </div>
    
@@ -707,7 +703,7 @@ Struggling to find developers locally? We remove distance as an obstacle and con
 
     
         <!-- Top content -->
-        <div style="background-color: #E9EBE9;    margin-bottom: 0;
+        <div style="background-color: #E9EBE9;    margin-bottom: 0;margin-top: -10px;
         " class ="jumbotron owl-2-style">
             <h2 style="
             padding-top: 1%;
@@ -738,7 +734,7 @@ Struggling to find developers locally? We remove distance as an obstacle and con
             </div>
         </div>
 
-        <div class="jumbotron" style=" background-color: #F7F7F7;
+        <div class="jumbotron hoverdarkcontainer" style="
         padding: 5%;
         ">     <h2 style="
        
@@ -750,14 +746,13 @@ Struggling to find developers locally? We remove distance as an obstacle and con
             ">Related services</h2>
             <!-- Example row of columns -->
             <div class="row" style="padding-top: 5%; ">
-              <div class="col-md-4 ">
-                <div class="card" style="
+              <div class="col-md-4 hoverlight">
+                <div class="card " style="
                     margin-left: 5%;
                     border-radius: 50px;
                     margin-right: 5%;
-                    background-color: rgba(255, 255, 255, 0.2);
+                 
                             color: black;
-                            border: 2px solid black;
                             margin-bottom: 2%;"            
                     >
                     <h4 style="
@@ -778,14 +773,13 @@ Struggling to find developers locally? We remove distance as an obstacle and con
                     </p>
                 </div>
             </div>
-              <div class="col-md-4">
-                <div class="card"style="
+              <div class="col-md-4 hoverlight">
+                <div class="card "style="
                     margin-left: 5%;
                     border-radius: 50px;
                     margin-right: 5%;
-                    background-color: rgba(255, 255, 255, 0.2);
-                            color: black;
-                            border: 2px solid black; margin-bottom: 2%;"   
+                
+                            color: black;"   
                     >
                     <h4 style="
                         padding-top: 15%;
@@ -805,14 +799,12 @@ Struggling to find developers locally? We remove distance as an obstacle and con
                      </p>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 hoverlight">
                 <div class="card"style="
                    margin-left: 5%;
                     border-radius: 50px;
                     margin-right: 5%;
-                    background-color: rgba(255, 255, 255, 0.2);
                             color: black;
-                            border: 2px solid black; margin-bottom: 2%;
                     ">
                     <h4 style="
                         padding-top: 15%;
@@ -946,7 +938,7 @@ Struggling to find developers locally? We remove distance as an obstacle and con
    
         </div>
 
-        <div class="jumbotron" style="background-color: #DEDEDE;">
+        <div class="jumbotron hoverlightcontainer" style="">
             <div class="container">
                 <h2 style="
             
