@@ -110,7 +110,7 @@ if ( $('.owl-4').length > 0 ) {
               margin: 20,
               stagePadding: 0,
               nav: true,
-            items: 3
+            items: 2.5
           }
       }
   });            
