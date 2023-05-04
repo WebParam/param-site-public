@@ -33,7 +33,7 @@ $(function() {
       $('.owl-1').owlCarousel({
           center: false,
           items: 1.5,
-          loop: false,
+          loop: true,
           stagePadding: 0,
           margin: 20,
           smartSpeed: 1000,
@@ -52,7 +52,7 @@ $(function() {
                   margin: 20,
                   stagePadding: 0,
                   nav: true,
-                items: 3
+                items: 2.5
               }
           }
       });            
