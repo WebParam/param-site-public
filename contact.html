@@ -343,13 +343,13 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
               padding: 1%;
               padding-left: 5%;">
                 <li style="padding-left:5%; " ><a href="/">Home</a></li>
-                <li style="padding-left:5%" class="active"   ><a href="about">About</a></li>
+                <li style="padding-left:5%"   ><a href="about">About</a></li>
                 
                 <li style="padding-left:5%"><a href="staff-augmentation">Augmentation</a></li>
-                <li style="padding-left:5%"><a href="#contact">Teams</a></li>
-                <li style="padding-left:5%"><a href="#contact">Devs</a></li>
-                <li style="padding-left:5%"><a href="#contact">Blog</a></li>
-                <li style="padding-left:5%"><a href="#contact">Contact</a></li>
+                <li style="padding-left:5%"><a href="teams">Teams</a></li>
+                <li style="padding-left:5%"><a href="career">Career</a></li>
+                <li style="padding-left:5%"><a href="blog-1">Blog</a></li>
+                <li style="padding-left:5%" class="active" ><a href="contact">Contact</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -407,7 +407,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     border: none;
                     border-bottom: 2px solid black;
                     padding: 2%;
-                    "  class="form-control-plaintext" id="staticEmail" value="">
+                    "  class="form-control-plaintext" name="name" id="name" value="">
                   </div>
                   <div class="col-sm-6  ">
                     <label for="staticEmail" class=" col-form-label" style=" padding-top:5%;   font-weight: bold;
@@ -417,7 +417,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     border: none;
                     border-bottom: 2px solid black;
                     padding: 2%;
-                    "  class="form-control-plaintext" id="staticEmail" value="">
+                    "  class="form-control-plaintext"name="email" id="email" value="">
                   </div>
             </div>
             <div class="form-group row">
@@ -430,7 +430,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     border: none;
                     border-bottom: 2px solid black;
                     padding: 2%;
-                    "  class="form-control-plaintext" id="staticEmail" value="">
+                    "  class="form-control-plaintext" name="interest" id="interest" value="">
                   </div>
                   <div class="col-sm-6  ">
                     <label for="staticEmail" class="col-form-label" style="padding-top:5%;    font-weight: bold;
@@ -440,15 +440,15 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     border: none;
                     border-bottom: 2px solid black;
                     padding: 2%;
-                    "  class="form-control-plaintext" id="staticEmail" value="">
+                    "  class="form-control-plaintext" name="phone" id="phone" value="">
                   </div>
                   
               </div> 
               <div class="form-group row">
               <div class='col-sm-12'>
-                <label for="staticEmail" class=" col-form-label" style="padding-top:5%;    font-weight: bold;
+                <label for="message" class=" col-form-label" style="padding-top:5%;    font-weight: bold;
                 font-size: 12px;">Message</label>
-                   <div class='input-group date' id='datetimepicker3' style="width:100%">
+                   <div class='input-group date'  id='datetimepicker3' style="width:100%">
                   
                       <textarea rows="7" style="background-color: transparent;
                       width: 100%;
@@ -456,8 +456,9 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                       font-size: 12px;
                       box-shadow: none;
                       border-bottom: 2px solid black;
+                      
                     padding: 2%;
-                     " class="form-control"> </textarea>
+                     " class="form-control" name="message" id="message"> </textarea>
                     
                       </span>
                    </div>
@@ -470,7 +471,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
               <div class="col-sm-12">
                 <!-- <div class="col-sm-6  " > -->
               
-                    <button type="button" style="background-color: transparent;
+                    <input type="submit" style="background-color: transparent;
                     border: 1px solid black;
                     color:black;
                     padding-left: 10%;
@@ -478,7 +479,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                     font-size: 12px;
                     float: right;
                     border-radius: 0;
-                    margin-top: 5%;" class="btn">Submit</button>
+                    margin-top: 5%;" class="btn"/>
                   <!-- </div> -->
               </div>
             </div>
