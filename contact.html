@@ -272,6 +272,51 @@ section {
             }
         });
     </script>
+    <script>
+        $('#myForm').submit(function(event) {
+  event.preventDefault();
+
+  var emailData = {
+    "personalizations": [
+      {
+        "to": [
+          {
+            "email": "recipient@example.com"
+          }
+        ]
+      }
+    ],
+    "from": {
+      "email": "sender@example.com"
+    },
+    "subject": "My Email Subject",
+    "content": [
+      {
+        "type": "text/plain",
+        "value": "My email content"
+      }
+    ]
+  };
+
+  $.ajax({
+    type: 'POST',
+    url: 'https://api.sendgrid.com/v3/mail/send',
+    headers: {
+      'Authorization': 'Bearer ' + 'YOUR_SENDGRID_API_KEY'
+    },
+    contentType: 'application/json',
+    data: JSON.stringify(emailData),
+    success: function(response) {
+      console.log(response);
+      alert('Email sent successfully!');
+    },
+    error: function(error) {
+      console.log(error);
+      alert('Error sending email.');
+    }
+  });
+});
+    </script>
      <body style="width:100%; overflow-x: hidden;  background-color: white;">
    
         <nav class="navbar navbar-default navbar-fixed-top" style="width:100%;   background: white;
@@ -351,7 +396,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
          <h4>Send a message</h4>
          <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet d</p>
 
-         <form style="padding-top: 5%;">
+         <form action="https://public.herotofu.com/v1/b9944060-eabe-11ed-9ea5-6d659508bc55" method="post" accept-charset="UTF-8" style="padding-top: 5%;">
             <div class="form-group row" >
             
                 <div class="col-sm-6">
