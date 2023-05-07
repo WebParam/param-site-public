@@ -115,6 +115,34 @@ if ( $('.owl-4').length > 0 ) {
       }
   });            
 }
+if ( $('.owl-5').length > 0 ) {
+  $('.owl-5').owlCarousel({
+      center: false,
+      items: 1,
+      loop: true,
+      stagePadding: 0,
+      margin: 20,
+      smartSpeed: 1000,
+      autoplay: false,
+      nav: true,
+      dots: true,
+      navContainer: '#owl-nav5',
+      pauseOnHover: false,
+      responsive:{
+          600:{
+              margin: 20,
+              nav: true,
+            items: 2
+          },
+          1000:{
+              margin: 20,
+              stagePadding: 0,
+              nav: true,
+            items: 2.5
+          }
+      }
+  });            
+}
 
 
     
