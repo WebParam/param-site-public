@@ -291,13 +291,15 @@
                 <div class="row" style="background-image: url(./images/param-banner.svg);background-repeat: no-repeat;">
               
                     <div class="col-md-6" style="padding-top:15%">
-                        <h3 style="font-size: 3em; text-align: right;
+                        <h3 class="hidden-xs" style="font-size: 3em; text-align: right;
                         font-weight: bold;">Dev-as-service</h3>
+                         <h3 class="visible-xs" style="font-size: 3em; text-align: center;
+                         font-weight: bold;">Dev-as-service</h3>
                     </div>
                     <div class="col-md-6 ghost-dark " style="padding-top: 10%;
                     padding-bottom: 15%;
                    ">
-                     <p style=" font-size: 15pt;"> Our developer as a service offering allows businesses across the world to connect with the top 10% of IT engineers across Africa. Our database of over 1000 developers means we have the expertise to help you achieve your business goals, no matter your industry. Whether you need support with software development, quality assurance, or project management, we've got you covered. Partner with us and access top-notch talent that'll take your business to new heights!
+                     <p style=" font-size: 1.5em; font-weight: 200;"> Our developer as a service offering allows businesses across the world to connect with the top 10% of IT engineers across Africa. Our database of over 1000 developers means we have the expertise to help you achieve your business goals, no matter your industry. <br/><br/>Whether you need support with software development, quality assurance, or project management, we've got you covered. Partner with us and access top-notch talent that'll take your business to new heights!
                     </p>
                   
                      
@@ -327,7 +329,19 @@
                 border-radius: 0px;
                 border: none;
                 " 
-                class="btn btn-outline-light">Schedule a session</a>
+                class="hidden-xs btn btn-outline-light">Schedule a session</a>
+                <a  type="button" data-toggle="modal" data-target="#exampleModal" style="
+                padding-left: 5%;
+                padding-right: 5%;
+                padding-top: 3%;
+                width: 100%;
+                padding-bottom: 3%;
+                color: white;
+                margin-top: 15px;
+                border-radius: 0px;
+                border: none;
+                " 
+                class="visible-xs btn btn-outline-light">Schedule a session</a>
                     </div>
                   
                   </div>
@@ -597,6 +611,7 @@
 
     
   </div>
+
   <div class="" style="    background-color: #F7F7F7;   padding-left: 5%;
   padding-top: 5%;
   ;">
@@ -605,14 +620,23 @@
     
     
     <div class="col-md-4" >
-        <h2 style="
+        <h2 class="hidden-xs" style="
         padding-top: 20%;
         padding-right: 15%;
         text-align: left; 
         font-size: 4em;
+        font-weight: 200;
         ">Skills We 
             Have Available</h2>
-       <div style="  margin-top: 8%;
+            <h2 class="visible-xs" style="
+            padding-top: 20%;
+            padding-right: 15%;
+            text-align: left; 
+            font-size: 3em;
+            font-weight: 200;
+            ">Skills We 
+                Have Available</h2>
+       <div class="container hidden-xs"  style="  margin-top: 8%;
        /* border-left: 3px solid black; */
        padding-bottom: 60%;
        background-position-y: -60%;
@@ -633,9 +657,13 @@
         </div>
     </div>
     </div>
-    <div class="col-md-6" style="margin-bottom: -11%;">
+    <div class="col-md-6 hidden-xs" style="margin-bottom: -11%;">
         <img style="width: 120%;
         margin-top: -25%;" src="./images/people-3.svg" alt="Image" />
+    </div>
+    <div class="col-md-6 visible-xs" style="padding-left: 0;">
+        <img style="width: 100%;
+            " src="./images/people-3.svg" alt="Image" />
     </div>
     </div>
 
@@ -643,40 +671,36 @@
 
 
 
-
-        <!-- Top content -->
-        <div class="jumbotron owl-2-style" style=" background-color: white;">
-            <h2 style="
-            padding-top: 1%;
-            padding-bottom: 2%;
-            font-size: 4em;
-            text-align: center; 
+<div style="background-color: #E9EBE9;    margin-bottom: 0;margin-top: -10px;
+" class ="jumbotron owl-2-style">
+    <h2 style="
+    padding-top: 1%;
+    padding-bottom: 2%;
+    font-size: 3em;font-weight: 200;
+    text-align: center; 
+    ">Companies we worked with</h2>
+    <div class="owl-carousel owl-2">
+        <div class="media-29101">
+            <a href="#"><img  height="10%" src="./images/stb.svg" alt="Image" class="img-fluid"></a>
            
-            
-            ">Companies we worked with</h2>
-            <div class="owl-carousel owl-2">
-                <div class="media-29101">
-                    <a href="#"><img  height="10%" src="./images/stb.svg" alt="Image" class="img-fluid"></a>
-                   
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"  src="./images/discovery.svg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"   src="./images/mtn.svg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"   src="./images/stb.svg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="media-29101">
-                    <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
-                </div>
-            </div>
         </div>
-
+        <div class="media-29101">
+            <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"  src="./images/discovery.svg" alt="Image" class="img-fluid"></a>
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"   src="./images/mtn.svg" alt="Image" class="img-fluid"></a>
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"   src="./images/stb.svg" alt="Image" class="img-fluid"></a>
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+        </div>
+    </div>
+</div>
      
      
         <div class="container">
