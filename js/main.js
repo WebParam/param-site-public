@@ -32,7 +32,7 @@ $(function() {
     if ( $('.owl-1').length > 0 ) {
       $('.owl-1').owlCarousel({
           center: false,
-          items: 1.5,
+          items: 1,
           loop: true,
           stagePadding: 0,
           margin: 20,
@@ -46,7 +46,7 @@ $(function() {
               600:{
                   margin: 20,
                   nav: true,
-                items: 2
+                items: 1
               },
               1000:{
                   margin: 20,
