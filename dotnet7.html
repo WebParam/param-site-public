@@ -485,7 +485,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" style="margin-top: 5%;    width: 75%;" role="document">
+            <div class="modal-dialog" style="margin-top: 5%; width: 75%;" role="document">
             <div class="modal-content" style=" 
             padding: 6%;
             box-shadow: none;
@@ -498,7 +498,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 </button>
                 </div> -->
                 <div class="modal-body" style="">
-                    <div class="container-fluid" style=" 
+                    <div class="container-fluid hidden-xs" style=" 
                     color:grey;
                     border-radius: 50px;">
                         <div class="row">
@@ -524,48 +524,48 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
 
                           height: 70%;
                           border-radius: 0px 25px 25px 0px;">
-                            <form style="padding-top: 5%;">
+                            <form  action="https://public.herotofu.com/v1/b9944060-eabe-11ed-9ea5-6d659508bc55" method="post" accept-charset="UTF-8" style="padding-top: 5%;">
                                 <div class="form-group row" >
                                 
                                   <div class="col-sm-12">
-                                    <label for="staticEmail" style="    font-weight: 100;width: 100%;
+                                    <label for="fullname" style="    font-weight: 100;width: 100%;
                                     font-size: 12px;" class="col-sm-2 col-form-label">Full Name</label>
-                                    <input type="text" style="  width: 100%;
+                                    <input type="text" name="fullname" style="  width: 100%;
                                     background: transparent;
                                     border: none;
                                     border-bottom: 1px solid gray;
-                                    "  class="form-control-plaintext" id="staticEmail" value="">
+                                    "  class="form-control-plaintext" id="fullname" value="">
                                   </div>
                                 </div>
                                 <div class="form-group row">
                                    
                                     <div class="col-sm-6">
-                                        <label for="staticEmail" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                        <label for="email" class="col-sm-2 col-form-label" style="    font-weight: 100;
                                         font-size: 12px;">Email</label>
                                         <input type="text" style="    width: 100%;
                                         background: transparent;
                                         border: none;
                                         border-bottom: 1px solid gray;
-                                        "  class="form-control-plaintext" id="staticEmail" value="">
+                                        "  class="form-control-plaintext" name="email" id="email" value="">
                                       </div>
                                       <div class="col-sm-6  ">
-                                        <label for="staticEmail" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                        <label for="mobile" class="col-sm-2 col-form-label" style="    font-weight: 100;
                                         font-size: 12px;">Mobile</label>
-                                        <input type="text" style="    width: 100%;
+                                        <input type="text" name="mobile" style="    width: 100%;
                                         background: transparent;
                                         border: none;
                                         border-bottom: 1px solid gray;
-                                        "  class="form-control-plaintext" id="staticEmail" value="">
+                                        "  class="form-control-plaintext" id="mobile" value="">
                                       </div>
                                       
                                   </div> 
                                   <div class="form-group row">
                                   <div class='col-sm-6'>
-                                    <label for="staticEmail" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                    <label for="date" class="col-sm-2 col-form-label" style="    font-weight: 100;
                                     font-size: 12px;">Date</label>
                                        <div class='input-group date' id='datetimepicker3' style="width:100%">
                                       
-                                          <input type='date' style="background-color: transparent;
+                                          <input type='date' name="date" style="background-color: transparent;
                                           width: 100%;
                                           border: 0px;
                                           font-size: 12px;
@@ -578,11 +578,11 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                                    
                                   </div>
                                   <div class='col-sm-6'>
-                                    <label for="staticEmail" class="col-sm-2 col-form-label" style="  width:100%;  font-weight: 100;
+                                    <label for="time" class="col-sm-2 col-form-label" style="  width:100%;  font-weight: 100;
                                     font-size: 12px;">Time</label>
                                     <div class='input-group date' id='datetimepicker3'>
                                       
-                                       <input type='time' style="background-color: transparent; width: 100%;
+                                       <input type='time' name="time" style="background-color: transparent; width: 100%;
                                        border: 0px;
                                        width: 100%;
                                        font-size: 12px;
@@ -605,7 +605,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                                         border-radius: 0;
                                         font-size: 12px;
                                         margin-top: 5%;" class="btn " data-dismiss="modal">Cancel</button>
-                                        <button type="button" style="background-color: transparent;
+                                        <button type="submit" style="background-color: transparent;
                                         border: 1px solid black;
                                         color:black;
                                         padding-left: 10%;
@@ -620,6 +620,130 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                         </div>
                         </div>
                       </div>
+
+
+                      <div class="container-fluid visible-xs" style=" 
+                      color:grey;
+                      border-radius: 50px;">
+                          <div class="row">
+                            <div class="col-md-12" style="padding: 20px;
+                           
+                              background-color: rgb(38, 63, 34);
+                            height: 30%;">
+                            <div style="text-align: center; padding-top: 45%; padding-bottom: 5%;">
+                              <img src="./images/param-banner-2.svg" height="80px"/>
+                              
+                            </div>
+                            <div>
+                              <h4 style="    color:white; font-size: 1.5em;
+                              text-align: center;">Lets get you all set up</h4>
+                              <h4 style="font-size: 12px;
+                              padding-top: 10%;color:white;
+                              text-align: center">We cant wait to hear from you, please complete the form to set up a session.</h4>
+                           </div>
+                            </div>
+                            <div class="col-md-12 ml-auto" style=    "padding: 10%;
+                            background-color: #eee;
+  
+  
+                            height: 50%;">
+                              <form  action="https://public.herotofu.com/v1/b9944060-eabe-11ed-9ea5-6d659508bc55" method="post" accept-charset="UTF-8" style="padding-top: 5%;">
+                                  <div class="form-group row" >
+                                  
+                                    <div class="col-sm-12">
+                                      <label for="fullname" style="    font-weight: 100;width: 100%;
+                                      font-size: 12px;" class="col-sm-2 col-form-label">Full Name</label>
+                                      <input type="text" name="fullname" style="  width: 100%;
+                                      background: transparent;
+                                      border: none;
+                                      border-bottom: 1px solid gray;
+                                      "  class="form-control-plaintext" id="fullname" value="">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                     
+                                      <div class="col-sm-6">
+                                          <label for="email" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                          font-size: 12px;">Email</label>
+                                          <input type="text" style="    width: 100%;
+                                          background: transparent;
+                                          border: none;
+                                          border-bottom: 1px solid gray;
+                                          "  class="form-control-plaintext" name="email" id="email" value="">
+                                        </div>
+                                        <div class="col-sm-6  ">
+                                          <label for="mobile" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                          font-size: 12px;">Mobile</label>
+                                          <input type="text" name="mobile" style="    width: 100%;
+                                          background: transparent;
+                                          border: none;
+                                          border-bottom: 1px solid gray;
+                                          "  class="form-control-plaintext" id="mobile" value="">
+                                        </div>
+                                        
+                                    </div> 
+                                    <div class="form-group row">
+                                    <div class='col-sm-6'>
+                                      <label for="date" class="col-sm-2 col-form-label" style="    font-weight: 100;
+                                      font-size: 12px;">Date</label>
+                                         <div class='input-group date' id='datetimepicker3' style="width:100%">
+                                        
+                                            <input type='date' name="date" style="background-color: transparent;
+                                            width: 100%;
+                                            border: 0px;
+                                            font-size: 12px;
+                                            box-shadow: none;
+                                            border-bottom: 1px solid gray;
+                                           " class="form-control" />
+                                          
+                                            </span>
+                                         </div>
+                                     
+                                    </div>
+                                    <div class='col-sm-6'>
+                                      <label for="time" class="col-sm-2 col-form-label" style="  width:100%;  font-weight: 100;
+                                      font-size: 12px;">Time</label>
+                                      <div class='input-group date' id='datetimepicker3'>
+                                        
+                                         <input type='time' name="time" style="background-color: transparent; width: 100%;
+                                         border: 0px;
+                                         width: 100%;
+                                         font-size: 12px;
+                                         box-shadow: none;border-bottom: 1px solid gray;" class="form-control" />
+                                       
+                                         </span>
+                                      </div>
+                                  
+                                 </div>
+                                    </div>
+                                 <div class="form-group row" style="padding-top: 5%;">
+                                    <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Email</label> -->
+                                    <div class="col-sm-12">
+                                      <!-- <div class="col-sm-6  " > -->
+                                          <button type="button" style="background-color: transparent;
+                                          border: 1px solid black;
+                                          padding-left: 10%;
+                                          color:black;
+                                          padding-right: 10%;
+                                          border-radius: 0;
+                                          font-size: 12px;
+                                          margin-top: 5%;" class="btn " data-dismiss="modal">Cancel</button>
+                                          <button type="submit" style="background-color: transparent;
+                                          border: 1px solid black;
+                                          color:black;
+                                          padding-left: 10%;
+                                          padding-right: 10%;
+                                          font-size: 12px;
+                                          border-radius: 0;
+                                          margin-top: 5%;" class="btn" >Submit</button>
+                                        <!-- </div> -->
+                                    </div>
+                                  </div>
+                                </form>
+                          </div>
+                          </div>
+                        </div>
+
                 </div>
                 <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -627,6 +751,10 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 </div> -->
             </div>
             </div>
+
+
+
+            
         </div>
         
 
