@@ -318,8 +318,8 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 
                     <div class="row" style="">
                         <h4 style="color: rgb(38, 63, 34);
-                        font-weight: bold;
-                        font-size: 1.2em;">Recent Articles (4)</h4>
+                        font-weight: 200;
+                        font-size: 2em;">Recent Articles</h4>
                   
                   <div id="wp-container"></div>
                   
@@ -459,7 +459,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
             return srcs;
             }
             var id = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
-
+debugger;
             function mapEntry(entry){
                 return `
                 <a href="blog-entry#${entry.id}" style="text-decoration: none; color: inherit;">
@@ -476,7 +476,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                                  padding-bottom: 0px;
                                  font-size: 10pt;
 
-                                 "> ${entry.title.rendered}<br/><br/></h2>
+                                 "> ${entry.title.rendered.substring(0,40)}${entry.title.rendered.length>40?`...`:``}<br/><br/></h2>
                                 <p style="
                                 padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
         
@@ -494,40 +494,6 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 var entries = data.body.map(x=> mapEntry(x))
                 debugger;
                 $('#wp-container').html(entries.join(''))
-            //      console.log("Data: " +  data.body );
-            //    var nohtml = data.body.content.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '');
-            //     var heading = data.body.title.rendered;
-            //     var author = data.body.author.name;
-            //     var date = data.body.date;
-
-                //write a js function to get the image src from raw html input
-                
-
-
-                
-            //     var image = data.body.jetpack_featured_media_url;
-            //    var allImages = getAllImageSrcs(data.body.content.rendered);
-            //     var content1 = nohtml.split(".").slice(0, 2).join(".");
-            //     var content2 = nohtml.split(".").slice(2, 5).join(".");
-            //     var content3 = nohtml.split(".").slice(5, 7).join(".");
-            //     var content4 = nohtml.split(".").slice(7, 10).join(".");
-            //     var content5 = nohtml.split(".").slice(10, 15).join(".");
-            //     var content6 = nohtml.split(".").slice(15, 20).join(".");
-
-            //     $("#wp-output-1").html(content1);
-            //     $("#wp-output-2").html(content2);
-
-            //     $("#wp-output-3").html(content3);
-            //     $("#wp-output-4").html(content4);
-            //     $("#wp-output-5").html(content5);
-            //     $("#wp-output-6").html(content6);  
-            //     $("#wp-heading").html(heading);
-            //     $("#wp-image").css('background-image', 'url(' + image + ')');
-            //     $("#wp-image1").css('background-image', 'url(' + allImages[0] + ')');
-            //     $("#wp-image2").css('background-image', 'url(' + allImages[1] + ')');
-            //     // $("#wp-author").html(author);
-            //     $("#wp-date").html(date);
-
             });
         
                
