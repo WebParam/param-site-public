@@ -444,7 +444,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
     
         </main>
     
-    <footer  class="jumbotron" style="color: black;">
+    <footer  class="jumbotron" style="background-color: rgb(38, 63, 34); color:white">
            
    
         <!-- Example row of columns -->
@@ -465,41 +465,41 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
             </div>
           <div class="col-md-3 " >
             <div class="" style="
-                color: black;   padding-top: 10%;
+                color: white;   padding-top: 10%;
                 ">
                 
-                <ul style="list-style: none; color: black;">
+                <ul style="list-style: none; color: white;">
                     <li><h4 style="padding-top: 10%;">Useful links</h4></li>
-                    <li style="padding-top: 5%;"><a style="color: black;" href="/">Home</a></li>
-                    <li style="padding-top: 5%;"><a style="color: black;" href="services">Services</a></li>
-                    <li style="padding-top: 5%;"><a style="color: black;" href="staff-augmentation">Staff augmentation</a></li>                            
-                    <li style="padding-top: 5%;"><a style="color: black;" href="teams">Teams</a></li>
-                    <li style="padding-top: 5%;"><a style="color: black;" href="blogs">Blog</a></li>
-                    <li style="padding-top: 5%;"><a style="color: black;" href="careers">Careers</a></li>
-                    <li style="padding-top: 5%;"><a style="color: black;" href="contact">Contact us</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white" href="/">Home</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white" href="services">Services</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white" href="staff-augmentation">Staff augmentation</a></li>                            
+                    <li style="padding-top: 5%;"><a style="color: white" href="teams">Teams</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white" href="blogs">Blog</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white" href="careers">Careers</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white" href="contact">Contact us</a></li>
                     </ul>
             </div>
         </div>
           <div class="col-md-3" style="
-          color: black;">
+          color: white;">
             <div class="" style="
-            color: black;     padding-top: 10%;
+            color: white;     padding-top: 10%;
             ">
             
-            <ul style="list-style: none; color: black;">
-                <li><h4 style="padding-top: 10%;"><a style="color: black;" href="/">Our services</a></h4></li>
-                <li style="padding-top: 5%;"><a style="color: black;" href="services">Business Analysts</a></li>
-                <li style="padding-top: 5%;"><a style="color: black;" href="services">Software Developers</a></li>
-                <li style="padding-top: 5%;"><a style="color: black;" href="services">Project Managers</a></li>
-                <li style="padding-top: 5%;"><a style="color: black;" href="services">DevOps Engineers</a></li>
-                <li style="padding-top: 5%;"><a style="color: black;" href="services">QA Engineers</a></li>
+            <ul style="list-style: none; color: white;">
+                <li><h4 style="padding-top: 10%;"><a style="color: white;" href="/">Our services</a></h4></li>
+                <li style="padding-top: 5%;"><a style="color: white;" href="services">Business Analysts</a></li>
+                <li style="padding-top: 5%;"><a style="color: white;" href="services">Software Developers</a></li>
+                <li style="padding-top: 5%;"><a style="color: white;" href="services">Project Managers</a></li>
+                <li style="padding-top: 5%;"><a style="color: white;" href="services">DevOps Engineers</a></li>
+                <li style="padding-top: 5%;"><a style="color: white;" href="services">QA Engineers</a></li>
                 </ul>
         </div>
           </div>
           <div class="col-md-3" style="
-          color: black;">
+          color: white;">
             <div class="" style="
-            color: black;    padding-top: 10%;
+            color: white;    padding-top: 10%;
             ">
             
             <ul style="list-style: none;">
@@ -589,7 +589,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                                  padding-bottom: 0px;
                                  font-size: 10pt;
 
-                                 "> ${entry.slug}<br/><br/></h2>
+                                 "> ${entry.title.rendered}<br/><br/></h2>
                                 <p style="
                                 padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
         
@@ -602,7 +602,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 </a>`
             }
 
-            $.get(`https://public-api.wordpress.com/wp/v2/sites/paramgeekulcha.wordpress.com/posts?_envelope=1`, function(data, status){
+            $.get(`https://public-api.wordpress.com/wp/v2/sites/paramsolutionsblog.wordpress.com/posts?_envelope=1`, function(data, status){
                
                 var entries = data.body.map(x=> mapEntry(x))
                 debugger;
