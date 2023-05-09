@@ -13,7 +13,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/navbar-fixed-top/">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- <title>Fixed Top Navbar Example for Bootstrap</title> -->
-
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
 
@@ -278,7 +278,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 <h2 id="wp-heading" class="display-3" style="text-align:left;   color:white; font-size: 45px;
                 font-weight: bold;"> </span></h2>
                 </div>
-                <p style=" margin-bottom: 5%; text-align: left;  color:white;  margin-top:2%">Param Solutions <br/> <small id="wp-date" style="font-size: 12px;"> </small></p>
+                <p id="wp-subheading" style=" margin-bottom: 5%; text-align: left;  color:white;  margin-top:2%">Param Solutions <br/> <small id="wp-date" style="font-size: 12px;"> </small></p>
             
             
             </div>
@@ -472,8 +472,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
 
             var id = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
             $.get(`https://public-api.wordpress.com/wp/v2/sites/paramsolutionsblog.wordpress.com/posts/${id}?_envelope=1`, function(data, status){
-                debugger;
-                 console.log("Data: " +  data.body );
+      
                var nohtml = data.body.content.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '');
                 var heading = data.body.title.rendered;
                 var author = data.body.author.name;
@@ -483,9 +482,11 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 
 
                 var allP = extractPTags(data.body.content.rendered);
-                console.log("TESTPTAGS",allP);
+              
                 var image = data.body.jetpack_featured_media_url;
                var allImages = getAllImageSrcs(data.body.content.rendered);
+               var blackHeading = data.body.tags[0]="22293897";
+
                $("#wp-output-1").html(allP);
                 // var content1 = nohtml.split(".").slice(0, 2).join(".");
                 // var content2 = nohtml.split(".").slice(2, 5).join(".");
@@ -500,13 +501,26 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 // $("#wp-output-3").html(content3);
                 // $("#wp-output-4").html(content4);
                 // $("#wp-output-5").html(content5);
-                // $("#wp-output-6").html(content6);  
+                // $("#wp-output-6").html(content6); 
+                debugger;
+                now = moment()
+                days = now.diff(data.body.date, "days")
+                
+                if(blackHeading){
+                    $("#wp-heading").css("color","black");
+                    $("#wp-subheading").css("color","black");
+                } 
                 $("#wp-heading").html(heading);
                 $("#wp-image").css('background-image', 'url(' + image + ')');
                 $("#wp-image1").css('background-image', 'url(' + allImages[0] + ')');
                 // $("#wp-image2").css('background-image', 'url(' + allImages[1] + ')');
                 // $("#wp-author").html(author);
-                $("#wp-date").html(date);
+                if(days==0){
+                    $("#wp-date").html(`Earlier today`);
+                }else{
+                    $("#wp-date").html(`${days} days ago`);
+                }
+               
 
             });
         
