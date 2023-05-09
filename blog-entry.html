@@ -222,34 +222,7 @@
         color: white;
     }
   </style>
-  <script>
-
-        /*
-            Carousel
-        */
-        $('#carousel-example').on('slide.bs.carousel', function (e) {
-            /*
-                CC 2.0 License Iatek LLC 2018 - Attribution required
-            */
-            var $e = $(e.relatedTarget);
-            var idx = $e.index();
-            var itemsPerSlide = 5;
-            var totalItems = $('.carousel-item').length;
-        
-            if (idx >= totalItems-(itemsPerSlide-1)) {
-                var it = itemsPerSlide - (totalItems - idx);
-                for (var i=0; i<it; i++) {
-                    // append slides to end
-                    if (e.direction=="left") {
-                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                    }
-                    else {
-                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                    }
-                }
-            }
-        });
-    </script>
+  
     <body style="width:100%; overflow-x: hidden;">
    
     <nav class="navbar navbar-default navbar-fixed-top" style="width:100%; 
@@ -439,36 +412,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 });
             });
          </script>
-        <script type="text/javascript">//<![CDATA[
-            
-            
-      VANTA.NET({
-              el: "#element",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 1.00,
-              scaleMobile: 1.00,
-              color: 0x545454,
-                backgroundColor: 0xdbdbdb,
-                showDots: false
-            })
-            // VANTA.GLOBE({
-            // el: "#element",
-            // mouseControls: true,
-            // touchControls: true,
-            // gyroControls: false,
-            // minHeight: 200.00,
-            // minWidth: 200.00,
-            // scale: 1.00,
-            // scaleMobile: 1.00,
-            // color: 0x87c05,
-            // color2: 0xa9119e,
-            // backgroundColor: 0xffffff
-            // })
-        </script>
+      
             
             
 

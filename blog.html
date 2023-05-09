@@ -1,14 +1,14 @@
-<html>
+<html style="overflow-x: hidden;">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="title" content="Param Solutions ||  Blog || Recent Articles & Blog Posts">
+    <meta name="title" content="Param Solutions || Blog || Whats new in .Net 7?">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Param Solutions || Blog || Param Solutions is an integrated development studio that works together with organizations and their teams to help them build and grow solutions that solve the problems they face.">
-    <meta name="author" content="ParamSolutions">
+    <meta name="description" content="Param Solutions || Blog || Let's take a quick look at Microsoft's offerings with this new release">
+    <meta name="author" content="Param Solutions">
     <link rel="icon" href="./images/favicon.ico">
     <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/navbar-fixed-top/">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -181,292 +181,270 @@
         }
     }
     
+    .owl-prev{
+        background-color: green;
+    margin: 2%;
+    border-radius: 35px;
+    padding: 3%;
+    border: none;
+    font-size: 30px;
+    width: 20%;
+    }
+    .owl-next{
+        background-color: green;
+    margin: 2%;
+    border-radius: 35px;
+    padding: 3%;
+    border: none;
+    font-size: 30px;
+    width: 20%;
+    }
+    .ghost-dark a{
+        background-color: transparent;
+        border: 2px solid black;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        width: 48%;
+        font-size: 1.2em;
+        color:black
+    }
+    .ghost-dark a:hover {
+     background-color: black;
+     color: white;
+    }
+
+    .contact-box a:hover{
+        color: gray;
+    }
+    .contact-box a{
+        color: white;
+    }
   </style>
-  
+  <script>
 
-    <body style="background-color: #eee;">
-        <nav class="navbar navbar-default navbar-fixed-top" style="width:100%; 
-    
-        padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
+        /*
+            Carousel
+        */
+        $('#carousel-example').on('slide.bs.carousel', function (e) {
+            /*
+                CC 2.0 License Iatek LLC 2018 - Attribution required
+            */
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 5;
+            var totalItems = $('.carousel-item').length;
         
-            background-color: rgba(238,238,238, 0.95);">
-                <a style="height:100%; max-width: 10%;     padding-right: 20%;
-            " class="navbar-brand"  href="/">
-                    <img src="./images/paramlogo.svg" height="5%" class="d-inline-block align-top" alt="">
-                    
-                </a>
-                  <div class="container-holder">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                      <ul class="nav navbar-nav" style="  width: 70%;
-                      padding: 1%;
-                      padding-left: 5%;">
-                        <li style="padding-left:5%; " ><a href="/">Home</a></li>
-                        
-                        <li style="padding-left:5%" ><a href="services">Services</a></li>
-                        <li style="padding-left:5%"><a href="staff-augmentation">Augmentation</a></li>
-                        <li style="padding-left:5%"><a href="teams">Teams</a></li>
-                        <li style="padding-left:5%"><a href="careers">Careers</a></li>
-                        <li style="padding-left:5%" class="active"><a href="#">Blog</a></li>
-                      
-                        <li style="padding-left:5%"><a href="contact">Contact</a></li>
-                      </ul>
-                    </div><!--/.nav-collapse -->
-                  </div>
-                </nav>
+            if (idx >= totalItems-(itemsPerSlide-1)) {
+                var it = itemsPerSlide - (totalItems - idx);
+                for (var i=0; i<it; i++) {
+                    // append slides to end
+                    if (e.direction=="left") {
+                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                    }
+                    else {
+                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                    }
+                }
+            }
+        });
+    </script>
+    <body style="width:100%; overflow-x: hidden;">
+   
+    <nav class="navbar navbar-default navbar-fixed-top" style="width:100%; 
+    
+padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
+
+    background-color: rgba(238,238,238, 0.95);">
+        <a style="height:100%; max-width: 10%;     padding-right: 20%;
+    " class="navbar-brand"  href="/">
+            <img src="./images/paramlogo.svg" height="5%" class="d-inline-block align-top" alt="">
             
-    
-        <main role="main" style="margin-top:5%">
-        <!-- <div id="element"> -->
-          <!-- Main jumbotron for a primary marketing message or call to action -->
-          <div class="jumbotron" style="     margin-bottom: 0px; background-position: left; background-size: contain;background-repeat: no-repeat;"
-        >
-            <div class="container" style="    padding-top: 10%;
-            padding-bottom: 10%;
-        ">
-                <div class="col-md-7" style="margin-top:5%">
-              <h1 class="display-3">Recent <span style="color:purple">News</span> <br/>      
-                 & <span style="color:purple"> Blog </span> Posts</h1>
-              </div>
-              <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p> -->
-           
-              <div class="col-md-5"  style=" background-size: contain; background-image: url(./images/param-arrow-right-banner.png);background-repeat: no-repeat;">
-                <img style="width:100%; " src="./images/plogo_white.png" alt="Image" />
+        </a>
+          <div class="container-holder">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
             </div>
-            <!-- <div class="row">
-                <div class="col-md-6">
-                    <button type="button" style="background-color: transparent;
-                    border: 1px solid rgb(196, 199, 201);
-                    padding-left: 10%;
-                    padding-right: 10%;
-                    padding-top: 5%;
-                    padding-bottom: 5%;
-                    width: 50%;
-                    float:right;
-                    " 
-                class="btn btn-outline-light">Hire Team</button>
-                </div>
-                <div class="col-md-6">
-                    <button style="background-color: transparent;
-                    border: 1px solid rgb(196, 199, 201);
-                    padding-left: 10%;
-                    padding-right: 10%;
-                    padding-top: 5%;
-                    padding-bottom: 5%;
-                    float: left;
-                    width: 50%;
-                    "  type="button" class="btn btn-outline">Hire Developer</button>
-                </div>
-
-            </div> -->
-            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav" style="  width: 70%;
+              padding: 1%;
+              padding-left: 5%;">
+                <li style="padding-left:5%; " ><a href="/">Home</a></li>
+                
+                <li style="padding-left:5%" ><a href="services">Services</a></li>
+                <li style="padding-left:5%"><a href="staff-augmentation">Augmentation</a></li>
+                <li style="padding-left:5%"><a href="teams">Teams</a></li>
+                <li style="padding-left:5%"><a href="careers">Careers</a></li>
+                <li style="padding-left:5%" class="active"><a href="#">Blog</a></li>
+              
+                <li style="padding-left:5%"><a href="contact">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
           </div>
-
-          
-
-            <div class="jumbotron container" style="margin-bottom:0px; background-color: transparent;">
-                <!-- Example row of columns -->
-                <div class="row">
-                    <h4 style="color: rgb(38, 63, 34);
-                    font-weight: bold;
-                    font-size: 1.2em;">Blog posts (3)</h4>
-                    <a href="dotnet7" style="text-decoration: none;
-                    color: inherit;">
-                    <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
-                        <div class="card container" style="    border-radius: 0px;">
-                            
-                            <div class="col-md-12" style="padding-top:10%; ;">
-                                <div class="row" style=" height: 15%;  background:url('./images/blog-1.png'); background-position: center;">
-
-                                </div>
-                                <h2 style="
-                                padding-top: 5%;
-                                 padding-left: 1%;
-                                 padding-right: 1%;
-                                 text-align: center;
-                                 font-weight: bold;
-                                 margin-bottom: 0px;
-                                 padding-bottom: 0px;
-                                 font-size: 10pt;
-
-                                 "> What's new in .NET 7 ?<br/><br/></h2>
-                                <p style="
-                                padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
-        
-        Identifying goals and getting help from industry specialists is key to creating a successful software development team...
-                                </p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    </a>
-                    <a href="blockchain" style="text-decoration: none;   color: inherit;">
-                    <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
-                        <div class="card container" style="    border-radius: 0px;">
-                            
-                            <div class="col-md-12" style="padding-top:10%; ;">
-                                <div class="row" style=" height: 15%;  background:url('./images/blog-2.png'); background-position: center;">
-
-                                </div>
-                                <h2 style="
-                                padding-top: 5%;
-                                 padding-left: 1%;
-                                 padding-right: 1%;
-                                 text-align: center;
-                                 font-weight: bold;
-                                 margin-bottom: 0px;
-                                 padding-bottom: 0px;
-                                 font-size: 10pt;
-
-                                 "> Why Education in the Blockchain Space is Essential</h2>
-                                <p style="
-                                padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
-        
-        Blockchain technology is gaining traction in Africa as more businesses and governments ...
-                                </p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    </a>
-                    <a href="staff-augmentation"  style="text-decoration: none;   color: inherit;">
-                    <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
-                        <div class="card container" style="    border-radius: 0px;">
-                            
-                            <div class="col-md-12" style="padding-top:10%; ;">
-                                <div class="row" style=" height: 15%;  background:url('./images/mvp.png'); background-position: center;">
-
-                                </div>
-                                <h2 style="
-                                padding-top: 5%;
-                                 padding-left: 1%;
-                                 padding-right: 1%;
-                                 text-align: center;
-                                 font-weight: bold;
-                                 margin-bottom: 0px;
-                                 padding-bottom: 0px;
-                                 font-size: 10pt;
-
-                                 "> How staff augmentation can supercharge your MVP build</h2>
-                                <p style="
-                                padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
-        
-        Hiring employees can come with a lot of expenses. With our resource augmentation services...
-                                </p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </a>
-                </div>
-                <hr/>
-                <div class="row" style="">
-                    <h4 style="color: rgb(38, 63, 34);
-                    font-weight: bold;
-                    font-size: 1.2em;">Recent News (4)</h4>
-                    <a href="dotnet7" style="text-decoration: none;
-                    color: inherit;">
-                    <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
-                        <div class="card container" style="    border-radius: 0px;">
-                            
-                            <div class="col-md-12" style="padding-top:10%; ;">
-                                <div class="row" style=" height: 15%;  background:url('./images/blog-1.png'); background-position: center;">
-
-                                </div>
-                                <h2 style="
-                                padding-top: 5%;
-                                 padding-left: 1%;
-                                 padding-right: 1%;
-                                 text-align: center;
-                                 font-weight: bold;
-                                 margin-bottom: 0px;
-                                 padding-bottom: 0px;
-                                 font-size: 10pt;
-
-                                 "> What's new in .NET 7 ?<br/><br/></h2>
-                                <p style="
-                                padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
-        
-        Identifying goals and getting help from industry specialists is key to creating a successful software development team...
-                                </p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    </a>
-                    <a href="blockchain" style="text-decoration: none;   color: inherit;">
-                    <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
-                        <div class="card container" style="    border-radius: 0px;">
-                            
-                            <div class="col-md-12" style="padding-top:10%; ;">
-                                <div class="row" style=" height: 15%;  background:url('./images/blog-2.png'); background-position: center;">
-
-                                </div>
-                                <h2 style="
-                                padding-top: 5%;
-                                 padding-left: 1%;
-                                 padding-right: 1%;
-                                 text-align: center;
-                                 font-weight: bold;
-                                 margin-bottom: 0px;
-                                 padding-bottom: 0px;
-                                 font-size: 10pt;
-
-                                 "> Why Education in the Blockchain Space is Essential</h2>
-                                <p style="
-                                padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
-        
-        Blockchain technology is gaining traction in Africa as more businesses and governments ...
-                                </p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    </a>
-                    <a href="staff-augmentation"  style="text-decoration: none;   color: inherit;">
-                    <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
-                        <div class="card container" style="    border-radius: 0px;">
-                            
-                            <div class="col-md-12" style="padding-top:10%; ;">
-                                <div class="row" style=" height: 15%;  background:url('./images/mvp.png'); background-position: center;">
-
-                                </div>
-                                <h2 style="
-                                padding-top: 5%;
-                                 padding-left: 1%;
-                                 padding-right: 1%;
-                                 text-align: center;
-                                 font-weight: bold;
-                                 margin-bottom: 0px;
-                                 padding-bottom: 0px;
-                                 font-size: 10pt;
-
-                                 "> How staff augmentation can supercharge your MVP build</h2>
-                                <p style="
-                                padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
-        
-        Hiring employees can come with a lot of expenses. With our resource augmentation services...
-                                </p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </a>
-                </div>
-            </div>
-      
-
-
-    </main>
+        </nav>
     
-    <footer  class="jumbotron" style="background-color: rgb(38, 63, 34);">
+      
+        <main role="main" style="margin-top:5%">
+            <!-- <div id="element"> -->
+              <!-- Main jumbotron for a primary marketing message or call to action -->
+              <div class="jumbotron" style="     margin-bottom: 0px; background-position: left; background-size: contain;background-repeat: no-repeat;"
+            >
+                <div class="container" style="    padding-top: 10%;
+                padding-bottom: 10%;
+            ">
+                    <div class="col-md-7" style="margin-top:5%">
+                  <h1 class="display-3">Recent <span style="color:purple">News</span> <br/>      
+                     & <span style="color:purple"> Blog </span> Posts</h1>
+                  </div>
+                  <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p> -->
+               
+                  <div class="col-md-5"  style=" background-size: contain; background-image: url(./images/param-arrow-right-banner.png);background-repeat: no-repeat;">
+                    <img style="width:100%; " src="./images/plogo_white.png" alt="Image" />
+                </div>
+                <!-- <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" style="background-color: transparent;
+                        border: 1px solid rgb(196, 199, 201);
+                        padding-left: 10%;
+                        padding-right: 10%;
+                        padding-top: 5%;
+                        padding-bottom: 5%;
+                        width: 50%;
+                        float:right;
+                        " 
+                    class="btn btn-outline-light">Hire Team</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button style="background-color: transparent;
+                        border: 1px solid rgb(196, 199, 201);
+                        padding-left: 10%;
+                        padding-right: 10%;
+                        padding-top: 5%;
+                        padding-bottom: 5%;
+                        float: left;
+                        width: 50%;
+                        "  type="button" class="btn btn-outline">Hire Developer</button>
+                    </div>
+    
+                </div> -->
+                </div>
+              </div>
+    
+              
+    
+                <div class="jumbotron container" style="margin-bottom:0px; background-color: transparent;">
+                    <!-- Example row of columns -->
+                
+                    <div class="row" style="">
+                        <h4 style="color: rgb(38, 63, 34);
+                        font-weight: bold;
+                        font-size: 1.2em;">Recent Articles (4)</h4>
+                  
+                  <div id="wp-container"></div>
+                  
+                  
+                  <!-- <a href="dotnet7" style="text-decoration: none;
+                        color: inherit;">
+                        <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
+                            <div class="card container" style="    border-radius: 0px;">
+                                
+                                <div class="col-md-12" style="padding-top:10%; ;">
+                                    <div class="row" style=" height: 15%;  background:url('./images/blog-1.png'); background-position: center;">
+    
+                                    </div>
+                                    <h2 style="
+                                    padding-top: 5%;
+                                     padding-left: 1%;
+                                     padding-right: 1%;
+                                     text-align: center;
+                                     font-weight: bold;
+                                     margin-bottom: 0px;
+                                     padding-bottom: 0px;
+                                     font-size: 10pt;
+    
+                                     "> What's new in .NET 7 ?<br/><br/></h2>
+                                    <p style="
+                                    padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
+            
+            Identifying goals and getting help from industry specialists is key to creating a successful software development team...
+                                    </p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        </a>
+                        <a href="blockchain" style="text-decoration: none;   color: inherit;">
+                        <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
+                            <div class="card container" style="    border-radius: 0px;">
+                                
+                                <div class="col-md-12" style="padding-top:10%; ;">
+                                    <div class="row" style=" height: 15%;  background:url('./images/blog-2.png'); background-position: center;">
+    
+                                    </div>
+                                    <h2 style="
+                                    padding-top: 5%;
+                                     padding-left: 1%;
+                                     padding-right: 1%;
+                                     text-align: center;
+                                     font-weight: bold;
+                                     margin-bottom: 0px;
+                                     padding-bottom: 0px;
+                                     font-size: 10pt;
+    
+                                     "> Why Education in the Blockchain Space is Essential</h2>
+                                    <p style="
+                                    padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
+            
+            Blockchain technology is gaining traction in Africa as more businesses and governments ...
+                                    </p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        </a>
+                        <a href="staff-augmentation"  style="text-decoration: none;   color: inherit;">
+                        <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
+                            <div class="card container" style="    border-radius: 0px;">
+                                
+                                <div class="col-md-12" style="padding-top:10%; ;">
+                                    <div class="row" style=" height: 15%;  background:url('./images/mvp.png'); background-position: center;">
+    
+                                    </div>
+                                    <h2 style="
+                                    padding-top: 5%;
+                                     padding-left: 1%;
+                                     padding-right: 1%;
+                                     text-align: center;
+                                     font-weight: bold;
+                                     margin-bottom: 0px;
+                                     padding-bottom: 0px;
+                                     font-size: 10pt;
+    
+                                     "> How staff augmentation can supercharge your MVP build</h2>
+                                    <p style="
+                                    padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
+            
+            Hiring employees can come with a lot of expenses. With our resource augmentation services...
+                                    </p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </a> -->
+                    </div>
+                </div>
+          
+    
+    
+        </main>
+    
+    <footer  class="jumbotron" style="color: black;">
            
    
         <!-- Example row of columns -->
@@ -485,41 +463,43 @@
                 </div>
                 
             </div>
-          <div class="col-md-3 ">
+          <div class="col-md-3 " >
             <div class="" style="
-                color:white;    padding-top: 10%;
+                color: black;   padding-top: 10%;
                 ">
                 
-                <ul style="list-style: none;">
+                <ul style="list-style: none; color: black;">
                     <li><h4 style="padding-top: 10%;">Useful links</h4></li>
-                    <li style="padding-top: 5%;"><a style="color: white;" href="/">Home</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;" href="services">Services</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;" href="staff-augmentation">Staff augmentation</a></li>                            
-                    <li style="padding-top: 5%;"><a style="color: white;" href="teams">Teams</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;" href="blogs">Blog</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;" href="careers">Careers</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;" href="contact">Contact us</a></li>
+                    <li style="padding-top: 5%;"><a style="color: black;" href="/">Home</a></li>
+                    <li style="padding-top: 5%;"><a style="color: black;" href="services">Services</a></li>
+                    <li style="padding-top: 5%;"><a style="color: black;" href="staff-augmentation">Staff augmentation</a></li>                            
+                    <li style="padding-top: 5%;"><a style="color: black;" href="teams">Teams</a></li>
+                    <li style="padding-top: 5%;"><a style="color: black;" href="blogs">Blog</a></li>
+                    <li style="padding-top: 5%;"><a style="color: black;" href="careers">Careers</a></li>
+                    <li style="padding-top: 5%;"><a style="color: black;" href="contact">Contact us</a></li>
                     </ul>
             </div>
         </div>
-          <div class="col-md-3">
+          <div class="col-md-3" style="
+          color: black;">
             <div class="" style="
-            color:white;    padding-top: 10%;
+            color: black;     padding-top: 10%;
             ">
             
-            <ul style="list-style: none;">
-                <li><h4 style="padding-top: 10%;"><a style="color: white;" href="/">Our services</a></h4></li>
-                <li style="padding-top: 5%;"><a style="color: white;" href="services">Business Analysts</a></li>
-                <li style="padding-top: 5%;"><a style="color: white;" href="services">Software Developers</a></li>
-                <li style="padding-top: 5%;"><a style="color: white;" href="services">Project Managers</a></li>
-                <li style="padding-top: 5%;"><a style="color: white;" href="services">DevOps Engineers</a></li>
-                <li style="padding-top: 5%;"><a style="color: white;" href="services">QA Engineers</a></li>
+            <ul style="list-style: none; color: black;">
+                <li><h4 style="padding-top: 10%;"><a style="color: black;" href="/">Our services</a></h4></li>
+                <li style="padding-top: 5%;"><a style="color: black;" href="services">Business Analysts</a></li>
+                <li style="padding-top: 5%;"><a style="color: black;" href="services">Software Developers</a></li>
+                <li style="padding-top: 5%;"><a style="color: black;" href="services">Project Managers</a></li>
+                <li style="padding-top: 5%;"><a style="color: black;" href="services">DevOps Engineers</a></li>
+                <li style="padding-top: 5%;"><a style="color: black;" href="services">QA Engineers</a></li>
                 </ul>
         </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" style="
+          color: black;">
             <div class="" style="
-            color:white;    padding-top: 10%;
+            color: black;    padding-top: 10%;
             ">
             
             <ul style="list-style: none;">
@@ -538,45 +518,26 @@
 
 
 </footer>
+
     
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        
+
+        
         <script src="../../assets/js/vendor/popper.min.js"></script>
         <script src="../../dist/js/bootstrap.min.js"></script>
-      
-        <script type="text/javascript">//<![CDATA[
-            
-            
-      VANTA.NET({
-              el: "#element",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 1.00,
-              scaleMobile: 1.00,
-              color: 0x545454,
-                backgroundColor: 0xdbdbdb,
-                showDots: false
-            })
-            // VANTA.GLOBE({
-            // el: "#element",
-            // mouseControls: true,
-            // touchControls: true,
-            // gyroControls: false,
-            // minHeight: 200.00,
-            // minWidth: 200.00,
-            // scale: 1.00,
-            // scaleMobile: 1.00,
-            // color: 0x87c05,
-            // color2: 0xa9119e,
-            // backgroundColor: 0xffffff
-            // })
-        </script>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker3').datetimepicker({
+                    format: 'LT'
+                });
+            });
+         </script>
+     
             
             
 
@@ -584,31 +545,107 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     
     <script>
         $(document).ready(function () {
+            function getAllImageSrcs(html) {
+            // Create a new DOMParser object
+            const parser = new DOMParser();
+
+            // Parse the HTML string into a new document object
+            const doc = parser.parseFromString(html, "text/html");
+
+            // Find all <img> elements in the parsed document
+            const imgs = doc.querySelectorAll('img');
+
+            // Extract the 'src' attribute values of each <img> element
+            const srcs = Array.from(imgs).map(img => img.getAttribute('src'));
+
+            return srcs;
+            }
+            var id = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
+
+            function mapEntry(entry){
+                return `
+                <a href="blog-entry.html#${entry.id}" style="text-decoration: none; color: inherit;">
+                <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
+                    <div class="card container" style="border-radius: 0px;"><div class="col-md-12" style="padding-top:10%; ;"> 
+                        <div class="row" style=" height: 15%;  background:url('${entry.jetpack_featured_media_url}'); background-position: center;"> </div> 
+                        <h2 style="
+                                padding-top: 5%;
+                                 padding-left: 1%;
+                                 padding-right: 1%;
+                                 text-align: center;
+                                 font-weight: bold;
+                                 margin-bottom: 0px;
+                                 padding-bottom: 0px;
+                                 font-size: 10pt;
+
+                                 "> ${entry.slug}<br/><br/></h2>
+                                <p style="
+                                padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
         
-            $.get("https://public-api.wordpress.com/wp/v2/sites/paramgeekulcha.wordpress.com/posts/3?_envelope=1", function(data, status){
+                                ${entry.excerpt.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0,150)}...
+                                </p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </a>`
+            }
+
+            $.get(`https://public-api.wordpress.com/wp/v2/sites/paramgeekulcha.wordpress.com/posts?_envelope=1`, function(data, status){
+               
+                var entries = data.body.map(x=> mapEntry(x))
                 debugger;
-                console.log("Data: " +  data.body.content.rendered + "\nStatus: " + status);
+                $('#wp-container').html(entries.join(''))
+            //      console.log("Data: " +  data.body );
+            //    var nohtml = data.body.content.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '');
+            //     var heading = data.body.title.rendered;
+            //     var author = data.body.author.name;
+            //     var date = data.body.date;
+
+                //write a js function to get the image src from raw html input
+                
+
+
+                
+            //     var image = data.body.jetpack_featured_media_url;
+            //    var allImages = getAllImageSrcs(data.body.content.rendered);
+            //     var content1 = nohtml.split(".").slice(0, 2).join(".");
+            //     var content2 = nohtml.split(".").slice(2, 5).join(".");
+            //     var content3 = nohtml.split(".").slice(5, 7).join(".");
+            //     var content4 = nohtml.split(".").slice(7, 10).join(".");
+            //     var content5 = nohtml.split(".").slice(10, 15).join(".");
+            //     var content6 = nohtml.split(".").slice(15, 20).join(".");
+
+            //     $("#wp-output-1").html(content1);
+            //     $("#wp-output-2").html(content2);
+
+            //     $("#wp-output-3").html(content3);
+            //     $("#wp-output-4").html(content4);
+            //     $("#wp-output-5").html(content5);
+            //     $("#wp-output-6").html(content6);  
+            //     $("#wp-heading").html(heading);
+            //     $("#wp-image").css('background-image', 'url(' + image + ')');
+            //     $("#wp-image1").css('background-image', 'url(' + allImages[0] + ')');
+            //     $("#wp-image2").css('background-image', 'url(' + allImages[1] + ')');
+            //     // $("#wp-author").html(author);
+            //     $("#wp-date").html(date);
+
             });
         
-                function createHTML(postData) {
-                // var ourHTMLString = '';
-                // for(i=0; i<postData.length; i++) {
-                //     ourHTMLString += '<p>' + postData[i].title.rendered + </h2>;
-                //     ourHTMLString +=  postData[i].title.rendered;
-                // }
-                // jQuery(".entry-content").append(ourHTMLString);
-                }
+               
         });
     </script>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="./js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
