@@ -409,7 +409,10 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
         
 
@@ -457,6 +460,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
 
             return srcs;
             }
+
             var id = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
 
 function mapEntry(entry) {
@@ -487,6 +491,7 @@ function mapEntry(entry) {
 }
 
 $.get(`https://public-api.wordpress.com/wp/v2/sites/paramsolutionsblog.wordpress.com/posts?_envelope=1`, function(data, status) {
+
     var filteredData = data.body.filter(entry => {
         const tags = entry.tags || [];
         return !tags.includes(6504);
@@ -496,21 +501,8 @@ $.get(`https://public-api.wordpress.com/wp/v2/sites/paramsolutionsblog.wordpress
     $('#wp-container').html(entries.join(''));
 });
 
-debugger;
+        });
 
-        function OnlyBlogPosts(){
-            // remove all posts with a 
-            
-            const arr =["a","b", "c"];
-            const filtered = arr.filter(x=>x!="b");
-
-        }
-
-        function OnlyJobPosts(){
-            //remove all that dont have tage =xxx
-        }
-
-        debugger;
     </script>
     <script src="./js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
