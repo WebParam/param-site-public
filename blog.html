@@ -278,6 +278,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 <li><a href="/">Home</a></li>
                 
                 <li style="padding-left:5%" ><a href="mvp.html">MVP</a></li>
+                <li style="padding-left:5%"><a href="fractional-cto.html">CTO</a></li>
                 <li style="padding-left:5%"><a href="staff-augmentation">DaaS</a></li>
                 <li style="padding-left:5%"><a href="teams">Teams</a></li>
                 <li style="padding-left:5%"><a href="careers">Careers</a></li>
@@ -457,45 +458,59 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
             return srcs;
             }
             var id = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
+
+function mapEntry(entry) {
+    return `
+    <a href="blog-entry#${entry.id}" style="text-decoration: none; color: inherit;">
+        <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
+            <div class="card container" style="border-radius: 0px;">
+                <div class="col-md-12" style="padding-top:10%;">
+                    <div class="row" style=" height: 15%;  background:url('${entry.jetpack_featured_media_url}'); background-position: center;"> </div>
+                    <h2 style="
+                        padding-top: 5%;
+                        padding-left: 1%;
+                        padding-right: 1%;
+                        text-align: center;
+                        font-weight: bold;
+                        margin-bottom: 0px;
+                        padding-bottom: 0px;
+                        font-size: 10pt;
+                    "> ${entry.title.rendered.substring(0,40)}${entry.title.rendered.length>40?`...`:``}<br/><br/></h2>
+                    <p style="
+                        padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;">
+                        ${entry.excerpt.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0,150)}...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </a>`;
+}
+
+$.get(`https://public-api.wordpress.com/wp/v2/sites/paramsolutionsblog.wordpress.com/posts?_envelope=1`, function(data, status) {
+    var filteredData = data.body.filter(entry => {
+        const tags = entry.tags || [];
+        return !tags.includes(6504);
+    });
+
+    var entries = filteredData.map(x => mapEntry(x));
+    $('#wp-container').html(entries.join(''));
+});
+
 debugger;
-            function mapEntry(entry){
-                return `
-                <a href="blog-entry#${entry.id}" style="text-decoration: none; color: inherit;">
-                <div class="col-md-4" style="padding: 3%; padding-right: 0px;">
-                    <div class="card container" style="border-radius: 0px;"><div class="col-md-12" style="padding-top:10%; ;"> 
-                        <div class="row" style=" height: 15%;  background:url('${entry.jetpack_featured_media_url}'); background-position: center;"> </div> 
-                        <h2 style="
-                                padding-top: 5%;
-                                 padding-left: 1%;
-                                 padding-right: 1%;
-                                 text-align: center;
-                                 font-weight: bold;
-                                 margin-bottom: 0px;
-                                 padding-bottom: 0px;
-                                 font-size: 10pt;
 
-                                 "> ${entry.title.rendered.substring(0,40)}${entry.title.rendered.length>40?`...`:``}<br/><br/></h2>
-                                <p style="
-                                padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
-        
-                                ${entry.excerpt.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0,150)}...
-                                </p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </a>`
-            }
+        function OnlyBlogPosts(){
+            // remove all posts with a 
+            
+            const arr =["a","b", "c"];
+            const filtered = arr.filter(x=>x!="b");
 
-            $.get(`https://public-api.wordpress.com/wp/v2/sites/paramsolutionsblog.wordpress.com/posts?_envelope=1`, function(data, status){
-               
-                var entries = data.body.map(x=> mapEntry(x))
-                debugger;
-                $('#wp-container').html(entries.join(''))
-            });
-        
-               
-        });
+        }
+
+        function OnlyJobPosts(){
+            //remove all that dont have tage =xxx
+        }
+
+        debugger;
     </script>
     <script src="./js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
