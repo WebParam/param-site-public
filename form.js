@@ -14,17 +14,16 @@ myForm.addEventListener('submit', function (e) {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        return response.json(); // Change this to response.text() if your API returns plain text
+        return response.json(); 
     })
     .then(function(data) {
         console.log('Response from the API:', data);
         
-        // Check if the API response indicates success (you may need to adjust this based on your API response structure)
+       
         if (data.success) {
-            // Redirect to the success page
-            window.location.href = '/success.html'; // Replace 'success.html' with your actual success page URL
+            window.location.href = '/success.html'; 
         } else {
-            // Handle other cases or display an error message
+            
             console.error('API response indicates failure');
         }
     })
