@@ -1,0 +1,232 @@
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+
+p {
+  color: #b3b3b3;
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+
+
+
+.card {
+  width: 12rem;
+  cursor: pointer;
+  width: 100%;
+  height: 350px;
+  background-color: 50%;
+  display: grid;
+  
+}
+
+.card-1 {
+  width: 100%;
+  height: auto;
+}
+
+.front{
+  display: grid;
+  text-align: center;
+  align-items: center;
+}
+
+.content-1 {
+  text-align: center;
+  position: relative;
+  transition: all 2.25s;
+  background-color: #263F22;
+  padding: 5em;
+  transform-style: preserve-3d;
+  /* height: 450px; */
+  color: white;
+}
+
+.content-2 {
+  text-align: center;
+  position: relative;
+  transition: all 2.25s;
+  background-color: white;
+  padding: 5em;
+  transform-style: preserve-3d;
+  /* height: 450px; */
+  color: #263F22;
+}
+
+.card:hover .content-1 {
+  transform: rotateY(0.5turn);
+}
+
+.card:hover .content-2 {
+  transform: rotateY(0.5turn);
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.dev-card{
+  margin-top: 53px;
+  width: 100%;
+  height: 50px;
+  background-color: #a2aba5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  font-size: larger;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  
+}
+
+.dev-card:hover{
+  background-color: white;
+  color: #6c757d;
+}
+
+.button-1{
+  width: 180px;
+  height: 60px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.button-1:hover{
+  background-color: black;
+  color: white;
+}
+
+.front,
+.back-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+/* ... previous styles ... */
+
+.container121{
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin-top: 2.5%;
+height: 80%;
+margin-bottom: 4%;
+}
+
+@media screen and (max-width: 768px) {
+/* Adjust the number of columns for mobile view */
+.container121{
+  grid-template-columns: 1fr;
+}
+
+/* Adjust card width for mobile view */
+.card {
+  width: 100%;
+  height: auto;
+}
+}
+
+.title {
+  transform: translateZ(5rem);
+  font-size: 4rem;
+}
+
+.subtitle {
+  transform: translateZ(2rem);
+}
+
+.back{
+  transform: rotateY(0.5turn);
+  background-color: black;
+}
+
+.back-1{
+  transform: rotateY(0.5turn);
+  background-color: white;
+  color: black;
+}
+
+
+.description {
+  transform: translateZ(3rem);
+}
+
+
+/*end of styles*/
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a, a:hover {
+    text-decoration: none !important; }
+
+.content {
+  padding: 7rem 0; }
+
+h2 {
+  font-size: 20px; }
+
+.bg-left-half {
+  position: relative; }
+  .bg-left-half:before {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    content: "";
+    left: 0;
+    top: 0;
+    background-color: #f8f9fa; }
+
+.media-29101 img {
+  margin-bottom: 20px; }
+
+.media-29101 h3 {
+  font-size: 18px;
+  font-weight: 900 !important; }
+  .media-29101 h3 a {
+    color: #6c757d; }
+
+.owl-2-style .owl-nav {
+  display: none; }
+
+.owl-2-style .owl-dots {
+  text-align: center;
+  position: relative;
+  bottom: -30px; }
+  .owl-2-style .owl-dots .owl-dot {
+    display: inline-block; }
+    .owl-2-style .owl-dots .owl-dot span {
+      display: inline-block;
+      width: 15px;
+      height: 3px;
+      border-radius: 0px;
+      background: #cccccc;
+      -webkit-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+      -o-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+      transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+      margin: 3px; }
+    .owl-2-style .owl-dots .owl-dot.active span {
+      background: #007bff; }
+    .owl-2-style .owl-dots .owl-dot:active, .owl-2-style .owl-dots .owl-dot:focus {
+      outline: none; }
+
+      
