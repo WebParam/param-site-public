@@ -1,7 +1,7 @@
-// Assuming you have an HTML form with the id 'myForm'
-const myForm = document.getElementById('myForm');
+const myForm1 = document.getElementById('myForm1');
 
-myForm.addEventListener('submit', function (e) {
+
+myForm1.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const formData = new FormData(this);
@@ -25,3 +25,4 @@ myForm.addEventListener('submit', function (e) {
         console.error('Error:', error);
     });
 });
+
