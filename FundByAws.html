@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="title" content="Param Solutions || Services || Dev-as-a-service & Staff-augmentation">
+    <meta name="title" content="Param Solutions || Blog || Staff augmentation for MVP builds.">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Param Solutions || Services || Param Solutions is an integrated development studio that works together with organizations and their teams to help them build and grow solutions that solve the problems they face.">
+    <meta name="description" content="Param Solutions || Blog ||Staff augmentation is a solution that can help small businesses build their MVP">
     <meta name="author" content="ParamSolutions">
     <link rel="icon" href="./images/favicon.ico">
     <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/navbar-fixed-top/">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/style.css">
     <!-- <title>Fixed Top Navbar Example for Bootstrap</title> -->
 
     <!-- Bootstrap core CSS -->
@@ -45,44 +44,16 @@
     .card{
         transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     border-radius: 4px;
-    /*  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
     background-color: rgb(247, 247, 247);
     }
 
-    .card-content-inner{
-        font-weight: 100;
-        padding: 5%; 
-    margin: 5%;
-    background: none;
-    font-size: 16px;
-    text-align: left;
-    padding-left: 0px;
-    padding-right: 0px
-        }
+
     /*
         code by Iatek LLC 2018 - CC 2.0 License - Attribution required
         code customized by Azmind.com
     */
     @media (min-width: 768px) and (max-width: 991px) {
-        .cardItemInner-white{
-            text-align: center;
-                        width: 45%;
-                        float:left;
-                        background-color: white;
-                        color: white;
-                        border-radius: 50px;
-                        padding: 6%; 
-        }
-
-        .cardItemInner-green{
-            text-align: center;
-                        width: 45%;
-                        float:left;
-                        background-color: #1B3517;
-                        color: white;
-                        border-radius: 50px;
-                        padding: 6%;
-        }
         /* Show 4th slide on md if col-md-4*/
         .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
             position: absolute;
@@ -94,16 +65,6 @@
         }
     }
     @media (min-width: 576px) and (max-width: 768px) {
-/* 
-        .cardItemInner{
-            text-align: center;
-                        width: 45%;
-                        float:left;
-                        background-color: white;
-                        color: white;
-                        border-radius: 50px;
-                        padding: 6%;
-        } */
         /* Show 3rd slide on sm if col-sm-6*/
         .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
             position: absolute;
@@ -115,42 +76,6 @@
         }
     }
     @media (min-width: 576px) {
-        .card-content-inner{
-            margin: 0px;
-            padding: 5%; 
-    font-weight: 100;
-            background: none;
-            font-size: 10px;
-            text-align: left;
-        }
-
-        .cardItemInner-white{
-            /* padding-bottom: 2%; */
-                        /* font-size: 12pt; */
-                        text-align: center;
-                        width: 45%;
-                        float:left;
-                        margin-left:1%;
-                        /* padding-top: 2%;  */
-                        background-color: white;
-                        color: white;
-                        border-radius: 50px;
-                        padding: 3%;
-        }
-
-        .cardItemInner-green{
-            /* padding-bottom: 2%; */
-                        /* font-size: 12pt; */
-                        text-align: center;
-                        width: 45%;
-                        float:left;
-                        margin-left:1%;
-                        /* padding-top: 2%;  */
-                        background-color: #1B3517;
-                        color: white;
-                        border-radius: 50px;
-                        padding: 3%;
-        }
         .carousel-item {
             margin-right: 0;
         }
@@ -194,118 +119,8 @@
             visibility: visible;
         }
     }
-
-    @media (max-width: 576px) {
-        .card-content-inner{
-            margin: 0px;
-            padding: 4%; 
-    font-weight: 100;
-            background: none;
-            font-size: 8px;
-            text-align: left;
-        }
-
-        .cardItemInner-green{
-            /* padding-bottom: 2%; */
-                        /* font-size: 12pt; */
-                        text-align: center;
-                        width: 45%;
-                        float:left;
-                        margin-left:1%;
-                        /* padding-top: 2%;  */
-                        background-color: #1B3517;
-                        color: white;
-                        border-radius: 10px; 
-                        padding: 4%;
-        }
-
-        .cardItemInner-white{
-            /* padding-bottom: 2%; */
-                        /* font-size: 12pt; */
-                        text-align: center;
-                        width: 45%;
-                        float:left;
-                        margin-left:1%;
-                        /* padding-top: 2%;  */
-                        background-color: white;
-                        color: white;
-                        border-radius: 10px; 
-                        padding: 4%;
-        }
-        .carousel-item {
-            margin-right: 0;
-        }
-        /* show 2 items */
-        .carousel-inner .active + .carousel-item {
-            display: block;
-        }
-        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
-            transition: none;
-        }
-        .carousel-inner .carousel-item-next {
-            position: relative;
-            transform: translate3d(0, 0, 0);
-        }
-        /* left or forward direction */
-        .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-        .carousel-item-next.carousel-item-left + .carousel-item,
-        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
-            position: relative;
-            transform: translate3d(-100%, 0, 0);
-            visibility: visible;
-        }
-        /* farthest right hidden item must be also positioned for animations */
-        .carousel-inner .carousel-item-prev.carousel-item-right {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            display: block;
-            visibility: visible;
-        }
-        /* right or prev direction */
-        .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-        .carousel-item-prev.carousel-item-right + .carousel-item,
-        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
-            position: relative;
-            transform: translate3d(100%, 0, 0);
-            visibility: visible;
-            display: block;
-            visibility: visible;
-        }
-    }
-
     /* MD */
     @media (min-width: 768px) {
-        .cardItemInner-white{
-            text-align: center;
-                        width: 45%;
-                        float:left;
-                        background-color: white;
-                        color: white;
-                        border-radius: 50px;
-                        padding: 6%;
-        }
-        .cardItemInner-green{
-            text-align: center;
-                        width: 45%;
-                        float:left;
-                        background-color: #1B3517;
-                        color: white;
-                        border-radius: 50px;
-                        padding: 6%;
-        }
-        .card-content-inner{
-            font-weight: 100;
-            padding: 5%; 
-        margin: 5%;
-        background: none;
-        font-size: 14px;
-        text-align: left;
-        }
-
-        
         /* show 3rd of 3 item slide */
         .carousel-inner .active + .carousel-item + .carousel-item {
             display: block;
@@ -367,24 +182,22 @@
     }
     
     .owl-prev{
-        background-color: transparent;
+        background-color: green;
     margin: 2%;
     border-radius: 35px;
     padding: 3%;
+    border: none;
     font-size: 30px;
-    width: 22%;
-    color: black;
-    border: 2px solid black;
+    width: 20%;
     }
     .owl-next{
-        background-color: transparent;
+        background-color: green;
     margin: 2%;
     border-radius: 35px;
     padding: 3%;
+    border: none;
     font-size: 30px;
-    width: 22%;
-    color: black;
-    border: 2px solid black;
+    width: 20%;
     }
     .ghost-dark a{
         background-color: transparent;
@@ -407,24 +220,6 @@
     }
     .contact-box a{
         color: white;
-    }
-    .colorswitch1:hover{
-       background-color:#263F22 ;
-    }
-    .colorswitch1 {
-       background-color: #1B3517;
-       transition: 1s;
-       cursor: pointer;
-       color:white;
-    }
-    .colorswitch2:hover{
-       background-color:#eee ;
-    }
-    .colorswitch2 {
-       background-color:white;
-       transition: 1s;
-       cursor: pointer;
-       color: #1B3517;
     }
   </style>
   <script>
@@ -477,526 +272,232 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
               </button>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav" style="  width: 70%;
+              <ul class="nav navbar-nav navbar-right" style="  width: 70%;
               padding: 1%;
               padding-left: 5%;">
                 <li><a href="/">Home</a></li>
-                
-                <li style="padding-left:5%" class="active"><a href="mvp.html">MVP</a></li>
-                <li style="padding-left:5%"><a href="fractional-cto.html">CTO</a></li>
-                <li style="padding-left:5%"><a href="staff-augmentation">DaaS</a></li>
-                <li style="padding-left:5%"><a href="teams">Teams</a></li>
+                <li style="padding-left:5%"><a href="fractional-cto.html">FCTO</a></li>
+                <li style="padding-left:5%"><a href="F-Eng.html">F-Eng</a></li>
                 <li style="padding-left:5%"><a href="careers">Careers</a></li>
-                <li style="padding-left:5%"><a href="blog">Blog</a></li>
+                <li style="padding-left:5%" class="active"><a href="blog">Blog</a></li>
                 <li style="padding-left:5%"><a href="contact">Contact</a></li>
-                
               </ul>
             </div><!--/.nav-collapse -->
           </div>
         </nav>
-
-        
     
-        <main role="main" style="background-color: #F3F3F3;
+        <main role="main" style="background-color: #F7F7F7;
         ;">
         <!-- <div id="element"> -->
           <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron hidden-xs" 
-          style="
-          color: white;
-          margin-bottom: 0px;">
-        </div>
-        
-        </div>
-        <div class="jumbotron visible-xs" 
-        style="
-        color: white;
-        margin-bottom: 0px;">
-
-        
-        <div class="" style="  padding-top: 6%;">
+          <div class="jumbotron" style="margin-bottom: 0px;
+          background-image: url(./images/server.jpg);
+          background-position: left;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position-y: top;"
+        >
+            <div class="container" style="
            
-          
-        </div>
-      </div>
-
-      <div class="container121">
-        <div class="card">
-            <div class="content-1">
-                <div class="front">
-                    <h1 class="title">Founder looking to develop something new</h1>
-                </div>
-     
-                <div class="back card-content-inner row" >
-                    <p class="description" style="margin-left:2%">
-                        <div class="row">
-                        <div class="col-md-4 cardItemInner-white" > 
-                            <p>Are you wondering: <br/><strong>What features are essential for my MVP and
-                            which ones can wait? </strong>
-                        </p> </div>
-                        
-                        <div class="col-md-4 cardItemInner-white">
-                        <p>Are you thinking: <br/><strong>How can I validate my business idea quickly without a large
-                            investment? </strong>
-                        </p></div>
-                    </div>
-                    <div class="row" style="margin-top: 2%;">
-                        <div class="col-md-4 cardItemInner-white" >
-                        <p>Are you questioning: <br/><strong>Is there a smarter way to manage resource allocation while
-                            building my MVP? </strong>
-                        </p></div>
-                   
-
-                        <div class="col-md-4 cardItemInner-white" >
-                        <p>Do you ponder:  <br/><strong> How can I build an MVP that  resonates with my users
-                            and provides real value?</strong>
-                        </p>
-                    </div>
-                </div>
-                    </p>
-                </div>
+        padding-top: 5%;">
+                <div class="col-md-12" style="margin-top:5%; margin-bottom: 3%; padding:0px">
+              <h2 class="display-3" style="text-align:left;   color:white; font-size: 45px;
+              font-weight: bold;">How To Get Your Startup MVP Funded By AWS  </span></h2>
+              </div>
+              <p style=" margin-bottom: 5%; text-align: left;  color:black;  margin-top:2%">Njinu Kimani <br/> <small style="font-size: 12px;"> 3 months ago</small></p>
+           
+           
             </div>
-        </div>
-    
-        <div class="card" >
-            <div class="content-2">
-                <div class="front">
-                    <h1 class="title">Established organization looking to develop something new</h1>
-                </div>
-     
-                <div class="back card-content-inner row" >
-                    <p class="description" style="margin-left:2%">
-                        <div class="row">
-                        <div class="col-md-4 cardItemInner-green" > 
-                            <p>Are you wondering: <br/><strong>What features are essential for my MVP and
-                            which ones can wait? </strong>
-                        </p> </div>
+          </div>
+
+        <div class="jumbotron" style="padding-right: 15%; padding-left: 15%; margin-bottom: 5%;   ">
+            <!-- Example row of columns -->
+           
+            <div class="row" style="background-color: white; padding: 7%;">
+              
+                <div class="col-md-12" style=" text-align: left;">
+               
+                    <p style="font-size: 18px;">Elevate your startup with our expert assistance! If you're on the path to craft a mobile
+                        app or SaaS platform on AWS, or venturing into realms like Analytics, IoT, Machine
+                        Learning, Containers, or Non-Relational Databases, we're your go-to partner. As an elite
+                        AWS Consulting Partner and exclusive member of the AWS Jumpstart Program, Param
+                        Solutions will catapult your vision into reality.
                         
-                        <div class="col-md-4 cardItemInner-green">
-                        <p>Are you thinking: <br/><strong>How can I validate my business idea quickly without a large
-                            investment? </strong>
-                        </p></div>
-                    </div>
-                    <div class="row" style="margin-top: 2%;">
-                        <div class="col-md-4 cardItemInner-green" >
-                        <p>Are you questioning: <br/><strong>Is there a smarter way to manage resource allocation while
-                            building my MVP? </strong>
-                        </p></div>
-                   
+                         </p>
+                 
+               </div>
+                <div class="col-md-8" style=" text-align: left;">
 
-                        <div class="col-md-4 cardItemInner-green" >
-                        <p>Do you ponder:  <br/><strong> How can I build an MVP that  resonates with my users
-                            and provides real value?</strong>
+                    <h3>Why the Jumpstart Program?</h3><br>
+                    
+                    <p style="font-size: 18px;">Specifically designed for startups, Jumpstart supports those eager to adopt AWS
+                        services but may lack the technical prowess. Bonus? Enjoy partial reimbursements for
+                        consulting used during your journey. Plus, based on certain criteria, AWS could fund up
+                        to 50% of your project!                        
                         </p>
-                    </div>
-                </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-      
-        <div class="jumbotron" style="padding-right: 5%;
+                    <h3>Dive into Top-Tier Services</h3>
+                        <ul style="font-size: 18px;">
+                            <li><b>Analytics:</b> From Amazon Redshift to AWS Glue, explore a spectrum of powerful
+                                tools.</li>
+                            <li><b>SIoT:</b> Utilize AWS IoT suites including AWS IoT SiteWise, Greengrass, and more.</li>
+                            <li><b>Machine Learning:</b> Harness solutions like Amazon SageMaker, Amazon
+                                Translate, and beyond</li>
+                            <li><b>Containers:</b> Experience Amazon ECS, Fargate, and the full EKS range.</li>
+                            <li><b>Non-relational Databases:</b> Dive into Amazon DynamoDB, DocumentDB, and other
+                                robust options..</li>
+                        </ul><br>
+
+                   
+              </div>
+                <div class="col-md-4"  style=""
+                >
+                    <img style="width:100%; margin:5%" src="./images/mvp.png" alt="Image" />
+                </div>
+                <div class="col-md-12" style=" text-align: left;">
+                    
+                    
+                        <h3>Hop Aboard in Simple Steps:</h3>
+                    <p style="font-size: 18px;">If you're in regions from North America to Japan and meet AWS’ meticulous standards,
+                        you're in! Ensure your proposal is AWS partner-centric and oriented. The cost to monthly
+                        revenue ratio should ideally be 7 or below. Every venture is examined by AWS before
+                        initiation, ensuring utmost alignment with your startup's goals.
+                        </p>
+
+                        <h3>Getting on Board :</h3>
+
+                    <p style="font-size: 18px;">Kick off your journey at the APN portal:</p>
+
+                        <p style="font-size: 18px;">Click on "My Customers."</p>
+                        <p style="font-size: 18px;">Press "Add" to present a new opportunity</p>
+                        <p style="font-size: 18px;">Fill the essentials and proceed!</p>
+
+                      
+
+                        <p style="font-size: 18px;">
+                            Post-project, a swift review, and approval process ensure your cash reimbursement.
+                            Funding essentials include a clear SOW, a glimpse of your estimated AWS usage, and an
+                            AWS Solution Architect's nod on your technical milestones.</p>
+                        
+                        <h4><b>Embark on this transformative journey with Param Solutions. Together, let's craft the
+                            future!</b></h4>
+                        
+                        </div>
+
+                            
+
+                            
+
+                     </div>
+
+                     <a type="button" href="blockchain" style=" border: 1px solid purple;
+              padding-left: 5%;
+              padding-right: 5%;
+              padding-top: 2%;
+              padding-bottom: 2%;
+              color: purple;
+              margin-top: 10%;
+            " 
+        class="btn btn-outline-light">← Previous article</a>
+        <a type="button" href="dotnet7" style=" border: 1px solid purple;
         padding-left: 5%;
-        margin-bottom: 0px;
-        padding-top: 0px;">
-            <div class="row">
-                <div class="col-md-4" style="padding-top: 3%; margin-top:5%">
-                    <h2 style="font-size: 4em; ">Ready to Navigate <small><br/>the tech maze with ease?</small></h2>
-                </div> 
-                <div class="col-md-8" style="margin-top:5%">
-                    <p style="
-                    font-weight: 200;
-                    font-size: 12pt;
-                    " >Whether you're a startup building your first MVP or an established business venturing into tech,
-                        Param is your strategic partner.
-                    <p style="
-                    font-weight: 200;
-                    font-size: 12pt;
-                    " >Startups can often struggle defining MVP features and managing
-                        resources - we provide focused MVP development, saving you time and resources.</p>
-                    <p style="
-                    font-weight: 200;
-                    font-size: 12pt;
-                    " >For businesses, we offer bespoke tech solutions aligning with your goals, allowing exploration of innovation without disrupting operations. 
-                        Param expertly navigates you through the tech maze, 
-                        transforming challenges into opportunities and visions into realities</p>
-                    <p style="
-                    font-weight: 200;
-                    font-size: 12pt;
-                    " > Param expertly navigates you through the tech maze,
-                        transforming challenges into opportunities and visions into realities. Embrace your innovation
-                        journey with Param.
-                    </p>
+        padding-right: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        color: purple;
+        margin-top: 10%;
+      " 
+  class="btn btn-outline-light">Next article →</a>
+
+                     
+
+                     
+                     
+                    
                 </div>
+
+              </div>
+              
+         
             </div>
-        </div>
-        <div class="" style="    background-color: #F7F7F7;   padding-left: 5%;
-        padding-top: 5%;
-        ;">
+          
+        <!-- </div> -->
+    
+        <div class="container">
+          <h2 style="
+          font-size: 3em;
+          margin-top: 2%;
+          padding-top: 1%;
+          font-weight: 200;
+          padding-bottom: 2%;
+          text-align: center; 
+          ">Recent Articles and News from Our Team</h2>
+        
           <!-- Example row of columns -->
           <div class="row">
-          
-          
-          <div class="col-md-4" >
-              <h2 class="hidden-xs" style="
-              padding-top: 20%;
-              padding-right: 15%;
-              text-align: left; 
-              font-size: 4em;
-              font-weight: 200;
-              ">Skills We 
-                  Have Available</h2>
-                  <h2 class="visible-xs" style="
-                  padding-top: 20%;
-                  padding-right: 15%;
-                  text-align: left; 
-                  font-size: 3em;
-                  font-weight: 200;
-                  ">Skills We 
-                      Have Available</h2>
-             <div class="container hidden-xs"  style="  margin-top: 8%;
-             /* border-left: 3px solid black; */
-             padding-bottom: 60%;
-             background-position-y: -60%;
-             font-size: 12pt;
-             padding-left: -2px;
-             text-align: left;
-             width: 100%;
-             /* background-image: url(./images/transparent-back-2.svg); */
-             background-size: 100%;
-             background-repeat: no-repeat;
-             background-position-x: 50px;">
-              <div class="container"  style="
-          
-              list-style-type: none;"
-              >
-        
+              
+            <div class="col-md-4">
+              <a href="FundByAws.html" style="text-decoration: none;
+              color: inherit;">
+              <div class="">
                  
-              </div>
-          </div>
-          </div>
-          <div class="col-md-6 hidden-xs" style="margin-bottom: -11%;">
-              <img style="width: 120%;
-              margin-top: -25%;" src="./images/people-3.svg" alt="Image" />
-          </div>
-          <div class="col-md-6 visible-xs" style="padding-left: 0;">
-              <img style="width: 100%;
-                  " src="./images/people-3.svg" alt="Image" />
-          </div>
-          </div>
- 
-      </div>
-
-
-      
-        <div class="container">
-            <h2 style="
-            margin-top: 2%;
-            padding-top: 5%;
-            /* font-weight: bold; */
-            padding-bottom: 2%;
-            text-align: center;
-            font-size: 3em; 
-            ">Benefits</h2>
-          
-            <!-- Example row of columns -->
-            <div class="row">
-
-                <div class="col-md-3" style="border-right: 1px solid rgb(234, 232, 232);
-                padding: 2%;">
-                  <div style="    
-                  padding-top: 5%;
-                 
-                  border-radius: 20px;
-                  padding-bottom: 5%;">
-                      <div style="text-align: center;">
-                           <img style="padding: 5%;" width="100" height="100" src="./images/Focused-Development.svg" alt="Image" />
-                      </div>
-                          <h4 style="
-                        padding: 5%;
-                        text-align: center;
-                        font-size: 14px;
-                        font-weight: bold;
-                           ">FOCUSED DEVELOPMENT
-
-
-
-
-                          </h4>
-                       <p style="text-align: center; padding-left: 5%;padding-right: 5%; font-size: 12px;" > Streamlined MVPs that validate core assumptions
-                        efficiently. </p>
-                  </div>
-                </div>
-            <div class="col-md-3" style="border-right: 1px solid  rgb(234, 232, 232);
-            padding: 2%;">
-              <div style="    
-              padding-top: 5%;
-             
-              border-radius: 20px;
-              padding-bottom: 5%;">
-                  <div style="text-align: center;">
-                       <img style="" width="100" height="100" src="./images/Resource-Optimization_1.svg" alt="Image" />
-                  </div>
-                      <h4 style="
-                     padding: 5%;
-                    text-align: center;
-                    font-size: 14px;
-                    font-weight: bold;
-                       ">RESOURCE OPTIMIZATION
-
-                      </h4>
-                   <p style="text-align: center; padding-left: 5%;padding-right: 5%; font-size: 12px;" >Save time and funds while creating impactful products.
+                       <img style="width:100%; height: 300px; padding:10%; margin-top: 5%;" src="./images/funded.svg" alt="Image" />
+                       <h4 style="
+                       padding-top: 15%;
+                       padding-right: 15%;
+                       text-align: left; 
+                       font-weight: bold;
+                       "> How To Get Your Startup MVP Funded By AWS<br/><br/> </h4>
+                  <p style="padding-top: 5%; font-size: 12px;" >Elevate your startup with our expert assistance! If you're on the path to craft a mobile app or SaaS platform on AWS, or venturing into realms like Analytics, IoT, Machine Learning, Containers, or Non-Relational Databases, we're your go-to partner.
                   </p>
               </div>
-            </div>
-              <div class="col-md-3" style="border-right: 1px solid  rgb(234, 232, 232);
-              padding: 2%;">
-                <div style="    
-                padding-top: 5%;
-               
-                border-radius: 20px;
-                padding-bottom: 5%;">
-                    <div style="text-align: center;">
-                         <img style="padding: 5%;"  width="100" height="100" src="./images/Expert-Guidance.svg" alt="Image" />
-                    </div>
-                        <h4 style="
-                     padding: 5%;
-                    text-align: center;
-                    font-size: 14px;
-                    font-weight: bold;
-                         "> EXPERT GUIDANCE
-
-                        </h4>
-                     <p style="text-align: center; padding-left: 5%;padding-right: 5%; font-size: 12px;" >
-                        Experienced team directing you through the startup landscape.
-                    </p>
-                </div>
+          </a>
+          </div>
+            <div class="col-md-4">
+              <a href="winningmvp.html" style="text-decoration: none;
+              color: inherit;">
+              <div class="">
+                
+                       <img style="width:100%; height: 300px; padding:10%; margin-top: 5%;" src="./images/winningmvp.svg" alt="Image" />
+                       <h4 style="
+                       padding-top: 15%;
+                       padding-right: 15%;
+                       text-align: left; 
+                       font-weight: bold;
+                       ">How To Build A Winning MVP</h4>
+                  <p style="padding-top: 5%; font-size: 12px;" >In today's hyper-competitive market, startups often face the challenge of rapidly converting an idea into a tangible product. 
+                      Yet, many founders stumble when it comes to defining the core of their offering. Enter Param: your trusted partner in sculpting a minimum viable product (MVP) that hits the mark, leveraging the time-tested 20/80 principle.
+                  </p>
               </div>
-              <div class="col-md-3" style="border-right: none;
-              padding: 2%;">
-                <div style="    
-                padding-top: 5%;
-               
-                border-radius: 20px;
-                padding-bottom: 5%;">
-                    <div style="text-align: center;">
-                         <img style="padding: 5%;" width="100" height="100" src="./images/solution_8223351.svg" alt="Image" />
-                    </div>
-                        <h4 style="
-                       padding: 5%;
-                        text-align: center;
-                        font-size: 14px;
-                        font-weight: bold;
-                         ">TAILORED SOLUTIONS
-
-
-                        </h4>
-                     <p style="text-align: center; padding-left: 5%;padding-right: 5%; font-size: 12px;" >Bespoke tech solutions that resonate with your audience.
-
-                    </p>
-                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="AWScredit.html" style="text-decoration: none;
+              color: inherit;">
+              <div class="">
+                 
+                       <img style="width:100%; height: 300px; padding:10%; margin-top: 5%;" src="./images/aws.svg" alt="Image" />
+                       <h4 style="
+                       padding-top: 15%;
+                       padding-right: 15%;
+                       text-align: left; 
+                       font-weight: bold;
+                       "> How To Get Up To $100 000 in AWS Credit</h4>
+                  <p style="padding-top: 5%; font-size: 12px;" >It's Amazon Web Services' golden ticket for startups! With tiers for funded and bootstrapped businesses, it dishes out tools, resources, and expert support to thrust startups forward.
+                  </p>
               </div>
+              </a>
             </div>
-
-            <div class="" style="background-color: #F7F7F7; padding-left: 5%;
-          padding-top: 5%;
-          padding-bottom: 5%;">
-            <!-- Example row of columns -->
-            <div class="row">
-              <h2 style="
-         font-weight: 200;
-            text-align: center;
-            font-size: 3em;
-              ">Our Results Speak For Us</h2>
-              <h4 class="hidden-xs" style="
-          text-align: center;
-    font-size: 2em;
-    padding-top: 3%;
-              text-align: center; 
-            ">Summary of the Findings of Gig Economy IT Projects on a Platform vs. Traditional IT Projects</h4>
-            <h4 class="visible-xs" style="
-            text-align: center;
-    font-size: 2em;
-    padding-right: 3%;
-    padding-top: 3%;
-                text-align: center; 
-            ">Summary of the Findings of Gig Economy IT Projects on a Platform vs. Traditional IT Projects</h4>
-              <div id="counter-box" class="col-md-4">
-                <div class="">
-                    <h4 class="counter" data-number="30" style="
-                        padding-top: 15%;
-                        padding-left: 15%;
-                        font-size: 4em;
-                        padding-right: 15%;
-                        text-align: center; 
-                        font-weight: bold;
-                        ">0%</h4>
-                    <p style="padding: 10%;
-                    text-align: center;
-                    font-weight: bold;
-                " >More Effecient Staffing
-                    </p>
-                </div>
-            </div>
-              <div id="counter-box" class="col-md-4">
-                <div class="">
-                    <h4 class="counter" data-number="25" style="
-                        padding-top: 15%;
-                        padding-left: 15%;
-                        font-size: 4em;
-                        padding-right: 15%;
-                        text-align: center;
-                        font-weight: bold; 
-                        "> 0%</h4>
-                    <p style="padding: 10%;
-                    text-align: center;
-                    font-weight: bold;
-                " >Lower Risk 
-                    </p>
-                </div>
-              </div>
-              <div id="counter-box" class="col-md-4">
-                <div class="">
-                    <h4 class="counter" data-number="36" style="
-                        padding-top: 15%;
-                        padding-left: 15%;
-                        font-size: 4em;
-                        padding-right: 15%;
-                        text-align: center; 
-                        font-weight: bold;
-                        ">0%</h4>
-                    <p style="padding: 10%;
-                    text-align: center;
-                    font-weight: bold;
-                " >Higher Project Satisfaction</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="row ghost-dark hidden-xs">
-                <div class="col-md-6 " style="text-align: right;">
-                    <a type="button" style="   
-                    padding: 3%;
-                    /* padding-left: 20%; */
-                    /* padding-right: 20%; */
-                    width: 30%;
-                    " href="teams"
-                class="btn btn-outline-light ">Hire Team</a>
-                </div>
-                <div class="col-md-6 px-xs-0" style="text-align: left;" >
-                    <a style="  
-                    padding: 3%;
-                    /* padding-left: 20%; */
-                    /* padding-right: 20%; */
-                    width: 30%;
-                    " href="staff-augmentation" type="button" class="btn btn-outline">Hire Developer</a>
-                </div>
-
-            </div>
+          </div>
+  
+          <!-- <hr> -->
+  
+      </div>
+            <!-- <hr> -->
     
-            <div class="row ghost-dark visible-xs">
-                <div class="col-md-6 " style="text-align: center;">
-                    <a type="button" style="   
-                    padding: 3%;
-                    margin: 3%;
-                    /* padding-left: 20%; */
-                    /* padding-right: 20%; */
-                    width: 50%;
-                    " href="teams"
-                class="btn btn-outline-light ">Hire Team</a>
-                </div>
-                <div class="col-md-6 px-xs-0" style="text-align: center;" >
-                    <a style="
-                      margin: 3%;  
-                    padding: 3%;
-                    /* padding-left: 20%; */
-                    /* padding-right: 20%; */
-                    width: 50%;
-                    " href="staff-augmentation" type="button" class="btn btn-outline">Hire Developer</a>
-                </div>
-
-            </div>
-    
-           
-            
-            
         </div> <!-- /container -->
-       <!-- Top content -->
-
-       
-
     
-      
-
-       <div class="container">
-        <h2 style="
-        font-size: 3em;
-        margin-top: 2%;
-        padding-top: 1%;
-        font-weight: 200;
-        padding-bottom: 2%;
-        text-align: center; 
-        ">Recent Articles and News from Our Team</h2>
-      
-        <!-- Example row of columns -->
-        <div class="row">
-            
-          <div class="col-md-4">
-            <a href="dotnet7" style="text-decoration: none;
-            color: inherit;">
-            <div class="">
-               
-                     <img style="width:100%; padding:10%; margin-top: 5%;" src="./images/blog-1.png" alt="Image" />
-                     <h4 style="
-                     padding-top: 15%;
-                     padding-right: 15%;
-                     text-align: left; 
-                     font-weight: bold;
-                     "> Whats new in .Net 7?<br/><br/> </h4>
-                <p style="padding-top: 5%; font-size: 12px;" >As we all know .net7 was released in early November 2023 and will be supported until mid-May 2024 with .NET 8 LTS expected to come out in November 2023..
-                </p>
-            </div>
-        </a>
-        </div>
-          <div class="col-md-4">
-            <a href="blockchain" style="text-decoration: none;
-            color: inherit;">
-            <div class="">
-              
-                     <img style="width:100%; padding:10%; margin-top: 5%;" src="./images/blog-2.png" alt="Image" />
-                     <h4 style="
-                     padding-top: 15%;
-                     padding-right: 15%;
-                     text-align: left; 
-                     font-weight: bold;
-                     ">Why Education in the Blockchain Space is Essential</h4>
-                <p style="padding-top: 5%; font-size: 12px;" >Blockchain technology is gaining traction in Africa as more businesses and governments explore its potential applications. However, with this new technology comes...
-                </p>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a href="mvpbuilds" style="text-decoration: none;
-            color: inherit;">
-            <div class="">
-               
-                     <img style="width:100%; padding:10%; margin-top: 5%;" src="./images/mvp.png" alt="Image" />
-                     <h4 style="
-                     padding-top: 15%;
-                     padding-right: 15%;
-                     text-align: left; 
-                     font-weight: bold;
-                     "> How staff augmentation can supercharge your MVP build</h4>
-                <p style="padding-top: 5%; font-size: 12px;" >Hiring employees can come with a lot of expenses. With our resource augmentation services, you can reduce costs for hiring, infrastructure, and more...
-                </p>
-            </div>
-            </a>
-          </div>
-        </div>
- 
-        <div class="container">
+        <div class="container" style="    margin-top: 10%;">
             <!-- Example row of columns -->
             <div class="row" style="
             padding-top: 8%; padding-bottom: 8%; ">
@@ -1319,79 +820,81 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
         
 
     </main>
-     
+    
+    
     <footer  class="jumbotron" style="background-color: rgb(38, 63, 34);">
            
    
-        <!-- Example row of columns -->
-        <div class="row" style="padding: 5%;">
-            <div class="col-md-3 " style="">
-                <div class="">
-                    <img src="./images/paramlogo_white.svg" style="width: 95%;" alt="Image" />
-                </div>
-                <div class="" style=" width: 100%;
-                background-image: url(./images/transparent-back-2.svg);
-                height: 50%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-y: -10%;">
-                  
-                </div>
+      <!-- Example row of columns -->
+      <div class="row" style="padding: 5%;">
+          <div class="col-md-3 " style="">
+              <div class="">
+                  <img src="./images/paramlogo_white.svg" style="width: 95%;" alt="Image" />
+              </div>
+              <div class="" style=" width: 100%;
+              background-image: url(./images/transparent-back-2.svg);
+              height: 50%;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position-y: -10%;">
                 
-            </div>
-          <div class="col-md-3 ">
-            <div class="" style="
-                color:white;    padding-top: 10%;
-                ">
-                
-                <ul style="list-style: none;">
-                    <li><h4  style=" padding-top: 10%; font-weight: 700;">Useful links</h4></li>
-                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="/">Home</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Services</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="staff-augmentation">Staff augmentation</a></li>                            
-                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="teams">Teams</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="blog">Blog</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="careers">Careers</a></li>
-                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="contact">Contact us</a></li>
-                    </ul>
-            </div>
-        </div>
-          <div class="col-md-3">
-            <div class="" style="
-            color:white;    padding-top: 10%;
-            ">
-            
-            <ul style="list-style: none;">
-                <li><h4  style="padding-top: 10%; font-weight: 700;">Our services</h4></li>
-                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Business Analysts</a></li>
-                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Software Developers</a></li>
-                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Project Managers</a></li>
-                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">DevOps Engineers</a></li>
-                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">QA Engineers</a></li>
-                </ul>
-        </div>
+              </div>
+              
           </div>
-          <div class="col-md-3">
-            <div class="" style="
-            color:white;    padding-top: 10%;
-            ">
-            
-            <ul style="list-style: none;">
-            <li><h4 style="    padding-top: 10%; font-weight: 700;">Contact</h4></li>
-                <li style="padding-top: 5%;color: white;    font-weight: 500;font-size: 16px; " >Corner Tyrwhitt and, 24 Cradock Ave</li>
-                <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Rosebank,</li>
-                <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Johannesburg, 2196</li>
-                <li></li>
-                <li style="padding-top: 5%;color: white;    font-weight: 500;font-size: 16px; " >Email: info@webparam.org</li>
-                <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Phone: (010) 346 5261</li>
-                </ul>
-        </div>
+        <div class="col-md-3 ">
+          <div class="" style="
+              color:white;    padding-top: 10%;
+              ">
+              
+              <ul style="list-style: none;">
+                  <li><h4  style=" padding-top: 10%; font-weight: 700;">Useful links</h4></li>
+                  <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="/">Home</a></li>
+                  <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Services</a></li>
+                  <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="staff-augmentation">Staff augmentation</a></li>                            
+                  <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="teams">Teams</a></li>
+                  <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="blog">Blog</a></li>
+                  <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="careers">Careers</a></li>
+                  <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="contact">Contact us</a></li>
+                  </ul>
           </div>
+      </div>
+        <div class="col-md-3">
+          <div class="" style="
+          color:white;    padding-top: 10%;
+          ">
+          
+          <ul style="list-style: none;">
+              <li><h4  style="padding-top: 10%; font-weight: 700;">Our services</h4></li>
+              <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Business Analysts</a></li>
+              <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Software Developers</a></li>
+              <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Project Managers</a></li>
+              <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">DevOps Engineers</a></li>
+              <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">QA Engineers</a></li>
+              </ul>
+      </div>
         </div>
+        <div class="col-md-3">
+          <div class="" style="
+          color:white;    padding-top: 10%;
+          ">
+          
+          <ul style="list-style: none;">
+          <li><h4 style="    padding-top: 10%; font-weight: 700;">Contact</h4></li>
+              <li style="padding-top: 5%;color: white;    font-weight: 500;font-size: 16px; " >Corner Tyrwhitt and, 24 Cradock Ave</li>
+              <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Rosebank,</li>
+              <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Johannesburg, 2196</li>
+              <li></li>
+              <li style="padding-top: 5%;color: white;    font-weight: 500;font-size: 16px; " >Email: info@webparam.org</li>
+              <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Phone: (010) 346 5261</li>
+              </ul>
+      </div>
+        </div>
+      </div>
 
 
 
 </footer>
+
 
 
     
@@ -1441,43 +944,7 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
             // })
         </script>
             
-            <script>
-                var a = 0;
-$(window).scroll(function () {
-    var oTop = $("#counter-box").offset().top - window.innerHeight;
-    if (a == 0 && $(window).scrollTop() > oTop) {
-        $(".counter").each(function () {
-            var $this = $(this),
-                countTo = $this.attr("data-number");
-            $({
-                countNum: $this.text()
-            }).animate(
-                {
-                    countNum: countTo
-                },
-
-                {
-                    duration: 850,
-                    easing: "swing",
-                    step: function () {
-                        //$this.text(Math.ceil(this.countNum));
-                        $this.text(
-                            Math.ceil(this.countNum).toLocaleString("en") +"%"
-                        );
-                    },
-                    complete: function () {
-                        $this.text(
-                            Math.ceil(this.countNum).toLocaleString("en") +"%"
-                        );
-                        //alert('finished');
-                    }
-                }
-            );
-        });
-        a = 1;
-    }
-});
-            </script>
+            
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -1489,7 +956,6 @@ $(window).scroll(function () {
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="./js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
