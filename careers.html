@@ -234,13 +234,13 @@
                       <ul class="nav navbar-nav navbar-right" style="  width: 70%;
                       padding: 1%;
                       padding-left: 5%;">
-                        <li><a href="/">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li style="padding-left:5%"><a href="fractional-cto.html">FCTO</a></li>
                         <li style="padding-left:5%"><a href="F-Eng.html">F-Eng</a></li>
-                        <li style="padding-left:5%"><a href="careers">Careers</a></li>
-                        <li style="padding-left:5%" class="active"><a href="blog">Blog</a></li>
+                        <li style="padding-left:5%" class="active"><a href="careers.html">Careers</a></li>
+                        <li style="padding-left:5%" ><a href="blog">Blog</a></li>
                       
-                        <li style="padding-left:5%"><a href="contact">Contact</a></li>
+                        <li style="padding-left:5%"><a href="contact.html">Contact</a></li>
                       </ul>
                     </div><!--/.nav-collapse -->
                   </div>
@@ -284,13 +284,13 @@
 
           
 
-            <div class="jumbotron " style=" margin-top: -25%; margin-bottom:0px; background-color: #D8D8D8; ;">
-                <!-- Example row of columns -->
-                <a target="_blank" href="https://www.linkedin.com/jobs/search/?currentJobId=3594254960" style="text-decoration: none;
+             <div class="jumbotron " style=" margin-top: -25%; margin-bottom:0px; background-color: #D8D8D8; ;">
+
+                <!-- <a target="_blank" href="https://www.linkedin.com/jobs/search/?currentJobId=3594254960" style="text-decoration: none;
                     color: inherit;">
                 <div class="row">
               
-                    
+        
                     <div class="col-md-12" style="padding: 5%; padding-right: 0px;    padding-bottom: 1%;
                     padding-top: 1%;">
                         <div class="card container" style=" padding: 5%;       padding-left: 2%; border-radius: 0px;">
@@ -334,65 +334,14 @@
                            
                         </div>
                     </div>
-                    </a>
 
-                    <a target="_blank" href="https://www.linkedin.com/jobs/search/?currentJobId=3594254960" style="text-decoration: none;
-                    color: inherit;">
-                <div class="row">
-              
                     
-                    <div class="col-md-12" style="padding: 5%; padding-right: 0px;    padding-bottom: 1%;
-                    padding-top: 1%;">
-                        <div class="card container" style=" padding: 5%;       padding-left: 2%; border-radius: 0px;">
-                            
-                            <div class="col-md-12" style="">
-                                <div class="col-md-3">
-                                    <h2 style="
-                                    /* padding-top: 5%; */
-                                     padding-left: 1%;
-                                     padding-right: 1%;
-                                     text-align: left;
-                                     margin-bottom: 0px;
-                                     padding-bottom: 0px;
-                                     font-size: 2em;
-    
-                                     ">Software Development Learnership<br/><br/></h2>
-                                     <span>1 month ago</span>
-                                </div>
-                                <div class="col-md-7">
-                                 
-                                    <p style="
-                                    padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" > 
-           Join Param's 12-Month Software Development Learnership. South Africans aged 18 to 35, get ready to launch your software development career! Param is looking for 30 talented individuals to join our 12-month learnership program.
-
-
-                                    </p>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="row ghost-dark">
-                                        <div class="col-md-12 " style="">
-                                            <a style="border: 2px solid darkgreen;
-                                            padding: 10%;
-                                            background-color: darkgreen;
-                                            color: white; margin-top: 25%;
-                                            " href="https://www.linkedin.com/feed/update/urn:li:activity:7052234028392792065/" target="_blank"
-                                        class="btn btn-outline-light ">View on Linked-In</a>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    </a>
-                 
-                </div>
-
+                    </a> -->
+                    <div id="wp-container" class="row" style=""></div>
+                </div> 
                 
-        
-      
-
+     
+                    
 
     </main>
     
@@ -468,6 +417,27 @@
 
 
 </footer>
+
+
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+
+
+
+
+
     
         <!-- Bootstrap core JavaScript
         ================================================== -->
@@ -475,6 +445,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
         <script src="../../assets/js/vendor/popper.min.js"></script>
+        
         <script src="../../dist/js/bootstrap.min.js"></script>
       
         <script type="text/javascript">//<![CDATA[
@@ -525,6 +496,98 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
   
+    <script>
+        $(document).ready(function () {
+            function getAllImageSrcs(html) {
+            // Create a new DOMParser object
+            const parser = new DOMParser();
+    
+            // Parse the HTML string into a new document object
+            const doc = parser.parseFromString(html, "text/html");
+    
+            // Find all <img> elements in the parsed document
+            const imgs = doc.querySelectorAll('img');
+    
+            // Extract the 'src' attribute values of each <img> element
+            const srcs = Array.from(imgs).map(img => img.getAttribute('src'));
+    
+            return srcs;
+            }
+    
+            var id = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
+
+            function extractUrlFromHtml(htmlContent) {
+                const urlRegex = /<a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1/g;
+                const match = urlRegex.exec(htmlContent);
+
+                if (match && match.length >= 3) {
+                    return match[2]; // The URL is the second captured group (match[2])
+                }
+
+  return null; // Return null if no URL is found
+}
+    function mapEntry(entry) {
+    return `
+    <div class="col-md-12" style="padding: 5%; padding-right: 0px;    padding-bottom: 1%;
+                    padding-top: 1%;
+                    
+                    ">
+                        <div class="card container" style=" padding: 5%;   padding-left: 0%; border-radius: 0px;">
+                            
+                            <div class="col-md-12" style="">
+                                <div class="col-md-3">
+                                    <h2 style="
+                                    /* padding-top: 5%; */
+                                     padding-left: 1%;
+                                     padding-right: 1%;
+                                     text-align: left;
+                                     margin-bottom: 0px;
+                                     padding-bottom: 0px;
+                                     font-size: 2em;
+    
+                                     ">${entry.title.rendered.substring(0,40)}${entry.title.rendered.length>40?`...`:``}<br/><br/></h2>
+                                     <span>3 months ago</span>
+                                </div>
+                                <div class="col-md-7">
+                                 
+                                    <p style="
+                                    padding: 1%; padding-top: 15px; font-weight: 300; font-size: 15px;" >
+                                    ${entry.excerpt.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0,150)}...
+
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="row ghost-dark">
+                                        <div class="col-md-12 " style="">
+                                            <a style="border: 2px solid darkgreen;
+                                            padding: 10%;
+                                            background-color: darkgreen;
+                                            color: white; margin-top: 25%;
+                                            " href="${extractUrlFromHtml(entry.content.rendered)}" target="_blank"
+                                        class="btn btn-outline-light ">View on Linked-In</a>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>      
+                    </div>
+    `;
+    }
+    
+    $.get(`https://public-api.wordpress.com/wp/v2/sites/paramsolutionsblog.wordpress.com/posts?categories=768848&_envelope`, function(data, status) {
+    
+    var entries = data.body.map(x => mapEntry(x));
+    $('#wp-container').html(entries.join(''));
+    });
+    
+        });
+    
+    </script>
+
+
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
