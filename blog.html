@@ -278,10 +278,10 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
                 <li><a href="/">Home</a></li>
                 <li style="padding-left:5%"><a href="fractional-cto.html">FCTO</a></li>
                 <li style="padding-left:5%"><a href="F-Eng.html">F-Eng</a></li>
-                <li style="padding-left:5%"><a href="careers">Careers</a></li>
-                <li style="padding-left:5%" class="active"><a href="blog">Blog</a></li>
+                <li style="padding-left:5%"><a href="careers.html">Careers</a></li>
+                <li style="padding-left:5%" class="active"><a href="blog.html">Blog</a></li>
               
-                <li style="padding-left:5%"><a href="contact">Contact</a></li>
+                <li style="padding-left:5%"><a href="contact.html">Contact</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -441,6 +441,14 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     
     <script>
+
+function excludeCategory(posts, categoryId) {
+        return posts.filter(entry => {
+            const categories = entry.categories || [];
+            return !categories.includes(categoryId);
+        });
+        }
+        
         $(document).ready(function () {
             function getAllImageSrcs(html) {
             // Create a new DOMParser object
@@ -459,6 +467,8 @@ padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
             }
 
             var id = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
+
+     
 
 function mapEntry(entry) {
     return `
@@ -488,17 +498,18 @@ function mapEntry(entry) {
 }
 
 $.get(`https://public-api.wordpress.com/wp/v2/sites/paramsolutionsblog.wordpress.com/posts?_envelope=1`, function(data, status) {
-
-    var filteredData = data.body.filter(entry => {
-        const tags = entry.tags || [];
-        return !tags.includes(6504);
-    });
+    var categoryIdToExclude = 768848;
+    
+    var filteredData = excludeCategory(data.body, categoryIdToExclude);
 
     var entries = filteredData.map(x => mapEntry(x));
     $('#wp-container').html(entries.join(''));
+  });
 });
 
-        });
+
+
+        
 
     </script>
     <script src="./js/bootstrap.min.js"></script>
