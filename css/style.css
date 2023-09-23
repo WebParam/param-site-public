@@ -32,7 +32,6 @@ h1, h2, h3, h4, h5, h6,
   padding-top: 5%;
   margin-bottom: 3%;
   padding-bottom: 5%;
-  
   background: #E0E0E0;
 }
 
@@ -89,7 +88,7 @@ line-height: normal;
 .row-1-d{
   display: flex;
   width: 100%;
-  gap: 20px;
+  /* gap: 10px; */
   justify-content: center;
   flex-direction: row;
 }
@@ -127,7 +126,7 @@ line-height: normal;
 }
 
 .text-1-b{
-  width: 304px; 
+  width: 354px; 
   height: 206px;
   color: #1E1E1E;
   font-family: Montserrat;
@@ -135,7 +134,7 @@ line-height: normal;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 2%;
+  padding: 5px;
 }
 
 .cards-1-b{
@@ -153,7 +152,7 @@ line-height: normal;
   height: 211px;
   background-color: rgba(228, 228, 228, 1);
   border-radius: 30px 30px 0px 0px;
-  border: 1px solid #000;
+
   display: flex;
   align-items: center;
   justify-content: center;
