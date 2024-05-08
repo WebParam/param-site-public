@@ -1,0 +1,1947 @@
+<html style="overflow-x: hidden;">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="title" content="Param Solutions || Teams || Flexible software engineering project teams">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Param Solutions || Teams || Param Solutions is an integrated development studio that works together with organizations and their teams to help them build and grow solutions that solve the problems they face.">
+    <meta name="author" content="ParamSolutions">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/navbar-fixed-top/">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <title>Fixed Top Navbar Example for Bootstrap</title> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="navbar-fixed-top.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+    .card{
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    background-color: rgb(247, 247, 247);
+    }
+
+
+    /*
+        code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+        code customized by Azmind.com
+    */
+    @media (min-width: 768px) and (max-width: 991px) {
+        /* Show 4th slide on md if col-md-4*/
+        .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -33.3333%;  /*change this with javascript in the future*/
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 768px) {
+        /* Show 3rd slide on sm if col-sm-6*/
+        .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -50%;  /*change this with javascript in the future*/
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+    }
+    @media (min-width: 576px) {
+        .carousel-item {
+            margin-right: 0;
+        }
+        /* show 2 items */
+        .carousel-inner .active + .carousel-item {
+            display: block;
+        }
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+            transition: none;
+        }
+        .carousel-inner .carousel-item-next {
+            position: relative;
+            transform: translate3d(0, 0, 0);
+        }
+        /* left or forward direction */
+        .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        .carousel-item-next.carousel-item-left + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+        /* farthest right hidden item must be also positioned for animations */
+        .carousel-inner .carousel-item-prev.carousel-item-right {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+        /* right or prev direction */
+        .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        .carousel-item-prev.carousel-item-right + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
+    }
+    /* MD */
+    @media (min-width: 768px) {
+        /* show 3rd of 3 item slide */
+        .carousel-inner .active + .carousel-item + .carousel-item {
+            display: block;
+        }
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+            transition: none;
+        }
+        .carousel-inner .carousel-item-next {
+            position: relative;
+            transform: translate3d(0, 0, 0);
+        }
+        /* left or forward direction */
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+        /* right or prev direction */
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
+    }
+    /* LG */
+    @media (min-width: 991px) {
+        /* show 4th item */
+        .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+            display: block;
+        }
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+            transition: none;
+        }
+        /* Show 5th slide on lg if col-lg-3 */
+        .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -25%;  /*change this with javascript in the future*/
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+        /* left or forward direction */
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+        /* right or prev direction //t - previous slide direction last item animation fix */
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
+    }
+    
+    /* Tabs*/
+/* section { 
+    padding: 60px 0;
+ */
+
+/* section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+} */
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f3f3f3;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 4px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    /* color: #eee;
+    font-size: 20px; */
+}
+.owl-prev{
+        background-color: white;
+    margin: 2%;
+    border-radius: 35px;
+    padding: 3%;
+    border: none;
+    font-size: 25px;
+    width: 20%;
+    color: black;
+    
+    }
+    .owl-next{
+        background-color: white;
+    margin: 2%;
+    border-radius: 35px;
+    padding: 3%;
+    border: none;
+    font-size: 25px;
+    width: 20%;
+    color:black;
+    }
+    .contact-box a:hover{
+        color: gray;
+    }
+    .contact-box a{
+        color: white;
+    }
+
+    .ghost-dark a{
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        color: white;
+        margin-top: 15px;
+        border-radius: 0px;
+        color: black;
+        font-size: 20px;
+        border: 1px solid black;
+    }
+    .ghost-dark a:hover {
+     background-color: black;
+     color: white;
+    }
+    
+  </style>
+  <script>
+
+        /*
+            Carousel
+        */
+        $('#carousel-example').on('slide.bs.carousel', function (e) {
+            /*
+                CC 2.0 License Iatek LLC 2018 - Attribution required
+            */
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 5;
+            var totalItems = $('.carousel-item').length;
+        
+            if (idx >= totalItems-(itemsPerSlide-1)) {
+                var it = itemsPerSlide - (totalItems - idx);
+                for (var i=0; i<it; i++) {
+                    // append slides to end
+                    if (e.direction=="left") {
+                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                    }
+                    else {
+                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                    }
+                }
+            }
+        });
+    </script>
+     <body style="width:100%; overflow-x: hidden;  background-color: white;">
+   
+        <nav class="navbar navbar-default navbar-fixed-top" style="width:100%; 
+    
+padding:0.5%; border:none; padding-top:2%; padding-bottom: 2%;
+
+    background-color: rgba(238,238,238, 0.95);">
+        <a style="height:100%; max-width: 10%;     padding-right: 20%;
+    " class="navbar-brand"  href="/">
+            <img src="./images/paramlogo.svg" height="5%" class="d-inline-block align-top" alt="">
+            
+        </a>
+          <div class="container-holder">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right" style="  width: 70%;
+              padding: 1%;
+              padding-left: 5%;">
+                <li><a href="/">Home</a></li>
+                <li style="padding-left:5%"><a href="fractional-cto.html">FCTO</a></li>
+                <li style="padding-left:5%" class="active"><a href="F-Eng.html">F-Eng</a></li>
+                <li style="padding-left:5%"><a href="careers.html">Careers</a></li>
+                <li style="padding-left:5%"><a href="blogs.html">Blog</a></li>
+                <li style="padding-left:5%"><a href="contact.html">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+                
+    
+        <main role="main" style="margin-top:5%">
+    
+          <!-- Main jumbotron for a primary marketing message or call to action -->
+          <div class="jumbotron" style="margin-bottom: 0px;padding-bottom: 0px; "
+          >
+            <div class="">
+                <div class="row hidden-xs" style="    background-image: url(./images/teams-banner.png);
+                background-position: right;
+                background-repeat: no-repeat;
+                padding-bottom: 5%;
+                background-size: 50%;" >
+                   <h1 style="margin-top: 5%; height:10px" class="visible-xs"></h1>
+                    <div class="col-md-7" style="padding-top: 15%;
+                        padding-bottom: 15%;
+                        padding-left: 15%;
+                        font-size: 1em;">
+                        <h3 style="font-size: 3em; text-align: left; font-weight:  200;
+                            font-weight: bold;">AWS Lambda</h3>
+                       <p
+                       style="font-size: 15pt; padding-right: 11%;">
+                       AWS Lambda provides dynamically scalable functions that we favor for hosting microservices or monolithic architectures on-demand. </p>
+                        <div class="ghost-dark">
+                            <a type="button" data-toggle="modal" data-target="#exampleModal" style="
+                           
+                            " 
+                            class="btn btn-outline-light">Learn more</a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-5" style="overflow: hidden;">
+                       <img style="width:100%; padding-top: 20%;     width: 150%;
+                       " src="./images/people-small.svg"/>
+                    </div> -->
+               
+                  
+                  </div>
+
+                  <div class="row visible-xs" style="    " >
+                      <div class="col-md-7" style="padding-top: 15%;
+                          padding-bottom: 15%;
+                          padding-left: 15%;
+                          font-size: 1em;">
+                          <h3 style="font-size: 3em; text-align: left;
+                              font-weight: bold;">F-Engineers</h3>
+                         <p
+                         style="font-size: 15pt; padding-right: 11%;"> 
+                         Seeking a tailored engineering solution
+                       without the full-time commitment?
+                       Discover the ease of hiring a fractional
+                       engineer. Simple, modest, fast
+                        </p>
+                          <div class="ghost-dark">
+                              <a type="button" data-toggle="modal" data-target="#exampleModal" style="
+                             
+                              " 
+                              class="btn btn-outline-light">Schedule a session</a>
+                          </div>
+                      </div>
+                      <!-- <div class="col-md-5" style="overflow: hidden;">
+                         <img style="width:100%; padding-top: 20%;     width: 150%;
+                         " src="./images/people-small.svg"/>
+                      </div> -->
+                 
+                    
+                    </div>
+              
+            </div>
+          </div>
+     
+      
+      <div class="" style="background-color: #F7F7F7; padding-left: 5%;
+      ">
+        <!-- Example row of columns -->
+        <div class="row" style="    padding-left: 0%;
+        padding-right: 6%;
+        padding-top: 5%;
+        padding-bottom: 10%;">
+     
+        
+        <div class="col-md-4" >
+            
+            <h2 class="hidden-xs" style="
+           font-weight: 300;
+    padding-top: 25%;
+    font-size:3em;
+    text-align: right;
+    padding-bottom: 15%;
+    padding-right: 15%;
+           ">AWS Lambda</h2>
+               <h2 class="visible-xs" style="
+               font-weight: 300;
+        padding-top: 25%;
+        font-size:3em;
+        text-align: center;
+        padding-bottom: 15%;
+               ">AWS Lambda</h2>
+ 
+        </div>
+        <div class="col-md-8" style=" padding-top: 5%;">
+           
+           <p style="
+            font-weight: 200;
+            font-size: 12pt;
+            ">
+Dive into the expansive functionalities of AWS Lambda alongside Param Solutions, a pioneering force in cloud consultancy. Our adept team specializes in architecting streamlined, scalable, and fortified serverless applications tailored to your technical requisites. Through adept utilization of AWS Lambda's capabilities, we engineer solutions that meticulously optimize infrastructure and operational expenses, ensuring peak efficiency and performance.
+    <br/>
+    <br/>
+    Param Solutions prides itself on delivering meticulously engineered, cost-efficient solutions in the cloud computing realm. Leveraging AWS Lambda's robust features, we orchestrate seamless infrastructural migrations and develop solutions that minimize overhead costs while maximizing output. Our technical acumen ensures that your serverless applications not only meet but exceed industry benchmarks, furnishing your business with a distinct technological edge.
+
+
+    <br/>
+    
+            </p>
+           
+
+        </div>
+        </div>
+
+    </div>
+    <div class="jumbotron" style="padding-right: 10%; padding-left: 0%; margin-bottom: 0px; 
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;">
+        <div class="row">
+             <div class="col-md-3">
+                <h2 style="font-size: 3em; font-weight: 200;
+                            padding-top: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;">Partners</h2>
+             </div> 
+             <div class="col-md-9">
+                <img src="./images/partnersbar.svg" alt="">
+             </div>
+        </div>
+    </div>
+    <div class="jumbotron hidden-xs" id="element" style="margin-bottom: 0px;">
+        <!-- Example row of columns -->
+        <div class="row" >
+            <h3 style="
+            padding:5%;
+            font-size: 7em;
+            text-align: left;"
+            >Why </br>
+            Lambda?</h3>
+
+         
+
+        </div>
+    </div>
+    <div class="jumbotron visible-xs" id="element2" style="margin-bottom: 0px;">
+        <!-- Example row of columns -->
+        <div class="row" >
+            <h3 style="
+            padding:5%;
+            font-size: 4em;
+            text-align: left;"
+            >Our </br>
+            Core </br>
+            Competencies</h3>
+
+         
+
+        </div>
+    </div>
+     
+
+        <div class="" style="background-color:rgba(238,238,238, 0.95); padding: 8%;padding-top: 0px;
+        padding-bottom: 0px;">
+   
+          
+            <!-- Example row of columns -->
+            <div class="row">
+                
+              <div class="col-md-4" style="
+              padding: 2%;">
+                <div class="card" style="    
+                padding-top: 5%;
+                box-shadow: none;
+                border-radius: 20px;
+                background-color: #EBEBEB;
+                padding-bottom: 5%;">
+                   <div style="text-align: center;">
+                    <img style="padding: 5%;    width: 40%;" src="./images/software-icon.svg" alt="Image" />
+                </div>
+                         <h4 style="
+                       text-align: center;
+                        font-size: 1.5em;
+                        padding-bottom: 3%;
+                         "> Cost</h4>
+                    <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >
+                        AWS Lambda's pay-per-use pricing model offers a cost-effective solution for businesses.
+                        <br/><br/> With Lambda, you only pay for the compute time consumed by your functions, without incurring charges for idle resources.                         
+                        <br/><br/>This cost-efficient approach allows businesses to optimize their spending while benefiting from the scalability and flexibility offered by serverless computing. 
+                    </p>
+                </div>
+            </div>
+              <div class="col-md-4" style=" 
+              padding: 2%;">
+                <div class="card" style="    
+                padding-top: 5%;
+                box-shadow: none;
+                border-radius: 20px;
+                background-color: #EBEBEB;
+                padding-bottom: 5%;">
+                     <div style="text-align: center;">
+                         <img style="padding: 5%; width: 45%;" src="./images/devops-icon.svg" alt="Image" />
+                    </div>
+                    <h4 style="
+                          padding: 5%;
+                        text-align: center;
+                        font-size: 1.5em;
+                         ">Scalablility</h4>
+                     <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >
+                        One of the key advantages of AWS Lambda is its inherent scalability. 
+                        <br/><br/> Lambda automatically scales to accommodate varying workloads, seamlessly handling fluctuations in traffic without any manual intervention required.
+                        <br/><br/>Whether you're experiencing a surge in demand or facing periods of low activity, Lambda dynamically adjusts resources to match your application's needs, ensuring optimal performance and responsiveness at all times.
+                    </p>
+                </div>
+              </div>
+              <div class="col-md-4" style="
+              padding: 2%;">
+                <div class="card" style="    
+                padding-top: 5%;
+                box-shadow: none;
+                background-color: #EBEBEB;
+                border-radius: 20px;
+                padding-bottom: 5%;">
+                      <div style="text-align: center;">
+                         <img style="padding: 5%; width:32%" src="./images/ai.svg" alt="Image" />
+                    </div>
+                        <h4 style="
+                       padding: 5%;
+                        text-align: center;
+                        font-size: 1.5em;
+                         "> Effeciency</h4>
+                     <p style="padding-left: 5%;padding-right: 5%; font-size: 12px;" >AWS Lambda shines in its efficiency, offering a streamlined deployment process that maximizes productivity.
+                        <br/><br/> Leveraging integrations like GitHub, developers can seamlessly automate deployment workflows, ensuring rapid and reliable updates to Lambda functions. 
+                        <br/><br/>   Additionally, Lambda integrates seamlessly with various AWS services, allowing for efficient data processing, storage, and management within the AWS ecosystem. 
+                    </p>
+                </div>
+              </div>
+            </div>
+    
+        </div> <!-- /container -->
+    
+        
+        <!-- <div class="container" style="    padding-top: 2%; height: 90%;
+        padding-bottom: 0%;" >
+          
+            <section id="tabs">
+                <div class="container">
+                    <h6 class="section-title h1">AI/ML Tech stack</h6>
+                    <div class="row" >
+                        <div class="col-xs-12 ">
+                            <nav style="padding-top: 5%; padding-bottom: 5%;">
+                                <div style="    padding-left: 0%;
+                                color: black;
+                                border-bottom: 2px solid grey;" class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                    <a style=" color: black; padding-left: 5%; text-decoration: none;
+                                    padding-right: 5%;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">LANGUAGE</a>                                                                                                                                          
+                                    <a  style=" color: black; padding-left: 5%; text-decoration: none;
+                                    padding-right: 5%;"class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">ML TOOLS </a>
+                                    <a  style=" color: black; padding-left: 5%; text-decoration: none;
+                                    padding-right: 5%;"class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">STORAGE</a>
+                                    <a  style=" color: black;padding-left: 5%; text-decoration: none;
+                                    padding-right: 5%;"class="nav-item nav-link " id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">ETL</a>
+                                    
+                                    <a  style=" color: black; padding-left: 5%;
+                                    padding-right: 5%;"class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">VISUALIZATION</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                <div class="tab-pane fade " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <img src="./images/python.svg"/>
+                                    <img src="./images/sql.svg"/>	
+                                    <img src="./images/java.svg"/>
+                                </div>
+                                <div class="tab-pane fade " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    <img src="./images/sql.svg"/>	
+                                </div>
+                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                    <img src="./images/java.svg"/>	
+                                </div>
+                                <div class="tab-pane fade show in active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                    <img src="./images/python.svg"/>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> -->
+
+       
+        <div style=" padding-top: 5%; background-color: rgba(238,238,238, 0.95);
+         ">
+          <!-- Example row of columns -->
+          <div class="row">
+            <div class="col-md-4 hidden-xs" style="background-color: #263F22;
+            padding-left: 10%;
+            padding-bottom: 15%;
+            color: white;
+            padding-top: 5%;">
+              <h2 style="margin-top:50%;font-size: 2.5em; font-weight: 200;">Our <br/>Dev Ops<br/> Team</h2>
+              <div id="owl-nav4"></div>
+            </div>
+            <div class="col-md-4 visible-xs" style="background-color: #263F22;
+            padding-left: 10%;
+            padding-bottom: 15%;
+            color: white;
+            padding-top: 5%;">
+              <h2 style="margin-top:5%;font-size: 2.5em; font-weight: 200;">Our <br/>Work</h2>
+              <div id="owl-nav5"></div>
+            </div>
+          
+            <div class="col-md-8 hidden-xs" style="    margin-top: 3%;" >
+              <div class="owl-carousel owl-4">
+                <div class="media-29101">
+                    <div class="col-md-10 " style="margin-bottom: 2%;
+                  "> <img src="./images/Njinu.png" style=""/>
+                        <div class="card" style=" padding-top: 15%;
+                        background-color:rgba(255,255,255,0.4);
+                          margin-top: -45%;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                       
+                        border-radius: 2;
+                        padding-left: 5%;
+                        border-radius: 25px;
+                        padding-right: 5%;">
+                       
+                            <h3 style="
+                                padding-top: 20%;
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                "> Njinu Kimani </h3>
+
+                            <p style="text-align: center;">Senior Software Engineer</p>
+
+                            
+                            <p style="
+                            padding: 5%;
+                            text-align: center;
+                        " >When approaching his work, Njinu places great importance on understanding a problem before moving on to solutions.
+                          <br/><br/><br/><br/></p>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="media-29101">
+                    <div class="col-md-10" style="margin-bottom: 2%;
+                  "> <img src="./images/remember.png" style=""/>
+                        <div class="card" style=" padding-top: 15%;
+                         background-color:rgba(255,255,255,0.4);
+                          margin-top: -45%;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                        
+                        border-radius: 2;
+                        padding-left: 5%;
+                        border-radius: 25px;
+                        padding-right: 5%;">
+                       
+                            <h4 style="
+                                padding-top: 20%;
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                "> Remember Mabunda
+                            </h4>
+
+                            <p style="text-align: center;">Senior Software Developer</p>
+
+                            <p style="
+                            padding: 5%;
+                            text-align: center;
+                        " >Remember Mabunda, an accomplished software development professional, 
+                        brings a wealth of expertise in strategic leadership, software development, and team management.<br/>
+                          <br/><br/><br/></p>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="media-29101">
+                  <div class="col-md-10" style="margin-bottom: 2%;
+                "> <img src="./images/siviwe.png" style=""/>
+                      <div class="card" style=" padding-top: 15%;
+                       background-color:rgba(255,255,255,0.4);
+                        margin-top: -45%;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                      
+                      border-radius: 2;
+                      padding-left: 5%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                     
+                          <h4 style="
+                              padding-top: 20%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              "> Siviwe Xakaza
+                          </h4>
+
+                          <p style="text-align: center;">Senior Software Developer</p>
+
+                          <p style="
+                          padding: 5%;
+                          text-align: center;
+                      " >Innovative, always full of new ideas / suggestions.Able to work on my own or in a team. 
+                      Clear and effective communication skills. Having a well thought out approach to problems. <br/>
+                        <br/><br/><br/></p>
+                      </div>
+                  </div>
+              
+              </div>
+                <div class="media-29101">
+                    <div class="col-md-10 " style="margin-bottom: 2%;
+                  "> <img src="./images/Goerge.png" style=""/>
+                        <div class="card" style=" padding-top: 15%;
+                        background-color:rgba(255,255,255,0.4);
+                          margin-top: -45%;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                       
+                        border-radius: 2;
+                        padding-left: 5%;
+                        border-radius: 25px;
+                        padding-right: 5%;">
+                       
+                            <h4 style="
+                                padding-top: 20%;
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                "> Goerge Mamvura</h4>
+
+                                <p style="text-align: center;">Senior Data Engineer</p>
+
+                            <p style="
+                            padding: 5%;
+                            text-align: center;
+                        " >I am a dedicated and passionate data and machine learning  with a strong 
+                        foundation in computer science and a commitment to staying up-to-date with emerging technologies.
+
+                          <br/><br/><br/></p>
+                        </div>
+                    </div>
+                
+                </div>
+              
+                <div class="media-29101">
+                    <div class="col-md-10" style="margin-bottom: 2%;
+                  "> <img src="./images/alinani.png" style=""/>
+                        <div class="card" style=" padding-top: 15%;
+                         background-color:rgba(255,255,255,0.4);
+                          margin-top: -45%;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                        
+                        border-radius: 2;
+                        padding-left: 5%;
+                        border-radius: 25px;
+                        padding-right: 5%;">
+                       
+                            <h4 style="
+                                padding-top: 20%;
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                "> Alinani Siyame
+                            </h4>
+
+                            <p style="text-align: center;">Senior Software Developer</p>
+                            
+                            <p style="
+                            padding: 5%;
+                            text-align: center;
+                        " >
+
+I am enthusiastic about tackling new challenges and continuously expanding my skillset. 
+My goal is to create innovative solutions that have a positive impact on users and businesses. <br/><br/>
+                                </p>
+                        </div>
+                    </div>
+                
+                </div>
+                  <!-- <div class="media-29101">
+                      <div class="col-md-12 ">
+                          <div class="card" style=" padding-top: 5%;min-height: 35%;
+                          background-color: transparent;
+                          box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                          padding-bottom: 5%;
+                          border-radius: 2;
+                          padding-left: 5%;
+                          border-radius: 25px;
+                          margin-bottom: 2%;
+                          padding-right: 5%;">
+                          <img src="./images/call-center.svg" style="    width: 50%;
+                          margin-left: 25%;"/>
+                              <h4 style="
+                                  padding-top: 5%;
+                                  padding-left: 20%;
+                                  padding-right: 20%;
+                                  text-align: center;
+                                  font-weight: bold;
+                                  font-size: 13px;
+                                  "> Call-center optimisation</h4>
+                              <p style="
+                              padding: 10%;
+                              text-align: center;
+                          " >
+
+                            Enabling the call to be routed to the best available agent, while giving the agent the right tools to satisfy the customer.</p>
+                          <br/><br/></div>
+                      </div>
+                  
+                  </div>
+                  <div class="media-29101">
+                      <div class="col-md-12">
+                        <div class="card" style=" padding-top: 5%;min-height: 35%;
+                        background-color: transparent;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                        padding-bottom: 5%;
+                        border-radius: 2;
+                        margin-bottom: 2%;
+                        padding-left: 5%;
+                        border-radius: 25px;
+                        padding-right: 5%;">
+                        <img src="./images/demand-forecast.svg" style="    width: 50%;
+                        margin-left: 25%;"/>
+                            <h4 style="
+                                padding-top: 5%;
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                ">Demand forecasting </h4>
+                            <p style="
+                            padding: 10%;
+                            text-align: center;
+                        " >On a per sku level, taking a variety of internal and external factors into account to get the right stock in the right stores at the right times.
+<br/>
+                            </p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="media-29101">
+                      <div class="col-md-12 ">
+                        <div class="card" style=" padding-top: 5%;min-height: 35%;
+                        background-color: transparent;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                        padding-bottom: 5%;
+                        border-radius: 2;
+                        padding-left: 5%;
+                        margin-bottom: 2%;
+                        border-radius: 25px;
+                        padding-right: 5%;">
+                        <img src="./images/call-center.svg" style="    width: 50%;
+                        margin-left: 25%;"/>
+                            <h4 style="
+                                padding-top: 5%;
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                "> Smart markdown apps</h4>
+                            <p style="
+                            padding: 13%;
+                            text-align: center;
+                        " >
+
+Apps that can tell you when an by how much fashion stock should be marked down so that everything is sold by the target date with the highest possible profit. 
+ </p>
+                        </div>
+                      </div>
+                  </div>
+            <div class="media-29101">
+                      <div class="col-md-12 ">
+                        <div class="card" style=" padding-top: 5%;min-height: 35%;
+                        background-color: transparent;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                        padding-bottom: 5%;
+                        border-radius: 2;
+                        padding-left: 5%;
+                        margin-bottom: 2%;
+                        border-radius: 25px;
+                        padding-right: 5%;">
+                        <img src="./images/call-center.svg" style="    width: 50%;
+                        margin-left: 25%;"/>
+                            <h4 style="
+                                padding-top: 5%;
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                "> Retail basket analysis and predictions</h4>
+                            <p style="
+                            padding: 10%    ;
+                            text-align: center;
+                        " >         Promotion analysis and
+                        management of
+                        scientific, in-the-field
+                        retail experiments that
+                        enables retailers to
+                        create better bundles,
+                        promotions and
+                        assortment for more
+                        and bigger sales.</p>
+                        </div>
+                      </div>
+                  </div>
+              -->
+              </div>
+          </div>
+
+
+          <div class="col-md-8 visible-xs" style="    margin-top: 5%;" >
+            <div class="owl-carousel owl-5">
+              <div class="media-29101">
+                  <div class="col-md-10 " style="margin-bottom: 2%;
+                "> <img src="./images/Njinu.png" style=""/>
+                      <div class="card" style=" padding-top: 15%;
+                      background-color:rgba(255,255,255,0.4);
+                        margin-top: -45%;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                     
+                      border-radius: 2;
+                      padding-left: 5%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                     
+                          <h4 style="
+                              padding-top: 20%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              "> Njinu Kimani
+
+
+
+</h4>
+                          <p style="
+                          padding: 5%;
+                          text-align: center;
+                      " >When approaching his work, 
+                      Njinu places great importance on understanding a problem before moving on to solutions.
+                        <br/><br/><br/><br/></p>
+                      </div>
+                  </div>
+              
+              </div>
+              <div class="media-29101">
+                  <div class="col-md-10" style="margin-bottom: 2%;
+                "> <img src="./images/remember.png" style=""/>
+                      <div class="card" style=" padding-top: 15%;
+                       background-color:rgba(255,255,255,0.4);
+                        margin-top: -45%;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                      
+                      border-radius: 2;
+                      padding-left: 5%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                     
+                          <h4 style="
+                              padding-top: 20%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              "> Remember Mabunda 
+
+
+
+
+                          </h4>
+                          <p style="
+                          padding: 5%;
+                          text-align: center;
+                      " >Remember Mabunda, an accomplished software development professional, 
+                        brings a wealth of expertise in strategic leadership, software development, and team management. <br/>
+                        <br/><br/><br/></p>
+                      </div>
+                  </div>
+              
+              </div>
+              <div class="media-29101">
+                  <div class="col-md-10 " style="margin-bottom: 2%;
+                "> <img src="./images/siviwe.png" style=""/>
+                      <div class="card" style=" padding-top: 15%;
+                       background-color:rgba(255,255,255,0.4);
+                        margin-top: -45%;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                     
+                      border-radius: 2;
+                      padding-left: 5%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                     
+                          <h4 style="
+                              padding-top: 20%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              "> Siviwe Xakaza
+
+
+
+                          </h4>
+                          <p style="
+                          padding: 5%;
+                          text-align: center;
+                      " >Innovative, always full of new ideas / suggestions.Able to work on my own or in a team. 
+                      Clear and effective communication skills. Having a well thought out approach to problems.
+                        <br/><br/></p>
+                      </div>
+                  </div>
+              
+              </div>
+              <div class="media-29101">
+                  <div class="col-md-10 " style="margin-bottom: 2%;
+                "> <img src="./images/Goerge.png" style=""/>
+                      <div class="card" style=" padding-top: 15%;
+                      background-color:rgba(255,255,255,0.4);
+                        margin-top: -45%;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                     
+                      border-radius: 2;
+                      padding-left: 5%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                     
+                          <h4 style="
+                              padding-top: 20%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              "> Goerge Mamvura </h4>
+                          <p style="
+                          padding: 5%;
+                          text-align: center;
+                      " >I am a dedicated and passionate software developer with a strong 
+                      foundation in computer science and a commitment to staying up-to-date with emerging technologies.
+
+                        <br/><br/><br/></p>
+                      </div>
+                  </div>
+              
+              </div>
+            
+              <div class="media-29101">
+                  <div class="col-md-10" style="margin-bottom: 2%;
+                "> <img src="./images/alinani.png" style=""/>
+                      <div class="card" style=" padding-top: 15%;
+                       background-color:rgba(255,255,255,0.4);
+                        margin-top: -45%;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                      
+                      border-radius: 2;
+                      padding-left: 5%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                     
+                          <h4 style="
+                              padding-top: 20%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              "> Alinani Siyame
+
+                          </h4>
+                          <p style="
+                          padding: 5%;
+                          text-align: center;
+                      " >I am enthusiastic about tackling new challenges and continuously expanding my skillset. 
+                      My goal is to create innovative solutions that have a positive impact on users and businesses. <br/><br/>
+                              </p>
+                      </div>
+                  </div>
+              
+              </div>
+                <!-- <div class="media-29101">
+                    <div class="col-md-12 ">
+                        <div class="card" style=" padding-top: 5%;min-height: 35%;
+                        background-color: transparent;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                        padding-bottom: 5%;
+                        border-radius: 2;
+                        padding-left: 5%;
+                        border-radius: 25px;
+                        margin-bottom: 2%;
+                        padding-right: 5%;">
+                        <img src="./images/call-center.svg" style="    width: 50%;
+                        margin-left: 25%;"/>
+                            <h4 style="
+                                padding-top: 5%;
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                "> Call-center optimisation</h4>
+                            <p style="
+                            padding: 10%;
+                            text-align: center;
+                        " >
+
+                          Enabling the call to be routed to the best available agent, while giving the agent the right tools to satisfy the customer.</p>
+                        <br/><br/></div>
+                    </div>
+                
+                </div>
+                <div class="media-29101">
+                    <div class="col-md-12">
+                      <div class="card" style=" padding-top: 5%;min-height: 35%;
+                      background-color: transparent;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                      padding-bottom: 5%;
+                      border-radius: 2;
+                      margin-bottom: 2%;
+                      padding-left: 5%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                      <img src="./images/demand-forecast.svg" style="    width: 50%;
+                      margin-left: 25%;"/>
+                          <h4 style="
+                              padding-top: 5%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              ">Demand forecasting </h4>
+                          <p style="
+                          padding: 10%;
+                          text-align: center;
+                      " >On a per sku level, taking a variety of internal and external factors into account to get the right stock in the right stores at the right times.
+<br/>
+                          </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="media-29101">
+                    <div class="col-md-12 ">
+                      <div class="card" style=" padding-top: 5%;min-height: 35%;
+                      background-color: transparent;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                      padding-bottom: 5%;
+                      border-radius: 2;
+                      padding-left: 5%;
+                      margin-bottom: 2%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                      <img src="./images/call-center.svg" style="    width: 50%;
+                      margin-left: 25%;"/>
+                          <h4 style="
+                              padding-top: 5%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              "> Smart markdown apps</h4>
+                          <p style="
+                          padding: 13%;
+                          text-align: center;
+                      " >
+
+Apps that can tell you when an by how much fashion stock should be marked down so that everything is sold by the target date with the highest possible profit. 
+</p>
+                      </div>
+                    </div>
+                </div>
+          <div class="media-29101">
+                    <div class="col-md-12 ">
+                      <div class="card" style=" padding-top: 5%;min-height: 35%;
+                      background-color: transparent;
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 1px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+                      padding-bottom: 5%;
+                      border-radius: 2;
+                      padding-left: 5%;
+                      margin-bottom: 2%;
+                      border-radius: 25px;
+                      padding-right: 5%;">
+                      <img src="./images/call-center.svg" style="    width: 50%;
+                      margin-left: 25%;"/>
+                          <h4 style="
+                              padding-top: 5%;
+                              padding-left: 20%;
+                              padding-right: 20%;
+                              text-align: center;
+                              font-weight: bold;
+                              font-size: 13px;
+                              "> Retail basket analysis and predictions</h4>
+                          <p style="
+                          padding: 10%    ;
+                          text-align: center;
+                      " >         Promotion analysis and
+                      management of
+                      scientific, in-the-field
+                      retail experiments that
+                      enables retailers to
+                      create better bundles,
+                      promotions and
+                      assortment for more
+                      and bigger sales.</p>
+                      </div>
+                    </div>
+                </div>
+            -->
+            </div>
+        </div>
+
+          
+          </div>
+  
+       
+  
+        </div>
+  
+        <div class="" style="background-color: #F7F7F7; padding-left: 5%;
+        ">
+                               <!-- Top content -->
+                               <div class="jumbotron" style="background-color:#F8F8F8; padding-bottom: 0;
+                               padding-top: 0;">
+                                   <div class="row" >
+                                       <h1 style="
+                                       padding:5%;
+                                       padding-top:10%;
+                                       padding-bottom: 0px;
+                                      
+                                       text-align: center; font-style: bold;"
+                                       >Lambda Use Cases</h1>
+               
+                                    
+               
+                                   
+               
+                                   </div>
+                               </div>
+            
+                               
+          <!-- Example row of columns -->
+          <div class="row" style="    padding-left: 0%;
+          padding-right: 6%;
+          padding-top: 0%;
+          padding-bottom: 0%;">
+       
+          
+          <div class="col-md-4" >
+              
+              <h2 class="hidden-xs" style="
+             font-weight: 300;
+      padding-top: 25%;
+      font-size:3em;
+      text-align: right;
+      padding-bottom: 15%;
+      padding-right: 15%;
+             ">Khumla</h2>
+                 <h2 class="visible-xs" style="
+                 font-weight: 300;
+          padding-top: 25%;
+          font-size:3em;
+          text-align: center;
+          padding-bottom: 15%;
+                 ">Grey Cloud</h2>
+   
+          </div>
+          <div class="col-md-8" style=" padding-top: 5%;">
+             
+             <p style="
+              font-weight: 200;
+              font-size: 12pt;
+              ">
+ Param Solutions developed a rental asset management tool integrating with Sage Accounting Software, utilizing React for the 
+ front end, .Net6, SQL Server, and AWS S3, the solution offers features such as asset 
+ registration, Sage integration, rental management, reporting, and more.
+ <br/>
+ <br/>
+ Khumla chose AWS lambda as their core computing infrastructure due to its scalability, reliability, and extensive set of services, allowing for the creation of a robust and
+flexible multi-tenant application while ensuring high availability and security.
+  
+      <br/>
+      
+              </p>
+             
+  
+          </div>
+          </div>
+  
+      </div>
+
+      <div class="" style="background-color: #F7F7F7; padding-left: 5%;
+      ">
+                             <!-- Top content -->
+ 
+        <!-- Example row of columns -->
+        <div class="row" style="    padding-left: 0%;
+        padding-right: 6%;
+       
+        padding-bottom: 5%;">
+     
+     <div class="col-md-8" style=" padding-top: 5%;">
+           
+        <p style="
+         font-weight: 200;
+         font-size: 12pt;
+         ">
+Param Solutions developed a comprehensive online learning platform for Khumla powered by a microservice mesh that utilizes  RabbitMQ & Redis, Mongo DB, and AWS services for scalability and reliability. The solution incorporates features
+such as behavioral-based learning, gamification elements, quizzes, assessments, and multi-tenancy support to enhance learner engagement and
+performance.
+
+<br/>
+<br/>
+Khumla integrates AWS Lambda as their primary computing platform, drawn to its scalability, reliability, and comprehensive service offerings. This choice enables the development of a resilient and adaptable multi-tenant application, bolstered by seamless integration with other services like RabbitMQ. The result is a solution that ensures high availability and security while empowering Khumla to meet diverse business needs efficiently.
+
+ <br/>
+ 
+         </p>
+        
+
+     </div>
+        <div class="col-md-4" >
+            
+            <h2 class="hidden-xs" style="
+           font-weight: 300;
+    padding-top: 25%;
+    font-size:3em;
+    text-align: right;
+    padding-bottom: 15%;
+    padding-right: 15%;
+           ">Grey Cloud</h2>
+               <h2 class="visible-xs" style="
+               font-weight: 300;
+        padding-top: 25%;
+        font-size:3em;
+        text-align: center;
+        padding-bottom: 15%;
+               ">Grey Cloud</h2>
+ 
+        </div>
+    
+        </div>
+
+    </div>
+  
+        </div> <!-- /container -->
+  
+
+
+             
+          
+                <div class="jumbotron" style=" color:white; padding-right: 5%; padding-left: 5%; margin-bottom: 0px; background-color: #263F22;">
+                    <div class="row">
+                         <div class="col-md-3">
+                            <h2 style="font-size: 4em; font-weight: 200;">Lets's get started</h2>
+                         </div> 
+                         <div class="col-md-8">
+                            <p style="    font-size: 1em;
+                            padding-top: 5%;">Connect us today and become part of a dynamic team dedicated to delivering cutting-edge solutions to our clients. With your skills and our resources, we can revolutionize the tech industry and make a difference in the world. Don't wait, apply now and let's create amazing software together!</p>
+                         </div>
+                         <div class="col-md-1" style="padding-top: 4%;">
+                            <button type="button" onclick="location.href = 'contact';" role="presentation" style="    background-color: transparent;
+                            margin: 2%;
+                            border-radius: 35px;
+                            padding: 3%;
+                            font-size: 30px;
+                            width: 66%;
+                            color: white;
+                            border: 2px solid white;" class="owl-next"><span aria-label="Next">›</span></button>
+                         </div> 
+                    </div>
+
+                    
+                </div>
+      
+ 
+            <!-- /container -->
+            
+
+              </div>
+
+  <div style="   background-color: #F7F7F7;
+  padding-left: 5%;
+  padding-top: 5%;
+  /* padding-bottom: 5%; */
+  background-image: url(./images/people-3.svg);
+  background-position-x: 90%;
+  background-repeat: no-repeat;
+  background-size: 54%;
+  ;" >
+
+    
+  </div>
+
+  <div class="" style="    background-color: #F7F7F7;   padding-left: 5%;
+  padding-top: 5%;
+  ;">
+    <!-- Example row of columns -->
+    <div class="row">
+    
+    
+    <div class="col-md-4" >
+        <h2 class="hidden-xs" style="
+        padding-top: 20%;
+        padding-right: 15%;
+        text-align: left; 
+        font-size: 4em;
+        font-weight: 200;
+        ">Skills We 
+            Have Available</h2>
+            <h2 class="visible-xs" style="
+            padding-top: 20%;
+            padding-right: 15%;
+            text-align: left; 
+            font-size: 3em;
+            font-weight: 200;
+            ">Skills We 
+                Have Available</h2>
+       <div class="container hidden-xs"  style="  margin-top: 8%;
+       /* border-left: 3px solid black; */
+       padding-bottom: 60%;
+       background-position-y: -60%;
+       font-size: 12pt;
+       padding-left: -2px;
+       text-align: left;
+       width: 100%;
+       /* background-image: url(./images/transparent-back-2.svg); */
+       background-size: 100%;
+       background-repeat: no-repeat;
+       background-position-x: 50px;">
+        <div class="container"  style="
+    
+        list-style-type: none;"
+        >
+  
+           
+        </div>
+    </div>
+    </div>
+    <div class="col-md-6 hidden-xs" style="margin-bottom: -11%;">
+        <img style="width: 120%;
+        margin-top: -25%;" src="./images/people-3.svg" alt="Image" />
+    </div>
+    <div class="col-md-6 visible-xs" style="padding-left: 0;">
+        <img style="width: 100%;
+            " src="./images/people-3.svg" alt="Image" />
+    </div>
+    </div>
+
+</div>
+
+
+
+<div style="background-color: #E9EBE9;    margin-bottom: 0;margin-top: -10px;
+" class ="jumbotron owl-2-style">
+    <h2 style="
+    padding-top: 1%;
+    padding-bottom: 2%;
+    font-size: 3em;font-weight: 200;
+    text-align: center; 
+    ">Companies we worked with</h2>
+    <div class="owl-carousel owl-2">
+        <div class="media-29101">
+            <a href="#"><img  height="10%" src="./images/stb.svg" alt="Image" class="img-fluid"></a>
+           
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"  src="./images/discovery.svg" alt="Image" class="img-fluid"></a>
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"   src="./images/mtn.svg" alt="Image" class="img-fluid"></a>
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"   src="./images/stb.svg" alt="Image" class="img-fluid"></a>
+        </div>
+        <div class="media-29101">
+            <a href="#"><img  height="10%"   src="./images/vodacom.svg" alt="Image" class="img-fluid"></a>
+        </div>
+    </div>
+</div>
+     
+     
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row" style="
+            padding-top: 8%; padding-bottom: 8%; ">
+             <div class="col-md-2" ></div>
+            
+            <div class="col-md-8 contact-box" >
+               
+                <div class="" style="
+                    /* padding-bottom: 2%; */
+                    font-size: 12pt;
+                    text-align: center;
+                    width: 100%;
+                    /* padding-top: 2%;  */
+                    background-color: rgb(38, 63, 34);
+                    color: white;
+                    border-radius: 50px;
+                    padding: 6%;
+                    "
+                    >
+                <h2 style="
+                 padding-top: 2%; 
+                font-size: 2em;
+                ">Work with The World’s Top Talent</h2>
+                    <p style="padding-left: 5%;
+                    padding-right: 5%; font-size: 12px;">
+                    Connect with our global team of experts and growing partner network who will provide the knowledge, tools, and processes for a fully-managed software product build.
+
+                </p>
+                    <a style="background-color: #1B3517;
+                    /* border: 1px solid rgb(196, 199, 201); */
+                   margin-top: 1%;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    "  type="button"  data-toggle="modal" data-target="#exampleModal" class="btn btn-outline">Get in touch</a>
+                </div>
+            </div>
+          
+            <div class="col-md-8" ></div>
+   
+            </div>
+        </div>
+
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="margin-top: 5%; width: 75%;" role="document">
+            <div class="modal-content" style=" 
+            padding: 6%;
+            box-shadow: none;
+            background-color: transparent;
+            border: none;">
+                <!-- <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div> -->
+                <div class="modal-body" style="">
+                    <div class="container-fluid hidden-xs" style=" 
+                    color:grey;
+                    border-radius: 50px;">
+                        <div class="row">
+                          <div class="col-md-4" style="padding: 20px;
+                          border-radius: 25px 0 0px 25px;
+                            background-color: rgb(38, 63, 34);
+                          height: 85%;">
+                          <div style="text-align: center; padding-top: 45%; padding-bottom: 5%;">
+                            <img src="./images/param-banner-2.svg" height="80px"/> 
+                          </div>
+                          <div>
+                            <h4 style="    color:white; font-size: 1.5em;
+                            text-align: center;">Lets get you all set up</h4>
+                            <h4 style="font-size: 12px;
+                            padding-top: 10%;color:white;
+                            text-align: center">We cant wait to hear from you, please complete the form to set up a session.</h4>
+                         </div>
+                          </div>
+                          <div class="col-md-8 ml-auto" style=    "padding: 10%;
+                          background-color: #eee;
+
+
+                          height: 85%;
+                          border-radius: 0px 25px 25px 0px;">
+                           <form id="myForm1" method="post" accept-charset="UTF-8" style="padding-top: 5%;">
+                            <div class="form-group row" >
+                            
+                                <div class="col-sm-6">
+                                    <label for="staticEmail" class="col-form-label" style=" padding-top:5%;  font-weight: bold;;
+                                    font-size: 12px;">Name</label>
+                                    <input type="text" style="    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    border-bottom: 2px solid black;
+                                    padding: 2%;
+                                    "  class="form-control-plaintext" name="name" id="name" value="">
+                                  </div>
+                                  <div class="col-sm-6  ">
+                                    <label for="staticEmail" class=" col-form-label" style=" padding-top:5%;   font-weight: bold;
+                                    font-size: 12px;">Email Address</label>
+                                    <input type="text" style="    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    border-bottom: 2px solid black;
+                                    padding: 2%;
+                                    "  class="form-control-plaintext"name="email" id="email" value="">
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                               
+                                <div class="col-sm-6">
+                                    <label for="staticEmail" class=" col-form-label" style=" padding-top:5%;  font-weight: bold;;
+                                    font-size: 12px;">Interested in</label>
+                                    <input type="text" style="    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    border-bottom: 2px solid black;
+                                    padding: 2%;
+                                    "  class="form-control-plaintext" name="interest" id="interest" value="">
+                                  </div>
+                                  <div class="col-sm-6  ">
+                                    <label for="staticEmail" class="col-form-label" style="padding-top:5%;    font-weight: bold;
+                                    font-size: 12px;">Phone number</label>
+                                    <input type="text" style="    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    border-bottom: 2px solid black;
+                                    padding: 2%;
+                                    "  class="form-control-plaintext" name="phone" id="phone" value="">
+                                  </div>
+                                  
+                              </div> 
+                              <div class="form-group row">
+                              <div class='col-sm-12'>
+                                <label for="message" class=" col-form-label" style="padding-top:5%;    font-weight: bold;
+                                font-size: 12px;">Message</label>
+                                   <div class='input-group date'  id='datetimepicker3' style="width:100%">
+                                  
+                                      <textarea rows="7" style="background-color: transparent;
+                                      width: 100%;
+                                      border: 0px;
+                                      font-size: 12px;
+                                      box-shadow: none;
+                                      border-bottom: 2px solid black;
+                                      
+                                    padding: 2%;
+                                     " class="form-control" name="message" id="message"> </textarea>
+                                    
+                                      </span>
+                                   </div>
+                               
+                              </div>
+                            
+                              </div>
+                           <div class="form-group row" style="padding-top: 5%;">
+                              <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Email</label> -->
+                              <div class="col-sm-12">
+                                <!-- <div class="col-sm-6  " > -->
+                              
+                                    <input type="submit" style="background-color: transparent;
+                                    border: 1px solid black;
+                                    color:black;
+                                    padding-left: 10%;
+                                    padding-right: 10%;
+                                    font-size: 12px;
+                                    float: right;
+                                    border-radius: 0;
+                                    margin-top: 5%;" class="btn"/>
+                                  <!-- </div> -->
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        </div>
+                      </div>
+
+
+                      <div class="container-fluid visible-xs" style=" 
+                      color:grey;
+                      border-radius: 50px;">
+                          <div class="row">
+                            <div class="col-md-12" style="padding: 20px;
+                           
+                              background-color: rgb(38, 63, 34);
+                            height: 40%;">
+                            <div style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            
+                            
+                            ">
+                              <img src="./images/param-banner-2.svg" height="80px"/>
+                              
+                            </div>
+                            <div>
+                              <h4 style="    color:white; font-size: 1.5em;
+                              text-align: center; ">Lets get you all set up</h4>
+                              <h4 style="font-size: 12px;
+                              padding-top: 10%;color:white;
+                              text-align: center">We cant wait to hear from you, please complete the form to set up a session.</h4>
+                           </div>
+                            </div>
+                            <div class="col-md-12 ml-auto" style=    "padding: 10%;
+                            background-color: #eee;
+  
+  
+                            height: 100%;">
+                               <form id="myForm2" method="post" accept-charset="UTF-8" style="padding-top: 5%;">
+                                <div class="form-group row" >
+                                
+                                    <div class="col-sm-6">
+                                        <label for="staticEmail" class="col-form-label" style=" padding-top:5%;  font-weight: bold;;
+                                        font-size: 12px;">Name</label>
+                                        <input type="text" style="    width: 100%;
+                                        background: transparent;
+                                        border: none;
+                                        border-bottom: 2px solid black;
+                                        padding: 2%;
+                                        "  class="form-control-plaintext" name="name" id="name" value="">
+                                      </div>
+                                      <div class="col-sm-6  ">
+                                        <label for="staticEmail" class=" col-form-label" style=" padding-top:5%;   font-weight: bold;
+                                        font-size: 12px;">Email Address</label>
+                                        <input type="text" style="    width: 100%;
+                                        background: transparent;
+                                        border: none;
+                                        border-bottom: 2px solid black;
+                                        padding: 2%;
+                                        "  class="form-control-plaintext"name="email" id="email" value="">
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                   
+                                    <div class="col-sm-6">
+                                        <label for="staticEmail" class=" col-form-label" style=" padding-top:5%;  font-weight: bold;;
+                                        font-size: 12px;">Interested in</label>
+                                        <input type="text" style="    width: 100%;
+                                        background: transparent;
+                                        border: none;
+                                        border-bottom: 2px solid black;
+                                        padding: 2%;
+                                        "  class="form-control-plaintext" name="interest" id="interest" value="">
+                                      </div>
+                                      <div class="col-sm-6  ">
+                                        <label for="staticEmail" class="col-form-label" style="padding-top:5%;    font-weight: bold;
+                                        font-size: 12px;">Phone number</label>
+                                        <input type="text" style="    width: 100%;
+                                        background: transparent;
+                                        border: none;
+                                        border-bottom: 2px solid black;
+                                        padding: 2%;
+                                        "  class="form-control-plaintext" name="phone" id="phone" value="">
+                                      </div>
+                                      
+                                  </div> 
+                                  <div class="form-group row">
+                                  <div class='col-sm-12'>
+                                    <label for="message" class=" col-form-label" style="padding-top:5%;    font-weight: bold;
+                                    font-size: 12px;">Message</label>
+                                       <div class='input-group date'  id='datetimepicker3' style="width:100%">
+                                      
+                                          <textarea rows="7" style="background-color: transparent;
+                                          width: 100%;
+                                          border: 0px;
+                                          font-size: 12px;
+                                          box-shadow: none;
+                                          border-bottom: 2px solid black;
+                                          
+                                        padding: 2%;
+                                         " class="form-control" name="message" id="message"> </textarea>
+                                        
+                                          </span>
+                                       </div>
+                                   
+                                  </div>
+                                
+                                  </div>
+                               <div class="form-group row" style="padding-top: 5%;">
+                                  <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Email</label> -->
+                                  <div class="col-sm-12">
+                                    <!-- <div class="col-sm-6  " > -->
+                                  
+                                        <input type="submit" style="background-color: transparent;
+                                        border: 1px solid black;
+                                        color:black;
+                                        padding-left: 10%;
+                                        padding-right: 10%;
+                                        font-size: 12px;
+                                        float: right;
+                                        border-radius: 0;
+                                        margin-top: 5%;" class="btn"/>
+                                      <!-- </div> -->
+                                  </div>
+                                </div>
+                              </form>
+                          </div>
+                          </div>
+                        </div>
+
+                </div>
+                <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+            </div>
+
+
+
+            
+        </div>
+
+
+    </main>
+    <footer  class="jumbotron" style="background-color: rgb(38, 63, 34);">
+           
+   
+        <!-- Example row of columns -->
+        <div class="row" style="padding: 5%;">
+            <div class="col-md-3 " style="">
+                <div class="">
+                    <img src="./images/paramlogo_white.svg" style="width: 95%;" alt="Image" />
+                </div>
+                <div class="" style=" width: 100%;
+                background-image: url(./images/transparent-back-2.svg);
+                height: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-y: -10%;">
+                  
+                </div>
+                
+            </div>
+          <div class="col-md-3 ">
+            <div class="" style="
+                color:white;    padding-top: 10%;
+                ">
+                
+                <ul style="list-style: none;">
+                    <li><h4  style=" padding-top: 10%; font-weight: 700;">Useful links</h4></li>
+                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="/">Home</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Services</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="staff-augmentation">Staff augmentation</a></li>                            
+                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="teams">Teams</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="blog">Blog</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="careers">Careers</a></li>
+                    <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="contact">Contact us</a></li>
+                    </ul>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <div class="" style="
+            color:white;    padding-top: 10%;
+            ">
+            
+            <ul style="list-style: none;">
+                <li><h4  style="padding-top: 10%; font-weight: 700;">Our services</h4></li>
+                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Business Analysts</a></li>
+                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Software Developers</a></li>
+                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">Project Managers</a></li>
+                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">DevOps Engineers</a></li>
+                <li style="padding-top: 5%;"><a style="color: white;    font-weight: 500;font-size: 16px; " href="services">QA Engineers</a></li>
+                </ul>
+        </div>
+          </div>
+          <div class="col-md-3">
+            <div class="" style="
+            color:white;    padding-top: 10%;
+            ">
+            
+            <ul style="list-style: none;">
+            <li><h4 style="    padding-top: 10%; font-weight: 700;">Contact</h4></li>
+                <li style="padding-top: 5%;color: white;    font-weight: 500;font-size: 16px; " >Corner Tyrwhitt and, 24 Cradock Ave</li>
+                <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Rosebank,</li>
+                <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Johannesburg, 2196</li>
+                <li></li>
+                <li style="padding-top: 5%;color: white;    font-weight: 500;font-size: 16px; " >Email: info@webparam.org</li>
+                <li style="padding-top: 1%;color: white;    font-weight: 500;font-size: 16px; " >Phone: (010) 346 5261</li>
+                </ul>
+        </div>
+          </div>
+        </div>
+
+
+
+</footer>
+
+
+
+
+    
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+      
+    
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
